@@ -30,12 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // products
+            // fProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "products";
+            this.ClientSize = new System.Drawing.Size(1132, 669);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "fProducts";
             this.Text = "Quản lý sản phẩm";
             this.ResumeLayout(false);
 
