@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class addBills : Form
+    public partial class fBills : Form
     {
-        public addBills()
+        public fBills()
         {
             InitializeComponent();
         }

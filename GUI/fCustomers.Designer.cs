@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class products
+    partial class fCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // products
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "products";
-            this.Text = "Quản lý sản phẩm";
-            this.ResumeLayout(false);
-
+            this.Text = "customer";
         }
 
         #endregion

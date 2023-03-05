@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class home
+    partial class faddBills
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // home
+            // addBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "home";
-            this.Text = "Trang chủ";
+            this.Name = "addBills";
+            this.Text = "Tạo mới hóa đơn";
             this.ResumeLayout(false);
 
         }
