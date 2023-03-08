@@ -51,6 +51,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -59,13 +61,15 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -254,6 +258,18 @@
             this.guna2Button2.TextOffset = new System.Drawing.Point(50, 0);
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // lbUserName
+            // 
+            this.lbUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lbUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbUserName.ForeColor = System.Drawing.Color.White;
+            this.lbUserName.Location = new System.Drawing.Point(43, 3);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(158, 30);
+            this.lbUserName.TabIndex = 9;
+            this.lbUserName.Text = "guna2HtmlLabel1";
+            this.lbUserName.Click += new System.EventHandler(this.lbUserName_Click);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.guna2ControlBox2);
@@ -296,17 +312,16 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2HtmlLabel2
+            // panelMain
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(339, 62);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(519, 22);
-            this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.Text = "Chào mừng đến với trang hệ thống bán hàng vật liệu xây dựng";
-            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            this.panelMain.Controls.Add(this.lbUserName);
+            this.panelMain.CustomizableEdges = customizableEdges23;
+            this.panelMain.Location = new System.Drawing.Point(300, 33);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            this.panelMain.Size = new System.Drawing.Size(886, 722);
+            this.panelMain.TabIndex = 2;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // fHome
             // 
@@ -314,7 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1188, 759);
-            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -323,8 +338,9 @@
             this.Text = "Trang chủ";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -342,6 +358,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMain;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbUserName;
     }
 }

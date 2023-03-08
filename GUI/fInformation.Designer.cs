@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // information
+            // fInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "information";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "fInformation";
             this.Text = "Quản lý thông tin cá nhân";
             this.ResumeLayout(false);
 

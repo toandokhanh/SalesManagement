@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,16 @@ namespace GUI
 {
     public partial class fHome : Form
     {
-        public fHome()
+        private string username;
+        private string password;
+        public fHome(string username, string password)
         {
             InitializeComponent();
+            this.username = username;
+            this.password = password;
+            lbUserName.Text = "Xin chào " + username + " đến với trang quản trị" + password;
         }
+        public static string LoggedInUserName;
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
@@ -76,6 +83,16 @@ namespace GUI
             this.Hide();
             fMain.ShowDialog();
             this.Show();
+        }
+
+        private void lbUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

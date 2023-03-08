@@ -39,10 +39,17 @@ namespace GUI
 
         private void guna2GradientButton1_Click_1(object sender, EventArgs e)
         {
-            fHome fMain = new fHome();
+            string username = txtUserName.Text;
+            string password = txtPassWork.Text;
+            fHome fMain = new fHome(username, password);
             this.Hide();
             fMain.ShowDialog();
             this.Show();
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
