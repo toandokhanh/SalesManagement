@@ -20,7 +20,7 @@ namespace GUI
             InitializeComponent();
             this.username = username;
             this.password = password;
-            lbUserName.Text = "Xin chào " + username + " đến với trang quản trị" + password;
+            lbUserName.Text = "Xin chào " + username + " đến với trang quản trị";
         }
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
@@ -94,12 +94,60 @@ namespace GUI
 
         }
 
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-
+            fRevenue fmRevenue = new fRevenue();
+            this.Hide();
+            fmRevenue.ShowDialog();
+            this.Show();
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        {
+            fInformation fmInformation = new fInformation();
+            this.Hide();
+            fmInformation.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
+        {
+            fBills fmBills = new fBills();
+            this.Hide();
+            fmBills.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2GradientButton5_Click(object sender, EventArgs e)
+        {
+            fProducts fmProduct = new fProducts();
+            this.Hide();
+            fmProduct.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2GradientButton6_Click(object sender, EventArgs e)
+        {
+            fCustomers fmCustomers= new fCustomers();
+            this.Hide();
+            fmCustomers.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2GradientButton7_Click(object sender, EventArgs e)
+        {
+            fStaffs fmStaffs = new fStaffs();
+            this.Hide();
+            fmStaffs.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lbUserName_Click_1(object sender, EventArgs e)
         {
 
         }
