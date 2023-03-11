@@ -1,0 +1,52 @@
+E:\GUI\GUI\bin\Debug\GUI.exe.config
+E:\GUI\GUI\bin\Debug\GUI.exe
+E:\GUI\GUI\bin\Debug\GUI.pdb
+E:\GUI\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\GUI\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+E:\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+E:\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\GUI\GUI\obj\Debug\GUI.exe
+E:\GUI\GUI\obj\Debug\GUI.pdb
+E:\GUI\GUI\bin\Debug\Guna.UI2.dll
+E:\GUI\GUI\obj\Debug\GUI.csproj.CopyComplete
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmHome.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.exe
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.pdb
+E:\QLyBanVatTu\GUI\bin\Debug\GUI.exe.config
+E:\QLyBanVatTu\GUI\bin\Debug\GUI.exe
+E:\QLyBanVatTu\GUI\bin\Debug\GUI.pdb
+E:\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmLogin.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmBills.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmCustomers.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmInformation.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmProducts.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmRevenue.resources
+E:\QLyBanVatTu\GUI\obj\Debug\GUI.frmStaffs.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\bin\Debug\GUI.exe.config
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\bin\Debug\GUI.exe
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\bin\Debug\GUI.pdb
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmBills.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmCustomers.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmHome.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmInformation.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmProducts.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmRevenue.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.frmStaffs.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.exe
+C:\Users\DELL\OneDrive\Máy tính\QLBanHangVatTu\QLyBanVatTu\GUI\obj\Debug\GUI.pdb
