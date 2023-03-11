@@ -113,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(332, 52);
+            this.label1.Location = new System.Drawing.Point(350, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(503, 29);
             this.label1.TabIndex = 13;
@@ -133,9 +133,7 @@
             this.guna2GradientButton7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton7.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton7.Location = new System.Drawing.Point(677, 390);
+            this.guna2GradientButton7.Location = new System.Drawing.Point(706, 390);
             this.guna2GradientButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton7.Name = "guna2GradientButton7";
             this.guna2GradientButton7.Size = new System.Drawing.Size(264, 80);
@@ -157,9 +155,7 @@
             this.guna2GradientButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton6.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton6.Location = new System.Drawing.Point(677, 269);
+            this.guna2GradientButton6.Location = new System.Drawing.Point(706, 269);
             this.guna2GradientButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton6.Name = "guna2GradientButton6";
             this.guna2GradientButton6.Size = new System.Drawing.Size(264, 80);
@@ -181,9 +177,7 @@
             this.guna2GradientButton4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton4.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton4.Location = new System.Drawing.Point(214, 390);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(243, 390);
             this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.Size = new System.Drawing.Size(264, 80);
@@ -205,9 +199,7 @@
             this.guna2GradientButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton5.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton5.Location = new System.Drawing.Point(677, 149);
+            this.guna2GradientButton5.Location = new System.Drawing.Point(706, 149);
             this.guna2GradientButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton5.Name = "guna2GradientButton5";
             this.guna2GradientButton5.Size = new System.Drawing.Size(264, 80);
@@ -229,9 +221,7 @@
             this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton3.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton3.Location = new System.Drawing.Point(214, 269);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(243, 269);
             this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.Size = new System.Drawing.Size(264, 80);
@@ -253,14 +243,12 @@
             this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton2.Location = new System.Drawing.Point(214, 149);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(243, 149);
             this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton2.TabIndex = 12;
-            this.guna2GradientButton2.Text = "Quản lý doanh thu";
+            this.guna2GradientButton2.Text = "Thống kê doanh thu";
             this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
             // 
             // guna2GradientButton1
@@ -276,9 +264,7 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton1.Location = new System.Drawing.Point(0, 528);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(0, 555);
             this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(203, 47);
