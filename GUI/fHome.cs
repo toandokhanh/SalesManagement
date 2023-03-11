@@ -22,7 +22,6 @@ namespace GUI
             this.password = password;
             lbUserName.Text = "Xin chào " + username + " đến với trang quản trị" + password;
         }
-        public static string LoggedInUserName;
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
@@ -91,6 +90,16 @@ namespace GUI
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
         }
