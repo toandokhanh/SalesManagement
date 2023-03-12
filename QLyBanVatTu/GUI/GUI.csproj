@@ -171,11 +171,5 @@
   <ItemGroup>
     <None Include="Resources\imageLogin.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{8ee7dc74-1ea7-43bc-b19c-618b98dbee5c}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
