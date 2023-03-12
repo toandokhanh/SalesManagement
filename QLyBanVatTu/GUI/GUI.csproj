@@ -171,5 +171,19 @@
   <ItemGroup>
     <None Include="Resources\imageLogin.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{bdcbf461-0467-44d1-8fb5-565bf10fe40e}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{4c0f4a49-a608-401d-9419-5395ac79cdd2}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{76616775-31ab-4126-b127-74975d4bd44f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

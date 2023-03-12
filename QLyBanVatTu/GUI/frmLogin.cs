@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace GUI
+using DTO;
+namespace  GUI
 {
     public partial class frmLogin : Form
     {
