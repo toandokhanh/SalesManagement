@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QLyBanVatTu"
+    "\\QLyBanVatTu",
+    "\\QLyBanVatTu\\GUI"
   ],
-  "SelectedNode": "\\QLyBanVatTu\\QLyBanVatTu.sln",
+  "SelectedNode": "\\QLyBanVatTu\\GUI\\frmProducts.cs",
   "PreviewInSolutionExplorer": false
 }
