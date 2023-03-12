@@ -114,3 +114,25 @@ C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.dll
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.exe.config
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.exe
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmBills.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmCustomers.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmHome.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmInformation.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmLogin.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmProducts.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmRevenue.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmStaffs.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.exe
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.pdb

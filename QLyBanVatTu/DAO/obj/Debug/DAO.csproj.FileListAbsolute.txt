@@ -20,3 +20,14 @@ C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.Co
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.dll
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\bin\Debug\DAO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\bin\Debug\DAO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\bin\Debug\DTO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\bin\Debug\DTO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DAO\obj\Debug\DAO.pdb

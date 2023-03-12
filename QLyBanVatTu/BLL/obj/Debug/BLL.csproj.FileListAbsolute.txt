@@ -24,3 +24,16 @@ C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.Co
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.dll
 C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\BLL.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\BLL.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\DAO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\DTO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\DAO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\bin\Debug\DTO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.Properties.Resources.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.GenerateResource.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\BLL\obj\Debug\BLL.pdb
