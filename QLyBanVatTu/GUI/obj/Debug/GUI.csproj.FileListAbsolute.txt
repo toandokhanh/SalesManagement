@@ -112,3 +112,5 @@ C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.pdb
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.dll
+C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.pdb
