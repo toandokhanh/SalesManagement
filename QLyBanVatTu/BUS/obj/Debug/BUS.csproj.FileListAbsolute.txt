@@ -9,3 +9,14 @@ C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.dll
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\BUS.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\BUS.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DAL.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DTO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DAL.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DTO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.pdb

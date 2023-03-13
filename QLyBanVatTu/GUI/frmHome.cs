@@ -20,7 +20,7 @@ namespace GUI
             InitializeComponent();
             this.username = username;
             this.password = password;
-            lbUserName.Text = "Xin chào " + username + " đến với trang quản trị";
+            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng";
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
@@ -74,6 +74,11 @@ namespace GUI
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

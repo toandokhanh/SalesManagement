@@ -11,15 +11,11 @@ namespace DAL
 {
     public class DAL_TKHT : DbConnect
     {
-        public bool CheckLogin(string email, string password)
+       public string CheckLogin(DTO_TKHT TKHT)
         {
-            conn.Open();
-            SqlCommand command = new SqlCommand("proc_login", conn);
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@email", email);
-            command.Parameters.AddWithValue("@pass", password);
-            return true;
-            
+            string info = CheckLoginDTO(TKHT);
+
+            return info;
         }
     }
 

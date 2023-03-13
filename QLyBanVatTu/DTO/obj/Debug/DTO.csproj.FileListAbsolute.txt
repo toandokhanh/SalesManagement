@@ -14,3 +14,11 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.dll
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\bin\Debug\DTO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\bin\Debug\DTO.pdb
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.Properties.Resources.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DTO\obj\Debug\DTO.pdb
