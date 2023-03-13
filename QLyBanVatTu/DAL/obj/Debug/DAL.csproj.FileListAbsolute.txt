@@ -1,0 +1,9 @@
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DAL.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DAL.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DTO.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DTO.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.pdb

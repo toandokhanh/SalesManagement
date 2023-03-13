@@ -12,6 +12,7 @@ namespace  GUI
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -26,10 +27,17 @@ namespace  GUI
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+ 
             frmHome fHome = new frmHome(username, password);
             this.Hide();
             fHome.ShowDialog();
             this.Show();
+
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

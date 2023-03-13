@@ -134,3 +134,9 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.exe
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.pdb

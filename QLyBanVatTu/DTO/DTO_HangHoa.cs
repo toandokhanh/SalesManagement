@@ -8,13 +8,43 @@ namespace DTO
 {
     public class DTO_HangHoa
     {
+        private string hh_Ma;
+        private string lh_Ma;
+        private string nsx_Ma;
+        private string hh_Ten;
+        private string hh_MoTa;
+        private string hh_DonGia;
+        private string hh_HinhAnh;
 
-        public string HH_Ma { get; set; }
-        public string LH_Ma { get; set; }
-        public string NSX_ma { get; set; }
-        public string HH_Ten { get; set; }
-        public string HH_MoTa { get; set; }
-        public float HH_DonGia { get; set; }
-        public string HH_HinhAnh { get; set; }
+        //hàm dựng
+        public DTO_HangHoa() 
+        {
+        }
+        public DTO_HangHoa(string hh_Ma, string lh_Ma, string nsx_Ma, string hh_Ten, string hh_MoTa, string hh_DonGia, string hh_HinhAnh)
+        {
+            this.hh_Ma = hh_Ma;
+            this.hh_Ma = lh_Ma;
+            this.nsx_Ma = nsx_Ma;
+            this.hh_Ten = hh_Ten;
+            this.hh_MoTa = hh_MoTa;
+            this.hh_DonGia = hh_DonGia;
+            this.hh_HinhAnh = hh_HinhAnh;
+            
+        }
+
+        public string Hh_Ma { get => hh_Ma; set => hh_Ma = value; }
+        public string Lh_Ma { get => lh_Ma; set => lh_Ma = value; }
+        public string Nsx_Ma { get => nsx_Ma; set => nsx_Ma = value; }
+        public string Hh_Ten { get => hh_Ten; set => hh_Ten = value; }
+        public string Hh_MoTa { get => hh_MoTa; set => hh_MoTa = value; }
+        public string Hh_DonGia { get => hh_DonGia; set => hh_DonGia = value; }
+        public string Hh_HinhAnh { get => hh_HinhAnh; set => hh_HinhAnh = value; }
+        /*public string HH_Ma { get; set; }
+public string LH_Ma { get; set; }
+public string NSX_ma { get; set; }
+public string HH_Ten { get; set; }
+public string HH_MoTa { get; set; }
+public float HH_DonGia { get; set; }
+public string HH_HinhAnh { get; set; }*/
     }
 }

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QLyBanVatTu",
+    "\\QLyBanVatTu\\DAL",
     "\\QLyBanVatTu\\GUI"
   ],
-  "SelectedNode": "\\QLyBanVatTu\\GUI\\frmProducts.cs",
+  "SelectedNode": "\\QLyBanVatTu\\DAL\\AccountAccess.cs",
   "PreviewInSolutionExplorer": false
 }
