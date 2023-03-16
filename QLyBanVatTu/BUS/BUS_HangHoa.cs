@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,12 +9,16 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class BUS_Product
+    public class BUS_HangHoa
     {
-        DAL_Products dalproduct = new DAL_Products();
+        DAL_HangHoa dalproduct = new DAL_HangHoa();
         public DataTable ListProduct()
         {
             return dalproduct.ListProduct();
+        }
+        public bool InsertProduct(DTO_HangHoa product) 
+        {
+            return dalproduct.InsertProduct(product);
         }
     }
 }

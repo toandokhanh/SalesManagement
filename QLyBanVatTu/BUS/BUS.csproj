@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS_Product.cs" />
+    <Compile Include="BUS_HangHoa.cs" />
     <Compile Include="BUS_TKHT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

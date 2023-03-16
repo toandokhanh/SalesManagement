@@ -13,32 +13,39 @@ namespace DTO
         private string nsx_Ma;
         private string hh_Ten;
         private string hh_MoTa;
-        private string hh_DonGia;
+        private float hh_DonGia;
         private string hh_HinhAnh;
+        private int hh_SoLuong;
+
 
         //hàm dựng
         public DTO_HangHoa() 
         {
         }
-        public DTO_HangHoa(string hh_Ma, string lh_Ma, string nsx_Ma, string hh_Ten, string hh_MoTa, string hh_DonGia, string hh_HinhAnh)
+        public DTO_HangHoa(string hh_Ma, string lh_Ma, string nsx_Ma, string hh_Ten, string hh_MoTa, float hh_DonGia, string hh_HinhAnh, int hh_SoLuong)
         {
             this.hh_Ma = hh_Ma;
-            this.hh_Ma = lh_Ma;
+            this.lh_Ma = lh_Ma;
             this.nsx_Ma = nsx_Ma;
             this.hh_Ten = hh_Ten;
             this.hh_MoTa = hh_MoTa;
-            this.hh_DonGia = hh_DonGia;
+            this.Hh_DonGia = hh_DonGia;
             this.hh_HinhAnh = hh_HinhAnh;
-            
+            this.Hh_SoLuong = hh_SoLuong;
+
         }
+
 
         public string Hh_Ma { get => hh_Ma; set => hh_Ma = value; }
         public string Lh_Ma { get => lh_Ma; set => lh_Ma = value; }
         public string Nsx_Ma { get => nsx_Ma; set => nsx_Ma = value; }
         public string Hh_Ten { get => hh_Ten; set => hh_Ten = value; }
+
+        public float Hh_DonGia { get => hh_DonGia; set => hh_DonGia = value; }
         public string Hh_MoTa { get => hh_MoTa; set => hh_MoTa = value; }
-        public string Hh_DonGia { get => hh_DonGia; set => hh_DonGia = value; }
         public string Hh_HinhAnh { get => hh_HinhAnh; set => hh_HinhAnh = value; }
+        public int Hh_SoLuong { get => hh_SoLuong; set => hh_SoLuong = value; }
+
         /*public string HH_Ma { get; set; }
 public string LH_Ma { get; set; }
 public string NSX_ma { get; set; }
