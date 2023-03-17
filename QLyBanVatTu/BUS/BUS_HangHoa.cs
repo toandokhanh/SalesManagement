@@ -20,5 +20,13 @@ namespace BUS
         {
             return dalproduct.InsertProduct(product);
         }
+        public bool UpdateProduct(DTO_HangHoa product) 
+        {
+            return dalproduct.UpdateProduct(product);
+        }
+        public bool DelectProduct(string hh_ma)
+        {
+            return dalproduct.DelectProduct(hh_ma);
+        }
     }
 }

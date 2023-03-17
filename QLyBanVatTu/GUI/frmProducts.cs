@@ -86,11 +86,11 @@ namespace GUI
             {
                 dtgvProduct.DataSource= busproduct.ListProduct();
                 LoadGridView();
-                MessBox("thêm sản phẩm thành công");
+                MessBox("thêm vật tư thành công");
             }
             else
             {
-                MessBox("Thêm sản phẩm không được",true);
+                MessBox("Thêm vật tư không được",true);
             }
                 
         }
@@ -115,5 +115,48 @@ namespace GUI
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dto_HangHoa = new DTO_HangHoa
+                (
+                    txtIDProduct.Text,
+                    guna2ComboBox1.SelectedValue.ToString(),
+                    guna2ComboBox2.SelectedValue.ToString(),
+                    guna2TextBox2.Text,
+                    guna2TextBox4.Text,
+                    float.Parse(guna2TextBox5.Text),
+                    guna2TextBox7.Text,
+                    int.Parse(guna2TextBox3.Text)
+                );
+                if (busproduct.UpdateProduct(dto_HangHoa))
+                {
+                    dtgvProduct.DataSource = busproduct.ListProduct();
+                    LoadGridView();
+                }
+                else
+                {
+                    MessBox("Sửa vật tư không thành công", true);
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (busproduct.DelectProduct(txtIDProduct.Text))
+                {
+                    dtgvProduct.DataSource = busproduct.ListProduct();
+                    LoadGridView();
+                    MessBox("Xóa vật tư thành công", true);
+                }
+                else
+                {
+                    MessBox("Xóa không thành công", true);
+                }
+            }
+        }
     }
 }

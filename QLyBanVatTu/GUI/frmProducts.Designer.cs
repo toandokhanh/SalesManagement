@@ -227,6 +227,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(93, 31);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -248,6 +249,7 @@
             this.btnDelete.Size = new System.Drawing.Size(93, 31);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefresh
             // 

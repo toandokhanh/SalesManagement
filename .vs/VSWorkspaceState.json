@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QLyBanVatTu",
-    "\\QLyBanVatTu\\DAL",
+    "\\QLyBanVatTu\\BUS",
     "\\QLyBanVatTu\\GUI"
   ],
-  "SelectedNode": "\\QLyBanVatTu\\GUI\\frmProducts.cs",
+  "SelectedNode": "\\QLyBanVatTu\\BUS\\BUS_HangHoa.cs",
   "PreviewInSolutionExplorer": false
 }
