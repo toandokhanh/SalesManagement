@@ -73,7 +73,7 @@ namespace GUI
         {
             dto_HangHoa = new DTO_HangHoa
             (
-                guna2TextBox1.Text,
+                txtIDProduct.Text,
                 guna2ComboBox1.SelectedValue.ToString(),
                 guna2ComboBox2.SelectedValue.ToString(),
                 guna2TextBox2.Text,
@@ -94,5 +94,26 @@ namespace GUI
             }
                 
         }
+
+        private void dtgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dtgvProduct.Rows.Count > 0)
+            {
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+
+                txtIDProduct.ReadOnly= true;
+                txtIDProduct.Text = dtgvProduct.CurrentRow.Cells[0].Value.ToString();
+                guna2ComboBox1.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
+                guna2ComboBox2.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
+                guna2TextBox2.Text = dtgvProduct.CurrentRow.Cells[3].Value.ToString();
+                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
+                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
+                //chỉnh lại format của hình ảnh
+                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
+                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+            }
+        }
+
     }
 }
