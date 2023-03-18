@@ -330,8 +330,8 @@ END
 GO 
 
 GO
-CREATE PROC DeleteProduct
-@mahang int
+CREATE PROC DeleteofProduct
+@mahang string
 AS BEGIN
 DECLARE @kq BIT = 1
 IF EXISTS(SELECT * FROM HANGHOA WHERE HH_Ma = @mahang)

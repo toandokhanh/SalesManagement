@@ -134,6 +134,7 @@ namespace GUI
                 {
                     dtgvProduct.DataSource = busproduct.ListProduct();
                     LoadGridView();
+                    MessBox("Sửa vật tư thành công");
                 }
                 else
                 {
@@ -144,19 +145,26 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            string ma = txtIDProduct.Text;
             if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (busproduct.DelectProduct(txtIDProduct.Text))
+                if (ma != null)
                 {
+                    busproduct.DeleteProduct(ma);
                     dtgvProduct.DataSource = busproduct.ListProduct();
                     LoadGridView();
-                    MessBox("Xóa vật tư thành công", true);
+                    MessBox("Xóa vật tư thành công");
                 }
                 else
                 {
                     MessBox("Xóa không thành công", true);
                 }
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

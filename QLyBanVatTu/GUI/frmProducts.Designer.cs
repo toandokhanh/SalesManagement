@@ -272,6 +272,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(98, 34);
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // s
             // 

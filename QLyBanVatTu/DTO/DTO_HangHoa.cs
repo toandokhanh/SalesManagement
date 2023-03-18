@@ -34,10 +34,7 @@ namespace DTO
             this.Hh_SoLuong = hh_SoLuong;
 
         }
-        public DTO_HangHoa(string hh_Ma)
-        {
-            this.hh_Ma = hh_Ma;
-        }
+
 
         public string Hh_Ma { get => hh_Ma; set => hh_Ma = value; }
         public string Lh_Ma { get => lh_Ma; set => lh_Ma = value; }

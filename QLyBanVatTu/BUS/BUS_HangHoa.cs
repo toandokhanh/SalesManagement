@@ -24,9 +24,9 @@ namespace BUS
         {
             return dalproduct.UpdateProduct(product);
         }
-        public bool DelectProduct(string hh_ma)
+        public bool DeleteProduct(string hh_ma)
         {
-            return dalproduct.DelectProduct(hh_ma);
+            return dalproduct.DeleteProduct(hh_ma);
         }
     }
 }

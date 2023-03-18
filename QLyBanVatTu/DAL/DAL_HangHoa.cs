@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -93,20 +94,21 @@ namespace DAL
 
             return false;
         }
-        public  bool DelectProduct(string hh_ma)
+        public  bool DeleteProduct(string hh_ma)
         {
             SqlConnection conn = new SqlConnection();
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "DelectProduct";
-                cmd.Parameters.AddWithValue("mahang", hh_ma);
+                string query = "Delete from HANGHOA where HH_Ma = '" + hh_ma + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                MessageBox.Show(query);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("hh_ma", hh_ma);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
-                else return false;
+                else
+                    return false;
             }
             catch(Exception)
             {
@@ -116,6 +118,7 @@ namespace DAL
             {
                 conn.Close();
             }
+
             return false;
         }
     }
