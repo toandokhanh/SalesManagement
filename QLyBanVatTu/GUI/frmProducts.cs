@@ -121,8 +121,6 @@ namespace GUI
                 if (guna2TextBox7.Text != "")
                 {
                     string linkImage = guna2TextBox7.Text;
-                    MessageBox.Show(linkImage);
-
                     guna2PictureBox1.Image = Image.FromFile(linkImage);
                     guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -183,7 +181,15 @@ namespace GUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            txtIDProduct.Text = null;
+            guna2ComboBox1.SelectedValue.ToString();
+            guna2ComboBox2.SelectedValue.ToString();
+            guna2TextBox2.Text = null;
+            guna2TextBox3.Text = null;
+            guna2TextBox4.Text = null;
+            guna2TextBox5.Text = null;
+            guna2TextBox7.Text = null;
+            guna2PictureBox1.Image = null;
         }
 
         private void guna2TextBox7_TextChanged(object sender, EventArgs e)
@@ -191,7 +197,7 @@ namespace GUI
 
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void btnInsertImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image files(*.jpg;*png)|*.jpg;*png";
@@ -202,5 +208,6 @@ namespace GUI
                 guna2TextBox7.Text = open.FileName;
             }
         }
+        
     }
 }
