@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -26,6 +27,7 @@ namespace BUS
         }
         public bool DeleteProduct(string hh_ma)
         {
+            //MessageBox.Show("Tầng BUS:" + hh_ma);
             return dalproduct.DeleteProduct(hh_ma);
         }
     }

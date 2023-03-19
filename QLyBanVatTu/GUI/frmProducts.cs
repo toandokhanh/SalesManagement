@@ -153,8 +153,10 @@ namespace GUI
             {
                 if (ma != null)
                 {
+                    //MessageBox.Show(ma);
                     busproduct.DeleteProduct(ma);
                     dtgvProduct.DataSource = busproduct.ListProduct();
+                    
                     LoadGridView();
                     MessBox("Xóa vật tư thành công");
                 }

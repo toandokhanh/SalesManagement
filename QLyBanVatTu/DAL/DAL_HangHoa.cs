@@ -96,13 +96,14 @@ namespace DAL
         }
         public  bool DeleteProduct(string hh_ma)
         {
-            SqlConnection conn = new SqlConnection();
+            //MessageBox.Show("Tầng DAL:" + hh_ma);
+            SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
                 string query = "Delete from HANGHOA where HH_Ma = '" + hh_ma + "'";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                MessageBox.Show(query);
+                //MessageBox.Show(query);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("hh_ma", hh_ma);
                 if (cmd.ExecuteNonQuery() > 0)
