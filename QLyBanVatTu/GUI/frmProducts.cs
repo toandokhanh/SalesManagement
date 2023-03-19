@@ -44,10 +44,10 @@ namespace GUI
             dtgvProduct.Columns[1].HeaderText = "Mã loại hàng";
             dtgvProduct.Columns[2].HeaderText = "Mã nhà sản xuất";
             dtgvProduct.Columns[3].HeaderText = "Tên hàng";
-            dtgvProduct.Columns[4].HeaderText = "Mô tả";
-            dtgvProduct.Columns[5].HeaderText = "Đơn giá";
-            dtgvProduct.Columns[6].HeaderText = "Hình ảnh";
-            dtgvProduct.Columns[7].HeaderText = "Số lượng";
+            dtgvProduct.Columns[4].HeaderText = "Số lượng";
+            dtgvProduct.Columns[5].HeaderText = "Mô tả";
+            dtgvProduct.Columns[6].HeaderText = "Đơn giá";
+            dtgvProduct.Columns[7].HeaderText = "Hình ảnh";
             foreach (DataGridViewColumn item in dtgvProduct.Columns)
                 item.DividerWidth = 1;
 
@@ -77,10 +77,11 @@ namespace GUI
                 guna2ComboBox1.SelectedValue.ToString(),
                 guna2ComboBox2.SelectedValue.ToString(),
                 guna2TextBox2.Text,
+                int.Parse(guna2TextBox3.Text),
                 guna2TextBox4.Text,
                 float.Parse(guna2TextBox5.Text),
-                guna2TextBox7.Text,
-                int.Parse(guna2TextBox3.Text)
+                guna2TextBox7.Text
+
             );
             if (busproduct.InsertProduct(dto_HangHoa))
             {
@@ -107,11 +108,12 @@ namespace GUI
                 guna2ComboBox1.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
                 guna2ComboBox2.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
                 guna2TextBox2.Text = dtgvProduct.CurrentRow.Cells[3].Value.ToString();
-                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
-                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
+                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
+                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
+                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
                 //chỉnh lại format của hình ảnh
-                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
-                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+
             }
         }
 
@@ -125,10 +127,11 @@ namespace GUI
                     guna2ComboBox1.SelectedValue.ToString(),
                     guna2ComboBox2.SelectedValue.ToString(),
                     guna2TextBox2.Text,
+                    int.Parse(guna2TextBox3.Text),
                     guna2TextBox4.Text,
                     float.Parse(guna2TextBox5.Text),
-                    guna2TextBox7.Text,
-                    int.Parse(guna2TextBox3.Text)
+                    guna2TextBox7.Text
+
                 );
                 if (busproduct.UpdateProduct(dto_HangHoa))
                 {

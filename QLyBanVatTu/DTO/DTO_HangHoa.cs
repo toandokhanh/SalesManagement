@@ -12,26 +12,28 @@ namespace DTO
         private string lh_Ma;
         private string nsx_Ma;
         private string hh_Ten;
+        private int hh_SoLuong;
         private string hh_MoTa;
         private float hh_DonGia;
         private string hh_HinhAnh;
-        private int hh_SoLuong;
+
 
 
         //hàm dựng
         public DTO_HangHoa() 
         {
         }
-        public DTO_HangHoa(string hh_Ma, string lh_Ma, string nsx_Ma, string hh_Ten, string hh_MoTa, float hh_DonGia, string hh_HinhAnh, int hh_SoLuong)
+        public DTO_HangHoa(string hh_Ma, string lh_Ma, string nsx_Ma, string hh_Ten, int hh_SoLuong, string hh_MoTa, float hh_DonGia, string hh_HinhAnh)
         {
             this.hh_Ma = hh_Ma;
             this.lh_Ma = lh_Ma;
             this.nsx_Ma = nsx_Ma;
             this.hh_Ten = hh_Ten;
+            this.Hh_SoLuong = hh_SoLuong;
             this.hh_MoTa = hh_MoTa;
             this.Hh_DonGia = hh_DonGia;
             this.hh_HinhAnh = hh_HinhAnh;
-            this.Hh_SoLuong = hh_SoLuong;
+
 
         }
 
@@ -45,6 +47,7 @@ namespace DTO
         public string Hh_MoTa { get => hh_MoTa; set => hh_MoTa = value; }
         public string Hh_HinhAnh { get => hh_HinhAnh; set => hh_HinhAnh = value; }
         public int Hh_SoLuong { get => hh_SoLuong; set => hh_SoLuong = value; }
+
 
         /*public string HH_Ma { get; set; }
 public string LH_Ma { get; set; }

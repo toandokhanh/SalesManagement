@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DAL_HangHoa 
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVatTu;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLBH;integrated security=true";
         
         public DataTable ListProduct()
         {
@@ -42,10 +42,10 @@ namespace DAL
                 comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
                 comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
                 comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
+                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);
                 comd.Parameters.AddWithValue("dongiahang", product.Hh_DonGia);
                 comd.Parameters.AddWithValue("hinhanh", product.Hh_HinhAnh);
-                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else 
@@ -74,10 +74,10 @@ namespace DAL
                 comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
                 comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
                 comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
+                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);
                 comd.Parameters.AddWithValue("dongiahang", product.Hh_DonGia);
                 comd.Parameters.AddWithValue("hinhanh", product.Hh_HinhAnh);
-                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else
