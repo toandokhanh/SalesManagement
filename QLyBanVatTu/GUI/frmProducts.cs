@@ -67,6 +67,8 @@ namespace GUI
             LoadGridView();
             LoadComboBoxNuocSanXuat();
             LoadComboBoxLoaiHang();
+            
+
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -113,6 +115,18 @@ namespace GUI
                 guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
                 //chỉnh lại format của hình ảnh
                 guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+
+
+
+                if (guna2TextBox7.Text != "")
+                {
+                    string linkImage = guna2TextBox7.Text;
+                    MessageBox.Show(linkImage);
+
+                    guna2PictureBox1.Image = Image.FromFile(linkImage);
+                    guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                }
 
             }
         }
@@ -170,6 +184,23 @@ namespace GUI
         private void btnRefresh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2TextBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files(*.jpg;*png)|*.jpg;*png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                guna2PictureBox1.Image = new Bitmap(open.FileName);
+                guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                guna2TextBox7.Text = open.FileName;
+            }
         }
     }
 }
