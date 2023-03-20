@@ -32,17 +32,23 @@ namespace GUI
         }
         private void LoadComboBoxLoaiHang()
         {
-            DAL_LoaiHang HangHoa = new DAL_LoaiHang();
-            DataTable dt = HangHoa.GetLoaiHang();
-            guna2ComboBox1.DisplayMember = "LH_Ten";
-            guna2ComboBox1.ValueMember = "LH_Ma";
-            guna2ComboBox1.DataSource = dt;
+            DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
+            DataTable dt = NhaCungCap.GetNhaCungCap();
+            guna2ComboBox3.DisplayMember = "NCC_Ten";
+            guna2ComboBox3.ValueMember = "NCC_Ma";
+            guna2ComboBox3.DataSource = dt;
+        }
+        private void LoadComboBoxNhaCungCap()
+        {
+            DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
+            DataTable dt = NhaCungCap.GetNhaCungCap();
+
         }
         private void LoadGridView()
         {
             dtgvProduct.Columns[0].HeaderText = "Mã hàng";
             dtgvProduct.Columns[1].HeaderText = "Mã loại hàng";
-            dtgvProduct.Columns[2].HeaderText = "Mã nhà sản xuất";
+            dtgvProduct.Columns[2].HeaderText = "Nước sản xuất";
             dtgvProduct.Columns[3].HeaderText = "Tên hàng";
             dtgvProduct.Columns[4].HeaderText = "Số lượng";
             dtgvProduct.Columns[5].HeaderText = "Mô tả";
