@@ -17,7 +17,8 @@ namespace DAL
             DataTable table = new DataTable();
             try
             {
-                string query = "SELECT LH_Ma, LH_Ten FROM dbo.LOAI_HANG";
+                conn.Open();
+                string query = "SELECT * FROM dbo.LOAI_HANG";
                 SqlDataAdapter data = new SqlDataAdapter(query, conn);
                 data.Fill(table);
             }

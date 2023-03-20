@@ -276,7 +276,7 @@ GO
 
 CREATE PROC [dbo].[ListOfProducts]
 AS BEGIN
-SELECT HH_Ma, LH_Ma, NSX_ma, HH_Ten, HH_MoTa, HH_DonGia, HH_HinhAnh FROM dbo.HANGHOA
+SELECT * FROM dbo.HANGHOA
 END
 GO
 
@@ -295,6 +295,7 @@ CREATE PROCEDURE InsertProduct
     @mahang VARCHAR(5),
     @maloai VARCHAR(5),
     @manuocsx VARCHAR(6),
+	@manhacungcap varchar(5),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -304,7 +305,7 @@ CREATE PROCEDURE InsertProduct
 AS
 BEGIN
     INSERT INTO HANGHOA
-    VALUES (@mahang, @maloai, @manuocsx, @tenhang, @motahang, @dongiahang, @hinhanh, @soluonghang)
+    VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @motahang, @dongiahang, @hinhanh, @soluonghang)
 END
 GO
 Go
@@ -312,6 +313,7 @@ CREATE PROCEDURE UpdateProduct
     @mahang VARCHAR(5),
     @maloai VARCHAR(5),
     @manuocsx VARCHAR(6),
+	@manhacungcap varchar(5),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -320,7 +322,7 @@ CREATE PROCEDURE UpdateProduct
 AS
 BEGIN
     UPDATE HANGHOA
-    SET LH_Ma = @maloai, NSX_ma = @manuocsx, HH_Ten =  @tenhang, HH_SoLuong = @soluonghang,  
+    SET LH_Ma = @maloai, NSX_ma = @manuocsx,NCC_Ma = @manhacungcap, HH_Ten =  @tenhang, HH_SoLuong = @soluonghang,  
     HH_MoTa = @motahang, HH_DonGia = @dongiahang, HH_HinhAnh = @hinhanh 
 WHERE  HH_Ma = @mahang 
 END

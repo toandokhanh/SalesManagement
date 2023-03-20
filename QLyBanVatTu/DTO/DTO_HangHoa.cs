@@ -45,7 +45,6 @@ namespace DTO
         public string Nsx_Ma { get => nsx_Ma; set => nsx_Ma = value; }
         public string Ncc_ma { get => ncc_Ma; set => ncc_Ma = value; }
         public string Hh_Ten { get => hh_Ten; set => hh_Ten = value; }
-
         public float Hh_DonGia { get => hh_DonGia; set => hh_DonGia = value; }
         public string Hh_MoTa { get => hh_MoTa; set => hh_MoTa = value; }
         public string Hh_HinhAnh { get => hh_HinhAnh; set => hh_HinhAnh = value; }

@@ -17,7 +17,8 @@ namespace DAL
             DataTable table = new DataTable();
             try
             {
-                string query = "SELECT NCC_Ma, NCC_Ten FROM dbo.NHACUNGCAP";
+                conn.Open();
+                string query = "SELECT * FROM dbo.NHA_CUNG_CAP";
                 SqlDataAdapter data = new SqlDataAdapter(query, conn);
                 data.Fill(table);
             }
@@ -31,3 +32,4 @@ namespace DAL
             return table;
         }
     }
+}

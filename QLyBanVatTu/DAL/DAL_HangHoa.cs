@@ -41,6 +41,7 @@ namespace DAL
                 comd.Parameters.AddWithValue("mahang", product.Hh_Ma);
                 comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
                 comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
+                comd.Parameters.AddWithValue("manhacungcap", product.Ncc_ma);
                 comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
                 comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);
@@ -73,6 +74,7 @@ namespace DAL
                 comd.Parameters.AddWithValue("mahang", product.Hh_Ma);
                 comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
                 comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
+                comd.Parameters.AddWithValue("manhacungcap", product.Ncc_ma);
                 comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
                 comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
                 comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);

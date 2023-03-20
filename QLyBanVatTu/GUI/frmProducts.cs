@@ -32,28 +32,31 @@ namespace GUI
         }
         private void LoadComboBoxLoaiHang()
         {
-            DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
-            DataTable dt = NhaCungCap.GetNhaCungCap();
-            guna2ComboBox3.DisplayMember = "NCC_Ten";
-            guna2ComboBox3.ValueMember = "NCC_Ma";
+            DAL_LoaiHang LoaiHang = new DAL_LoaiHang();
+            DataTable dt = LoaiHang.GetLoaiHang();
+            guna2ComboBox3.DisplayMember = "LH_Ten";
+            guna2ComboBox3.ValueMember = "LH_Ma";
             guna2ComboBox3.DataSource = dt;
         }
         private void LoadComboBoxNhaCungCap()
         {
             DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
             DataTable dt = NhaCungCap.GetNhaCungCap();
-
+            guna2ComboBox3.DisplayMember = "NCC_Ten";
+            //guna2ComboBox3.ValueMember = "NCC_Ma";
+            guna2ComboBox3.DataSource = dt;
         }
         private void LoadGridView()
         {
             dtgvProduct.Columns[0].HeaderText = "Mã hàng";
             dtgvProduct.Columns[1].HeaderText = "Mã loại hàng";
             dtgvProduct.Columns[2].HeaderText = "Nước sản xuất";
-            dtgvProduct.Columns[3].HeaderText = "Tên hàng";
-            dtgvProduct.Columns[4].HeaderText = "Số lượng";
-            dtgvProduct.Columns[5].HeaderText = "Mô tả";
-            dtgvProduct.Columns[6].HeaderText = "Đơn giá";
-            dtgvProduct.Columns[7].HeaderText = "Hình ảnh";
+            dtgvProduct.Columns[3].HeaderText = "Nhà cung cấp";
+            dtgvProduct.Columns[4].HeaderText = "Tên hàng";
+            dtgvProduct.Columns[5].HeaderText = "Số lượng";
+            dtgvProduct.Columns[6].HeaderText = "Mô tả";
+            dtgvProduct.Columns[7].HeaderText = "Đơn giá";
+            dtgvProduct.Columns[8].HeaderText = "Hình ảnh";
             foreach (DataGridViewColumn item in dtgvProduct.Columns)
                 item.DividerWidth = 1;
 
@@ -73,8 +76,7 @@ namespace GUI
             LoadGridView();
             LoadComboBoxNuocSanXuat();
             LoadComboBoxLoaiHang();
-            
-
+            LoadComboBoxNhaCungCap();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -84,6 +86,7 @@ namespace GUI
                 txtIDProduct.Text,
                 guna2ComboBox1.SelectedValue.ToString(),
                 guna2ComboBox2.SelectedValue.ToString(),
+                guna2ComboBox3.SelectedValue.ToString(),
                 guna2TextBox2.Text,
                 int.Parse(guna2TextBox3.Text),
                 guna2TextBox4.Text,
@@ -110,20 +113,16 @@ namespace GUI
             {
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
-
                 txtIDProduct.ReadOnly= true;
                 txtIDProduct.Text = dtgvProduct.CurrentRow.Cells[0].Value.ToString();
                 guna2ComboBox1.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
                 guna2ComboBox2.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
-                guna2TextBox2.Text = dtgvProduct.CurrentRow.Cells[3].Value.ToString();
-                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
-                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
-                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
-                //chỉnh lại format của hình ảnh
-                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
-
-
-
+                guna2ComboBox3.SelectedValue= dtgvProduct.CurrentRow.Cells[3].Value.ToString();
+                guna2TextBox2.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
+                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
+                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
+                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[8].Value.ToString();
                 if (guna2TextBox7.Text != "")
                 {
                     string linkImage = guna2TextBox7.Text;
@@ -144,6 +143,7 @@ namespace GUI
                     txtIDProduct.Text,
                     guna2ComboBox1.SelectedValue.ToString(),
                     guna2ComboBox2.SelectedValue.ToString(),
+                    guna2ComboBox3.SelectedValue.ToString(),
                     guna2TextBox2.Text,
                     int.Parse(guna2TextBox3.Text),
                     guna2TextBox4.Text,
@@ -174,7 +174,6 @@ namespace GUI
                     //MessageBox.Show(ma);
                     busproduct.DeleteProduct(ma);
                     dtgvProduct.DataSource = busproduct.ListProduct();
-                    
                     LoadGridView();
                     MessBox("Xóa vật tư thành công");
                 }
