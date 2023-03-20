@@ -12,8 +12,8 @@ namespace DAL
 {
     public class DAL_HangHoa 
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLBH;integrated security=true";
-        
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+
         public DataTable ListProduct()
         {
             SqlConnection conn = new SqlConnection(stringConnect);
@@ -36,7 +36,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("InsertProduct", conn);
+                SqlCommand comd = new SqlCommand("InsertofProduct", conn);
                 comd.CommandType = CommandType.StoredProcedure;
                 comd.Parameters.AddWithValue("mahang", product.Hh_Ma);
                 comd.Parameters.AddWithValue("maloai", product.Lh_Ma);

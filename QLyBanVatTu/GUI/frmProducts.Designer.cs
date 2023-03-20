@@ -585,7 +585,6 @@
             this.guna2TextBox7.SelectedText = "";
             this.guna2TextBox7.Size = new System.Drawing.Size(238, 36);
             this.guna2TextBox7.TabIndex = 27;
-            this.guna2TextBox7.TextChanged += new System.EventHandler(this.guna2TextBox7_TextChanged);
             // 
             // guna2PictureBox1
             // 

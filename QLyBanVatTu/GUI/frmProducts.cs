@@ -34,16 +34,16 @@ namespace GUI
         {
             DAL_LoaiHang LoaiHang = new DAL_LoaiHang();
             DataTable dt = LoaiHang.GetLoaiHang();
-            guna2ComboBox3.DisplayMember = "LH_Ten";
-            guna2ComboBox3.ValueMember = "LH_Ma";
-            guna2ComboBox3.DataSource = dt;
+            guna2ComboBox1.DisplayMember = "LH_Ten";
+            guna2ComboBox1.ValueMember = "LH_Ma";
+            guna2ComboBox1.DataSource = dt;
         }
         private void LoadComboBoxNhaCungCap()
         {
             DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
             DataTable dt = NhaCungCap.GetNhaCungCap();
             guna2ComboBox3.DisplayMember = "NCC_Ten";
-            //guna2ComboBox3.ValueMember = "NCC_Ma";
+            guna2ComboBox3.ValueMember = "NCC_Ma";
             guna2ComboBox3.DataSource = dt;
         }
         private void LoadGridView()
@@ -186,6 +186,7 @@ namespace GUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            txtIDProduct.ReadOnly = false;
             txtIDProduct.Text = null;
             guna2ComboBox1.SelectedValue.ToString();
             guna2ComboBox2.SelectedValue.ToString();
@@ -197,10 +198,6 @@ namespace GUI
             guna2PictureBox1.Image = null;
         }
 
-        private void guna2TextBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnInsertImg_Click(object sender, EventArgs e)
         {
