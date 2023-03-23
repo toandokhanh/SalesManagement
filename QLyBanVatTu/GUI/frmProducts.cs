@@ -210,6 +210,23 @@ namespace GUI
                 guna2TextBox7.Text = open.FileName;
             }
         }
-        
+
+        private void guna2TextBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            string name = guna2TextBox6.Text.Trim();
+            if(e.KeyCode== Keys.Enter)
+            {
+                if(name == "")
+                {
+                    frmProducts_Load(sender, e);
+                }
+                else
+                {
+                    DataTable table = busproduct.SearchProduct(guna2TextBox6.Text);
+                    dtgvProduct.DataSource = table;
+                }
+                             
+            }
+        }
     }
 }

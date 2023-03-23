@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace  GUI
 {
     public partial class frmLogin : Form
     {
         DTO_TKHT tkht = new DTO_TKHT();
         BUS_TKHT tkBLL = new BUS_TKHT();
-
+        SqlConnection conn;
         public frmLogin()
         {
             InitializeComponent();
@@ -42,18 +46,15 @@ namespace  GUI
                     return;
                 case "Tài khoản hoặc mật khẩu không chích xác":
                     MessageBox.Show("Tài khoản hoặc mật khẩu không chích xác.");
-                    return;
-                
+                    return;               
             }
-
+            string query = "select PQ_ma from TKHT where TKHT_Email='" + txtUsername.Text + "'";
+            BUS_TKHT b = new BUS_TKHT();
+            b.checkPQ(query, label2.Text, conn);
             frmHome fHome = new frmHome(txtUsername.Text, txtPassword.Text);
             this.Hide();
             fHome.ShowDialog();
             this.Show();
-
-
-
-
 
         }
 

@@ -212,7 +212,6 @@ GO
 ALTER TABLE [dbo].[CHITIET_HD_NHAP]  WITH CHECK ADD FOREIGN KEY([HDN_Ma])
 REFERENCES [dbo].[HOA_DON_NHAP] ([HDN_Ma])
 GO
-
 ALTER TABLE [dbo].[CHITIET_HD_NHAP]  WITH CHECK ADD FOREIGN KEY([HH_Ma])
 REFERENCES [dbo].[HANGHOA] ([HH_Ma])
 GO
@@ -295,7 +294,7 @@ CREATE PROCEDURE InsertProduct
     @mahang VARCHAR(5),
     @maloai VARCHAR(5),
     @manuocsx VARCHAR(6),
-	@manhacungcap varchar(5),
+    @manhacungcap varchar(5),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -313,7 +312,7 @@ CREATE PROCEDURE UpdateProduct
     @mahang VARCHAR(5),
     @maloai VARCHAR(5),
     @manuocsx VARCHAR(6),
-	@manhacungcap varchar(5),
+    @manhacungcap varchar(5),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -322,7 +321,7 @@ CREATE PROCEDURE UpdateProduct
 AS
 BEGIN
     UPDATE HANGHOA
-    SET LH_Ma = @maloai, NSX_ma = @manuocsx,NCC_Ma = @manhacungcap, HH_Ten =  @tenhang, HH_SoLuong = @soluonghang,  
+    SET LH_Ma = @maloai, NSX_ma = @manuocsx, NCC_Ma = @manhacungcap, HH_Ten =  @tenhang, HH_SoLuong = @soluonghang,  
     HH_MoTa = @motahang, HH_DonGia = @dongiahang, HH_HinhAnh = @hinhanh 
 WHERE  HH_Ma = @mahang 
 END
@@ -341,7 +340,47 @@ SELECT @kq
 END
 GO
 GO
+GO
+CREATE PROC [dbo].[SearchProduct]
+@tenhanghoa NVARCHAR(50)
+AS BEGIN
+SELECT * FROM dbo.HANGHOA WHERE HH_Ten LIKE '%' + @tenhanghoa + '%'
+END
+GO
 
+CREATE PROCEDURE InsertCustomers
+    @makh VARCHAR(5),
+    @tenkh nvarchar(20),
+    @diachi nvarchar(100),
+    @sdt varchar(10)
+
+AS
+BEGIN
+    INSERT INTO KHACH_HANG
+    VALUES (@makh, @tenkh, @diachi, @sdt)
+END
+GO
+
+CREATE PROCEDURE UpdateCustomers
+    @makh VARCHAR(5),
+    @tenkh nvarchar(20),
+    @diachi nvarchar(100),
+    @sdt varchar(10)
+
+AS
+BEGIN
+    UPDATE KHACH_HANG
+    SET  MA_KH = @makh, TEN_KH = @tenkh, DIACHI = @diachi, SDT = @sdt
+    WHERE MA_KH = @makh
+END
+GO
+
+CREATE PROC [dbo].[SearchCustomers]
+@ten NVARCHAR(50)
+AS BEGIN
+SELECT * FROM dbo.KHACH_HANG WHERE TEN_KH LIKE '%' + @ten + '%'
+END
+GO
 
 
 

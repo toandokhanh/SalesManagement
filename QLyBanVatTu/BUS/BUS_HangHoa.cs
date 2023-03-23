@@ -30,5 +30,9 @@ namespace BUS
             //MessageBox.Show("Tầng BUS:" + hh_ma);
             return dalproduct.DeleteProduct(hh_ma);
         }
+        public DataTable SearchProduct(string tenhang)
+        {
+            return dalproduct.SearchProduct(tenhang);
+        }
     }
 }

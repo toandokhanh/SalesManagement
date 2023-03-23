@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using BUS;
+using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +22,8 @@ namespace GUI
             InitializeComponent();
             this.username = username;
             this.password = password;
-            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng";
+            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng";            
         }
-
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             frmRevenue fRevenue = new frmRevenue();

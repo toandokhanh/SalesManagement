@@ -22,13 +22,14 @@ namespace DAL
         public static string CheckLoginDTO(DTO_TKHT tkht)
         {
             string user = null;
+            string password = null;
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
             SqlCommand command = new SqlCommand("proc_check_login", conn);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@email", tkht.Tkht_Email);
             command.Parameters.AddWithValue("@pass", tkht.Tkht_Password);
-            ////command.Parameters.AddWithValue("@roles", tkht.Pq_Ma);
+            //command.Parameters.AddWithValue("@roles", tkht.Pq_Ma);
             command.Connection = conn;
 
 
@@ -49,5 +50,6 @@ namespace DAL
             }
             return user;
         }
+
     }
 }
