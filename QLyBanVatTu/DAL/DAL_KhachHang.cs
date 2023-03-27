@@ -136,5 +136,25 @@ namespace DAL
                 conn.Close();
             }
         }
+        public DataTable GetCustomer()
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            DataTable table = new DataTable();
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM dbo.KHACH_HANG";
+                SqlDataAdapter data = new SqlDataAdapter(query, conn);
+                data.Fill(table);
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return table;
+        }
     }
 }
