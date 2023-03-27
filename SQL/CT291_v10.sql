@@ -273,7 +273,7 @@ BEGIN
 END;
 GO
 
-CREATE PROC [dbo].[ListOfProducts]
+CREATE PROC [dbo].[ListProducts]
 AS BEGIN
 SELECT * FROM dbo.HANGHOA
 END
@@ -382,7 +382,17 @@ SELECT * FROM dbo.KHACH_HANG WHERE TEN_KH LIKE '%' + @ten + '%'
 END
 GO
 
-
+CREATE PROCEDURE InsertHDX
+    @madon varchar(5),
+	@makh varchar(5),
+	@emailtkht varchar(30),
+	@ngaylap date
+AS
+BEGIN
+    INSERT INTO HOA_DON_XUAT
+    VALUES (@madon, @makh, @emailtkht, @ngaylap)
+END
+GO
 
 INSERT INTO [dbo].[HANGHOA] ([HH_Ma], [LH_Ma], [NSX_ma], [HH_Ten], [HH_MoTa], [HH_DonGia], [HH_HinhAnh])
 VALUES
@@ -396,3 +406,18 @@ VALUES
 ('HH09', 'LH02', 'NSX03', N'Đá 1x2 Mỹ', N'Đá 1x2 Mỹ chất lượng cao', 28000, NULL),
 ('HH10', 'LH02', 'NSX03', N'Đá 1x2 Mỹ', N'Đá 1x2 Mỹ tiêu chuẩn', 25000, NULL)
 Go
+
+
+
+INSERT INTO [dbo].[HOA_DON_XUAT] ([HDX_Ma], [MA_KH], [TKHT_Email], [HDX_NgayLap])
+VALUES
+('HDX01', 'KH01', 'CEO@localhost.com', '2022-01-01'),
+('HDX02', 'KH02', 'emp1@localhost.com', '2022-01-02'),
+('HDX03', 'KH03', 'admin@localhost.com', '2022-01-03'),
+('HDX04', 'KH01', 'emp2@localhost.com', '2022-01-04'),
+('HDX05', 'KH02', 'admin@localhost.com', '2022-01-05'),
+('HDX06', 'KH03', 'emp2@localhost.com', '2022-01-06'),
+('HDX07', 'KH01', 'emp1@localhost.com', '2022-01-07'),
+('HDX08', 'KH02', 'admin@localhost.com', '2022-01-08'),
+('HDX09', 'KH03', 'admin@localhost.com', '2022-01-09'),
+('HDX10', 'KH01', 'emp2@localhost.com', '2022-01-10')
