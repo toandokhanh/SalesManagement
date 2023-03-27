@@ -2,6 +2,7 @@
 using System.Configuration;
 using DTO;
 using System.Data;
+using System.Reflection.Emit;
 
 namespace DAL
 {
@@ -22,7 +23,6 @@ namespace DAL
         public static string CheckLoginDTO(DTO_TKHT tkht)
         {
             string user = null;
-            string password = null;
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
             SqlCommand command = new SqlCommand("proc_check_login", conn);
@@ -41,6 +41,7 @@ namespace DAL
                     user = reader.GetString(0);
                 }
                 reader.Close();
+                
                 conn.Close();
 
             }
@@ -50,6 +51,17 @@ namespace DAL
             }
             return user;
         }
+        public string checkRoleDTO(DTO_TKHT tkht)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            SqlCommand command = new SqlCommand("select PQ_Ma from TAI_KHOAN_HE_THONG WHERE TKHT_Email = @username",conn);
+            command.CommandType = CommandType.Text;
+            command.Connection = conn;
+            command.Parameters.AddWithValue("@username", tkht.Tkht_Email);
+            string role = (string)command.ExecuteScalar();
+            return role;
 
+        }
     }
 }

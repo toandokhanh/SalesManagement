@@ -17,6 +17,11 @@ namespace DAL
 
             return info;
         }
+        public string checkRole(DTO_TKHT tkht)
+        {
+            string role = checkRoleDTO(tkht);
+            return role;
+        }
     }
 
 }

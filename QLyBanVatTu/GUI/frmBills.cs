@@ -12,9 +12,13 @@ namespace GUI
 {
     public partial class frmBills : Form
     {
-        public frmBills()
+        private string role;
+        public frmBills(string role)
         {
             InitializeComponent();
+            this.role = role;
+            txtStaff.Text = role;
+            txtStaff.ReadOnly = true;
         }
     }
 }

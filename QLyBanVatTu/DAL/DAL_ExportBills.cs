@@ -1,85 +1,47 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DAL
 {
-    public class DAL_HangHoa 
+    public class DAL_ExportBills
     {
         string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
 
-        public DataTable ListProduct()
+        public DataTable ListExportBills()
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SELECT * FROM dbo.HANGHOA", conn);
+                SqlCommand comd = new SqlCommand("SELECT * FROM dbo.HOA_DON_XUAT", conn);
                 comd.CommandType = CommandType.Text;
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
                 return data;
             }
-            finally { 
+            finally
+            {
                 conn.Close();
             }
         }
-        public bool InsertProduct(DTO_HangHoa product)
+        public bool InsertExportBills(DTO_HoaDonXuat HDX)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("InsertProduct", conn);
+                SqlCommand comd = new SqlCommand("InsertHDX", conn);
                 comd.CommandType = CommandType.StoredProcedure;
-                comd.Parameters.AddWithValue("mahang", product.Hh_Ma);
-                comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
-                comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
-                comd.Parameters.AddWithValue("manhacungcap", product.Ncc_ma);
-                comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
-                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
-                comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);
-                comd.Parameters.AddWithValue("dongiahang", product.Hh_DonGia);
-                comd.Parameters.AddWithValue("hinhanh", product.Hh_HinhAnh);
-                if (comd.ExecuteNonQuery() > 0)
-                    return true;
-                else 
-                    return false;
-            }
-            catch(Exception)
-            {
-
-            }
-            finally
-            {
-                conn.Close ();
-            }
-
-            return false;
-        }
-        public bool UpdateProduct(DTO_HangHoa product)
-        {
-            SqlConnection conn = new SqlConnection(stringConnect);
-            try
-            {
-                conn.Open();
-                SqlCommand comd = new SqlCommand("UpdateProduct", conn);
-                comd.CommandType = CommandType.StoredProcedure;
-                comd.Parameters.AddWithValue("mahang", product.Hh_Ma);
-                comd.Parameters.AddWithValue("maloai", product.Lh_Ma);
-                comd.Parameters.AddWithValue("manuocsx", product.Nsx_Ma);
-                comd.Parameters.AddWithValue("manhacungcap", product.Ncc_ma);
-                comd.Parameters.AddWithValue("tenhang", product.Hh_Ten);
-                comd.Parameters.AddWithValue("soluonghang", product.Hh_SoLuong);
-                comd.Parameters.AddWithValue("motahang", product.Hh_MoTa);
-                comd.Parameters.AddWithValue("dongiahang", product.Hh_DonGia);
-                comd.Parameters.AddWithValue("hinhanh", product.Hh_HinhAnh);
+                comd.Parameters.AddWithValue("maDon", HDX.Hdx_Ma);
+                comd.Parameters.AddWithValue("makh",HDX.Ma_KH);
+                comd.Parameters.AddWithValue("emailtkht", HDX.Tkht_Email);
+                comd.Parameters.AddWithValue("ngaylap", HDX.Hdx_NgayLap);
                 if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -96,24 +58,24 @@ namespace DAL
 
             return false;
         }
-        public  bool DeleteProduct(string hh_ma)
+        public bool UpdateExportBills(DTO_HoaDonXuat HDX)
         {
-            //MessageBox.Show("Tầng DAL:" + hh_ma);
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                string query = "Delete from HANGHOA where HH_Ma = '" + hh_ma + "'";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                //MessageBox.Show(query);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("hh_ma", hh_ma);
-                if (cmd.ExecuteNonQuery() > 0)
+                SqlCommand comd = new SqlCommand("UpdateHDX", conn);
+                comd.CommandType = CommandType.StoredProcedure;
+                comd.Parameters.AddWithValue("maDon", HDX.Hdx_Ma);
+                comd.Parameters.AddWithValue("makh", HDX.Ma_KH);
+                comd.Parameters.AddWithValue("emailtkht", HDX.Tkht_Email);
+                comd.Parameters.AddWithValue("ngaylap", HDX.Hdx_NgayLap);
+                if (comd.ExecuteNonQuery() > 0)
                     return true;
                 else
                     return false;
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
@@ -124,15 +86,43 @@ namespace DAL
 
             return false;
         }
-        public DataTable SearchProduct(string tenhang)
+        public bool DeleteHDX(string mahdx)
+        {
+            //MessageBox.Show("Tầng DAL:" + hh_ma);
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                string query = "Delete from HOA_DON_XUAT where HDX_Ma = '" + mahdx + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                //MessageBox.Show(query);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("mahdx", mahdx);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return false;
+        }
+        public DataTable SearchHDX(string tenkh)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SearchProduct", conn);
+                SqlCommand comd = new SqlCommand("SearchHDX", conn);
                 comd.CommandType = CommandType.StoredProcedure;
-                comd.Parameters.AddWithValue("tenhanghoa", tenhang);
+                comd.Parameters.AddWithValue("tenkh", tenkh);
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
                 return data;

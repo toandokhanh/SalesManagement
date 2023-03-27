@@ -4,8 +4,9 @@
     "\\QLyBanVatTu",
     "\\QLyBanVatTu\\BUS",
     "\\QLyBanVatTu\\DAL",
-    "\\QLyBanVatTu\\GUI"
+    "\\QLyBanVatTu\\GUI",
+    "\\SQL"
   ],
-  "SelectedNode": "\\QLyBanVatTu\\DAL\\DAL_HangHoa.cs",
+  "SelectedNode": "\\QLyBanVatTu\\GUI\\frmStaffs.cs",
   "PreviewInSolutionExplorer": false
 }

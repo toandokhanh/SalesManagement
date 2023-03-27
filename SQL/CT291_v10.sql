@@ -328,7 +328,7 @@ END
 GO 
 
 GO
-CREATE PROC DeleteofProduct
+CREATE PROC DeleteProduct
 @mahang varchar(5)
 AS BEGIN
 DECLARE @kq BIT = 1

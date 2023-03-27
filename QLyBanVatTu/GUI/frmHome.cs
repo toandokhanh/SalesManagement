@@ -15,14 +15,17 @@ namespace GUI
 {
     public partial class frmHome : Form
     {
-        private string username;
-        private string password;
-        public frmHome(string username, string password)
+        private string role;
+        public frmHome(string role)
         {
             InitializeComponent();
-            this.username = username;
-            this.password = password;
-            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng";            
+            this.role = role;
+
+            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng ";
+            if (role == "PQ03")
+            {
+                guna2GradientButton7.Enabled = false;
+            }
         }
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
@@ -58,7 +61,8 @@ namespace GUI
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
-            frmBills fBills = new frmBills();
+            this.role = role;
+            frmBills fBills = new frmBills(role);
             this.Hide();
             fBills.ShowDialog();
             this.Show();
@@ -66,10 +70,12 @@ namespace GUI
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
+
             frmStaffs fStaffs = new frmStaffs();
             this.Hide();
             fStaffs.ShowDialog();
             this.Show();
+            
         }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)

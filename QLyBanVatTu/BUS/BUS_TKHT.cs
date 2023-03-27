@@ -29,12 +29,10 @@ namespace BUS
             string info = thkt.CheckLogin(TKHT);
             return info;
         }
-        public string checkPQ(string query, string lb ,SqlConnection conn)
+        public string checkRole(DTO_TKHT TKHT)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            DataSet dataset = new DataSet();
-            string ma = lb.ToString();
-            return ma;
+            string role = thkt.checkRole(TKHT);
+            return role;
         }
     }
 }

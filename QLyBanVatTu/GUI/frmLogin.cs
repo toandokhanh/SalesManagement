@@ -48,13 +48,12 @@ namespace  GUI
                     MessageBox.Show("Tài khoản hoặc mật khẩu không chích xác.");
                     return;               
             }
-            string query = "select PQ_ma from TKHT where TKHT_Email='" + txtUsername.Text + "'";
-            BUS_TKHT b = new BUS_TKHT();
-            b.checkPQ(query, label2.Text, conn);
-            frmHome fHome = new frmHome(txtUsername.Text, txtPassword.Text);
+            string getrole =  tkBLL.checkRole(tkht);
+            frmHome fHome = new frmHome(getrole);
             this.Hide();
             fHome.ShowDialog();
             this.Show();
+
 
         }
 
