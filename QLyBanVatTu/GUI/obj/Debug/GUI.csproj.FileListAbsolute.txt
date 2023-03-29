@@ -92,7 +92,6 @@ C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.exe
 C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.pdb
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
-C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmBills.resources
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmCustomers.resources
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmHome.resources
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmInformation.resources
@@ -150,3 +149,6 @@ C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.dll
 C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.pdb
 C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.pdb
 C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.pdb
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmImportBill.resources
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmExportBills.resources

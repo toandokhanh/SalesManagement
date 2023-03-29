@@ -62,7 +62,7 @@ namespace GUI
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             this.role = role;
-            frmBills fBills = new frmBills(role);
+            frmExportBills fBills = new frmExportBills(role);
             this.Hide();
             fBills.ShowDialog();
             this.Show();
@@ -83,9 +83,12 @@ namespace GUI
             this.Close();
         }
 
-        private void panelMain_Paint(object sender, PaintEventArgs e)
+        private void btnImportBill_Click(object sender, EventArgs e)
         {
-
+            frmImportBill fImportBill = new frmImportBill();
+            this.Hide(); 
+            fImportBill.ShowDialog();
+            this.Show();
         }
     }
 }
