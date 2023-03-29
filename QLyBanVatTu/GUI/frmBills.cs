@@ -30,9 +30,9 @@ namespace GUI
         {
             DAL_KhachHang khachhang = new DAL_KhachHang();
             DataTable dt = khachhang.GetCustomer();
-            cbCustomer.DisplayMember = "MA_KH";
-            cbCustomer.ValueMember = "TEN_KH";
-            cbCustomer.DataSource= dt;
+            cbBill.DisplayMember = "MA_KH";
+            cbBill.ValueMember = "TEN_KH";
+            cbBill.DataSource= dt;
         }
         private void LoadGridView()
         {
@@ -57,9 +57,9 @@ namespace GUI
             {
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
-                txtID.ReadOnly = true;
-                txtID.Text = dtgvExprotBill.CurrentRow.Cells[0].Value.ToString();
-                cbCustomer.SelectedValue = dtgvExprotBill.CurrentRow.Cells[1].Value.ToString();
+                txtName.ReadOnly = true;
+                txtName.Text = dtgvExprotBill.CurrentRow.Cells[0].Value.ToString();
+                cbBill.SelectedValue = dtgvExprotBill.CurrentRow.Cells[1].Value.ToString();
                 txtStaff.Text = dtgvExprotBill.CurrentRow.Cells[2].Value.ToString();
                 DateTimePicker.Text = dtgvExprotBill.CurrentRow.Cells[3].Value.ToString();
             }
@@ -75,8 +75,8 @@ namespace GUI
         {
             dtoHDX = new DTO_HoaDonXuat
             (
-                txtID.Text,
-                cbCustomer.SelectedValue.ToString(),
+                txtName.Text,
+                cbBill.SelectedValue.ToString(),
                 txtStaff.Text,
                 DateTimePicker.Value
 
@@ -91,6 +91,46 @@ namespace GUI
             {
                 MessBox("Thêm hóa đơn xuất không thành công", true);
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,3 +20,14 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\B
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.dll
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\BUS.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\BUS.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DAL.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DTO.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\bin\Debug\DTO.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\BUS\obj\Debug\BUS.pdb

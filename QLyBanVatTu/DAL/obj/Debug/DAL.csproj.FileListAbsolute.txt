@@ -16,3 +16,12 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DAL\obj\Debug\D
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.dll
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DAL.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DTO.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\bin\Debug\DTO.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\DAL\obj\Debug\DAL.pdb

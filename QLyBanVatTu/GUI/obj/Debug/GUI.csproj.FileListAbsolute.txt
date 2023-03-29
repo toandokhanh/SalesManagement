@@ -110,8 +110,6 @@ C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.pdb
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.CopyComplete
-C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.dll
-C:\Users\PC\source\repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BLL.pdb
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.exe.config
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.exe
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\SalesManagement\QLyBanVatTu\GUI\bin\Debug\GUI.pdb
@@ -146,3 +144,9 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\D
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.pdb
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.pdb
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.dll
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\BUS.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.pdb
