@@ -18,8 +18,7 @@ namespace  GUI
     public partial class frmLogin : Form
     {
         DTO_TKHT tkht = new DTO_TKHT();
-        BUS_TKHT tkBLL = new BUS_TKHT();
-        SqlConnection conn;
+        BUS_TKHT tkBLL = new BUS_TKHT();        
         public frmLogin()
         {
             InitializeComponent();
@@ -49,7 +48,8 @@ namespace  GUI
                     return;               
             }
             string getrole =  tkBLL.checkRole(tkht);
-            frmHome fHome = new frmHome(getrole);
+            string getemail = tkBLL.CheckLogin(tkht);
+            frmHome fHome = new frmHome(getrole, getemail);
             this.Hide();
             fHome.ShowDialog();
             this.Show();

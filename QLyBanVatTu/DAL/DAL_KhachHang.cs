@@ -11,7 +11,6 @@ namespace DAL
 {
     public class DAL_KhachHang
     {
-        DTO_KhachHang dtokhachhang = new DTO_KhachHang();
         string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
         public DataTable ListCustomers()
         {
@@ -52,7 +51,7 @@ namespace DAL
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -82,7 +81,7 @@ namespace DAL
                     return false;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -155,6 +154,20 @@ namespace DAL
                 conn.Close();
             }
             return table;
+        }
+        public string GetFieldValues(string sql)
+        {
+            string ma = "";
+            SqlConnection conn = new SqlConnection(stringConnect);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+                ma = reader.GetValue(0).ToString();
+            reader.Close();
+            conn.Close();
+            return ma;
         }
     }
 }

@@ -95,6 +95,7 @@ CREATE TABLE [dbo].[HOA_DON_XUAT](
 	[MA_KH] [varchar](5) NULL,
 	[TKHT_Email] [varchar](30) NOT NULL,
 	[HDX_NgayLap] [date] NULL,
+	[HDN_TongTien] [float] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[HDX_Ma] ASC
@@ -108,6 +109,7 @@ CREATE TABLE [dbo].[HOA_DON_NHAP](
 	[NCC_Ma] [varchar](5) NULL,
 	[TKHT_Email] [varchar](30) NOT NULL,
 	[HDN_NgayNhap] [date] NULL,
+	[HDN_TongTien] [float] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[HDN_Ma] ASC
@@ -290,7 +292,7 @@ GO
 
 
 GO
-CREATE PROCEDURE InsertProduct
+CREATE PROCEDURE [dbo].[InsertofProducts]
     @mahang VARCHAR(5),
     @maloai VARCHAR(5),
     @manuocsx VARCHAR(6),
@@ -304,7 +306,7 @@ CREATE PROCEDURE InsertProduct
 AS
 BEGIN
     INSERT INTO HANGHOA
-    VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @motahang, @dongiahang, @hinhanh, @soluonghang)
+    VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @soluonghang, @motahang, @dongiahang, @hinhanh)
 END
 GO
 Go

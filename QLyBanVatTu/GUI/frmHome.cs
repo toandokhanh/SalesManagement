@@ -16,10 +16,12 @@ namespace GUI
     public partial class frmHome : Form
     {
         private string role;
-        public frmHome(string role)
+        private string email;
+        public frmHome(string role, string email)
         {
             InitializeComponent();
             this.role = role;
+            this.email = email;
 
             lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng ";
             if (role == "PQ03")
@@ -62,7 +64,8 @@ namespace GUI
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             this.role = role;
-            frmExportBills fBills = new frmExportBills(role);
+            this.email = email;
+            frmExportBills fBills = new frmExportBills(role, email);
             this.Hide();
             fBills.ShowDialog();
             this.Show();

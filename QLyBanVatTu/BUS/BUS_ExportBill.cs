@@ -12,9 +12,9 @@ namespace BUS
     public class BUS_ExportBill
     {
         DAL_ExportBills dalHDX = new DAL_ExportBills();
-        public DataTable ListExportBill()
+        public DataTable ListExportBill(string ma)
         {
-            return dalHDX.ListExportBills();
+            return dalHDX.ListExportBills(ma);
         }
         public bool InsertExportBills(DTO_HoaDonXuat bushdx)
         {

@@ -22,29 +22,34 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private bool CheckIsNummber(string text)
+        {
+            return int.TryParse(text, out int s);
+        }
         private void LoadComboBoxNuocSanXuat()
         {
             DAL_NuocSanXuat NuocSanXuat = new DAL_NuocSanXuat();
             DataTable dt = NuocSanXuat.GetProduct();
-            guna2ComboBox2.DisplayMember= "NSX_Ten";
-            guna2ComboBox2.ValueMember= "NSX_Ma";
-            guna2ComboBox2.DataSource= dt;
+            cbNuocSX.DisplayMember= "NSX_Ten";
+            cbNuocSX.ValueMember= "NSX_Ma";
+            cbNuocSX.DataSource= dt;
         }
         private void LoadComboBoxLoaiHang()
         {
             DAL_LoaiHang LoaiHang = new DAL_LoaiHang();
             DataTable dt = LoaiHang.GetLoaiHang();
-            guna2ComboBox1.DisplayMember = "LH_Ten";
-            guna2ComboBox1.ValueMember = "LH_Ma";
-            guna2ComboBox1.DataSource = dt;
+            cbLoaiVT.DisplayMember = "LH_Ten";
+            cbLoaiVT.ValueMember = "LH_Ma";
+            cbLoaiVT.DataSource = dt;
         }
         private void LoadComboBoxNhaCungCap()
         {
             DAL_NhaCungCap NhaCungCap = new DAL_NhaCungCap();
             DataTable dt = NhaCungCap.GetNhaCungCap();
-            guna2ComboBox3.DisplayMember = "NCC_Ten";
-            guna2ComboBox3.ValueMember = "NCC_Ma";
-            guna2ComboBox3.DataSource = dt;
+            cbNCC.DisplayMember = "NCC_Ten";
+            cbNCC.ValueMember = "NCC_Ma";
+            cbNCC.DataSource = dt;
         }
         private void LoadGridView()
         {
@@ -77,34 +82,58 @@ namespace GUI
             LoadComboBoxNuocSanXuat();
             LoadComboBoxLoaiHang();
             LoadComboBoxNhaCungCap();
+            cbLoaiVT.SelectedIndex = -1;
+            cbNCC.SelectedIndex = -1;
+            cbNuocSX.SelectedIndex = -1;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            dto_HangHoa = new DTO_HangHoa
-            (
-                txtIDProduct.Text,
-                guna2ComboBox1.SelectedValue.ToString(),
-                guna2ComboBox2.SelectedValue.ToString(),
-                guna2ComboBox3.SelectedValue.ToString(),
-                guna2TextBox2.Text,
-                int.Parse(guna2TextBox3.Text),
-                guna2TextBox4.Text,
-                float.Parse(guna2TextBox5.Text),
-                guna2TextBox7.Text
-
-            );
-            if (busproduct.InsertProduct(dto_HangHoa))
-            {
-                dtgvProduct.DataSource= busproduct.ListProduct();
-                LoadGridView();
-                MessBox("thêm vật tư thành công");
-            }
+            if (txtIDProduct.Text == "")
+                MessBox("Vui lòng nhập mã đơn", true);
+            else if (txtName.Text == "")
+                MessBox("Vui lòng nhập tên vật tư!", true);
+            else if (txtNumber.Text == "")
+                MessBox("Vui lòng nhập số lượng vật tư", true);
+            else if (txtPrice.Text == "")
+                MessBox("Vui lòng nhập đơn giá vật tư", true);
+            else if (cbLoaiVT.SelectedIndex == -1)
+                MessBox("Vui lòng chọn loại vật tư", true);
+            else if (cbNuocSX.SelectedIndex == -1)
+                MessBox("Vui lòng chọn nước sản xuất",true);
+            else if (cbNCC.SelectedIndex == -1)
+                MessBox("Vui lòng chọn nhà cung cấp", true);
+            else if (!CheckIsNummber(txtNumber.Text) || !CheckIsNummber(txtPrice.Text))
+                MessBox("Vui lòng nhập chữ số!", true);
+            else if (guna2PictureBox1.Image == null)
+                MessBox("Vui lòng chọn hình!", true);
             else
             {
-                MessBox("Thêm vật tư không được",true);
+                dto_HangHoa = new DTO_HangHoa
+                    (
+                        txtIDProduct.Text,
+                        cbLoaiVT.SelectedValue.ToString(),
+                        cbNuocSX.SelectedValue.ToString(),
+                        cbNCC.SelectedValue.ToString(),
+                        txtName.Text,
+                        int.Parse(txtNumber.Text),
+                        txtMoTa.Text,
+                        float.Parse(txtPrice.Text),
+                        txtImg.Text
+
+                    );
+                if (busproduct.InsertProduct(dto_HangHoa))
+                {
+                    dtgvProduct.DataSource = busproduct.ListProduct();
+                    LoadGridView();
+                    MessBox("Thêm vật tư thành công");
+                }
+                else
+                {
+                    MessBox("Thêm vật tư không thành công", true);
+                }
             }
-                
+
         }
 
         private void dtgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -115,17 +144,17 @@ namespace GUI
                 btnDelete.Enabled = true;
                 txtIDProduct.ReadOnly= true;
                 txtIDProduct.Text = dtgvProduct.CurrentRow.Cells[0].Value.ToString();
-                guna2ComboBox1.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
-                guna2ComboBox2.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
-                guna2ComboBox3.SelectedValue= dtgvProduct.CurrentRow.Cells[3].Value.ToString();
-                guna2TextBox2.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
-                guna2TextBox3.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
-                guna2TextBox4.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
-                guna2TextBox5.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
-                guna2TextBox7.Text = dtgvProduct.CurrentRow.Cells[8].Value.ToString();
-                if (guna2TextBox7.Text != "")
+                cbLoaiVT.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
+                cbNuocSX.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
+                cbNCC.SelectedValue= dtgvProduct.CurrentRow.Cells[3].Value.ToString();
+                txtName.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
+                txtNumber.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
+                txtMoTa.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
+                txtPrice.Text = dtgvProduct.CurrentRow.Cells[7].Value.ToString();
+                txtImg.Text = dtgvProduct.CurrentRow.Cells[8].Value.ToString();
+                if (txtImg.Text != "")
                 {
-                    string linkImage = guna2TextBox7.Text;
+                    string linkImage = txtImg.Text;
                     guna2PictureBox1.Image = Image.FromFile(linkImage);
                     guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -138,28 +167,37 @@ namespace GUI
         {
             if (MessageBox.Show("Bạn có chắc muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                dto_HangHoa = new DTO_HangHoa
-                (
-                    txtIDProduct.Text,
-                    guna2ComboBox1.SelectedValue.ToString(),
-                    guna2ComboBox2.SelectedValue.ToString(),
-                    guna2ComboBox3.SelectedValue.ToString(),
-                    guna2TextBox2.Text,
-                    int.Parse(guna2TextBox3.Text),
-                    guna2TextBox4.Text,
-                    float.Parse(guna2TextBox5.Text),
-                    guna2TextBox7.Text
-
-                );
-                if (busproduct.UpdateProduct(dto_HangHoa))
-                {
-                    dtgvProduct.DataSource = busproduct.ListProduct();
-                    LoadGridView();
-                    MessBox("Sửa vật tư thành công");
-                }
+                if (!CheckIsNummber(txtNumber.Text) || !CheckIsNummber(txtPrice.Text))
+                    MessBox("Vui lòng nhập chữ số!", true);
+                else if (txtName.Text == "")
+                    MessBox("Vui lòng nhập tên vật tư!", true);
+                else if (guna2PictureBox1.Image == null)
+                    MessBox("Vui lòng chọn hình!", true);
                 else
                 {
-                    MessBox("Sửa vật tư không thành công", true);
+                    dto_HangHoa = new DTO_HangHoa
+                    (
+                        txtIDProduct.Text,
+                        cbLoaiVT.SelectedValue.ToString(),
+                        cbNuocSX.SelectedValue.ToString(),
+                        cbNCC.SelectedValue.ToString(),
+                        txtName.Text,
+                        int.Parse(txtNumber.Text),
+                        txtMoTa.Text,
+                        float.Parse(txtPrice.Text),
+                        txtImg.Text
+
+                    );
+                    if (busproduct.UpdateProduct(dto_HangHoa))
+                    {
+                        dtgvProduct.DataSource = busproduct.ListProduct();
+                        LoadGridView();
+                        MessBox("Sửa vật tư thành công");
+                    }
+                    else
+                    {
+                        MessBox("Sửa vật tư không thành công", true);
+                    }
                 }
             }
         }
@@ -188,13 +226,14 @@ namespace GUI
         {
             txtIDProduct.ReadOnly = false;
             txtIDProduct.Text = null;
-            guna2ComboBox1.SelectedValue.ToString();
-            guna2ComboBox2.SelectedValue.ToString();
-            guna2TextBox2.Text = null;
-            guna2TextBox3.Text = null;
-            guna2TextBox4.Text = null;
-            guna2TextBox5.Text = null;
-            guna2TextBox7.Text = null;
+            cbLoaiVT.SelectedIndex = -1;
+            cbNuocSX.SelectedIndex = -1;
+            cbNCC.SelectedIndex = -1;
+            txtName.Text = null;
+            txtNumber.Text = null;
+            txtMoTa.Text = null;
+            txtPrice.Text = null;
+            txtImg.Text = null;
             guna2PictureBox1.Image = null;
         }
 
@@ -207,7 +246,7 @@ namespace GUI
             {
                 guna2PictureBox1.Image = new Bitmap(open.FileName);
                 guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                guna2TextBox7.Text = open.FileName;
+                txtImg.Text = open.FileName;
             }
         }
 

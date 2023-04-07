@@ -51,22 +51,29 @@ namespace GUI
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            dtokhachhang = new DTO_KhachHang
-            (
-                txtID.Text,
-                txtName.Text,
-                txtAddress.Text,
-                txtPhone.Text
-            );
-            if (buskhachhang.InsertCustomer(dtokhachhang))
+            if (txtID.Text != "" && txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
             {
-                dtgvCustomer.DataSource = buskhachhang.ListCustomer();
-                LoadGridView();
-                MessBox("Thêm khách hàng thành công");
+                dtokhachhang = new DTO_KhachHang
+                (
+                    txtID.Text,
+                    txtName.Text,
+                    txtAddress.Text,
+                    txtPhone.Text
+                );
+                if (buskhachhang.InsertCustomer(dtokhachhang))
+                {
+                    dtgvCustomer.DataSource = buskhachhang.ListCustomer();
+                    LoadGridView();
+                    MessBox("Thêm khách hàng thành công");
+                }
+                else
+                {
+                    MessBox("Thêm khách hàng không thành công", true);
+                }
             }
             else
             {
-                MessBox("Thêm khách hàng không thành công", true);
+                MessBox("Vui lòng nhập nhập đầy đủ thông tin", true);
             }
 
 
@@ -97,23 +104,30 @@ namespace GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtID.Text != "" && txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
             {
-                dtokhachhang = new DTO_KhachHang
-                (
-                    txtID.Text,
-                    txtName.Text,
-                    txtAddress.Text,
-                    txtPhone.Text
-                );
-                if (buskhachhang.UpdateCustomer(dtokhachhang))
+                if (MessageBox.Show("Bạn có chắc muốn sửa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dtgvCustomer.DataSource = buskhachhang.ListCustomer();
-                    LoadGridView();
-                    MessBox("Sửa thông tin khách hàng thành công");
+                    dtokhachhang = new DTO_KhachHang
+                    (
+                        txtID.Text,
+                        txtName.Text,
+                        txtAddress.Text,
+                        txtPhone.Text
+                    );
+                    if (buskhachhang.UpdateCustomer(dtokhachhang))
+                    {
+                        dtgvCustomer.DataSource = buskhachhang.ListCustomer();
+                        LoadGridView();
+                        MessBox("Sửa thông tin khách hàng thành công");
+                    }
+                    else
+                        MessBox("Sửa thông tin khách hàng không thành công", true);
                 }
                 else
-                    MessBox("Sửa thông tin khách hàng không thành công",true);
+                {
+                    MessBox("Vui lòng kiểm tra lại thông tin thông tin", true);
+                }
             }
         }
 

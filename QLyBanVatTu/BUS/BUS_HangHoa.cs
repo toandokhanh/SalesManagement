@@ -20,6 +20,8 @@ namespace BUS
         public bool InsertProduct(DTO_HangHoa product) 
         {
             return dalproduct.InsertProduct(product);
+            
+
         }
         public bool UpdateProduct(DTO_HangHoa product) 
         {
