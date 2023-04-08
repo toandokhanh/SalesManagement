@@ -56,7 +56,6 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\G
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\Guna.UI2.dll
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
-D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmBills.resources
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmCustomers.resources
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmHome.resources
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmInformation.resources
@@ -152,3 +151,8 @@ C:\Users\PC\Source\Repos\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DTO.pdb
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmImportBill.resources
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmExportBills.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmExportBills.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmImportBill.resources
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.xml

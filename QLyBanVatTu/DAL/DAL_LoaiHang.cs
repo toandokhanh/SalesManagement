@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DAL_LoaiHang
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         public DataTable GetLoaiHang()
         {
             SqlConnection conn = new SqlConnection(stringConnect);

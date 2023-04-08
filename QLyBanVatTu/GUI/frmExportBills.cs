@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using COMExcel = Microsoft.Office.Interop.Excel;
 
@@ -12,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -99,6 +100,31 @@ namespace GUI
             cbIDProduct.SelectedIndex = -1;
             dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
             LoadDataGV();
+            //code nửa mùa của anh tònh
+            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+            SqlConnection conn = new SqlConnection(stringConnect);
+            conn.Open();
+            string query = "SELECT MAX(HDX_ma) AS Largest_hdx_ma FROM HOA_DON_XUAT";
+            SqlCommand command = new SqlCommand(query, conn);
+            string largestHHMa = command.ExecuteScalar().ToString();
+            string a, b;
+            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
+            if (match.Success)
+            {
+                a = match.Groups[1].Value; // Lưu "LH" vào biến a
+                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
+                int intValue;
+                if (int.TryParse(b, out intValue))
+                {
+                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+                    int intB = intValue;
+                    intB++;
+                    string newID = a + intB.ToString();
+                    txtIDExprotBill.Text = newID;
+                }
+            }
+
+            conn.Close();
 
         }
 
@@ -108,7 +134,7 @@ namespace GUI
             if (cbCustomer.SelectedItem != null)
             {
                 string ma = cbCustomer.SelectedValue.ToString();
-                string query = "Select * from KHACH_HANG where Ma_KH = @Ma";
+                string query = "Select * from KHACH_HANG where MA_KH = @Ma";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@Ma", ma);
                 connection.Open();
@@ -186,7 +212,7 @@ namespace GUI
         private void btnInsert_Click(object sender, System.EventArgs e)
         {
             SqlConnection conn = new SqlConnection(stringConnect);
-            string sql = "Select HDX_Ma from HOA_DON_XUAT where HDX_Ma = '" + txtIDExprotBill + "'";
+            string sql = "Select HDX_Ma from HOA_DON_XUAT where HDX_Ma = '" + txtIDExprotBill.Text + "'";
             if(!dalHDX.CheckKey(sql))
             {
                 //Mã hóa đơn chưa có, tiến hành lưu các thông tin chung
@@ -544,6 +570,213 @@ namespace GUI
             txtTotalBill.Text = "";
             txtTotalProduct.Text = "";
             dtgvExportBill.ClearSelection();
+        }
+
+        private void cbHDX_Ma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbHDX_Ma_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txtIDExprotBill.Text = cbHDX_Ma.Text;
+            LoadComboBoxKhachHang();
+            LoadComboBoxTKHT(role, email);
+            LoadComboBoxVatTu();
+            string query = "Select HDX_NgayLap from HOA_DON_XUAT where HDX_Ma = '" + txtIDExprotBill.Text + "'";
+            datepicker.Text = dalHDX.GetFieldValues(query);
+            dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
+            LoadDataGV();
+        }
+
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStaff_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datepicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNameCustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgvExportBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtIntro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotalProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotalBill_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNameProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIDExprotBill_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPQNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DAL_KhachHang
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         public DataTable ListCustomers()
         {
             SqlConnection conn = new SqlConnection(stringConnect);

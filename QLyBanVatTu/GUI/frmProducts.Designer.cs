@@ -148,12 +148,14 @@
             this.txtIDProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtIDProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIDProduct.ForeColor = System.Drawing.Color.White;
             this.txtIDProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDProduct.Location = new System.Drawing.Point(179, 43);
             this.txtIDProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDProduct.Name = "txtIDProduct";
             this.txtIDProduct.PasswordChar = '\0';
             this.txtIDProduct.PlaceholderText = "";
+            this.txtIDProduct.ReadOnly = true;
             this.txtIDProduct.SelectedText = "";
             this.txtIDProduct.Size = new System.Drawing.Size(184, 36);
             this.txtIDProduct.TabIndex = 17;
@@ -168,7 +170,7 @@
             this.cbLoaiVT.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiVT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiVT.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLoaiVT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiVT.ForeColor = System.Drawing.Color.White;
             this.cbLoaiVT.ItemHeight = 30;
             this.cbLoaiVT.Location = new System.Drawing.Point(179, 152);
             this.cbLoaiVT.Name = "cbLoaiVT";
@@ -185,7 +187,7 @@
             this.cbNuocSX.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNuocSX.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNuocSX.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNuocSX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNuocSX.ForeColor = System.Drawing.Color.White;
             this.cbNuocSX.ItemHeight = 30;
             this.cbNuocSX.Location = new System.Drawing.Point(179, 209);
             this.cbNuocSX.Name = "cbNuocSX";
@@ -204,6 +206,7 @@
             this.txtMoTa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtMoTa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMoTa.ForeColor = System.Drawing.Color.White;
             this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoTa.Location = new System.Drawing.Point(530, 209);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -313,6 +316,7 @@
             this.guna2TextBox6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox6.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.Location = new System.Drawing.Point(899, 264);
             this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -436,6 +440,7 @@
             this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(179, 98);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -458,6 +463,7 @@
             this.txtNumber.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNumber.ForeColor = System.Drawing.Color.White;
             this.txtNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNumber.Location = new System.Drawing.Point(530, 100);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -480,6 +486,7 @@
             this.txtPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrice.ForeColor = System.Drawing.Color.White;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Location = new System.Drawing.Point(530, 155);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -577,6 +584,7 @@
             this.txtImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtImg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtImg.ForeColor = System.Drawing.Color.White;
             this.txtImg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImg.Location = new System.Drawing.Point(899, 209);
             this.txtImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -617,7 +625,7 @@
             this.cbNCC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNCC.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNCC.ForeColor = System.Drawing.Color.White;
             this.cbNCC.ItemHeight = 30;
             this.cbNCC.Location = new System.Drawing.Point(530, 43);
             this.cbNCC.Name = "cbNCC";

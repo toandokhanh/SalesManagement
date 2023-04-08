@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml;
+using Guna.UI2.WinForms;
 
 namespace GUI
 {
@@ -44,7 +50,31 @@ namespace GUI
         }
         private void frmCustomers_Load(object sender, EventArgs e)
         {
+            //code nửa mùa của anh tònh
+            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+            SqlConnection conn = new SqlConnection(stringConnect);
+            conn.Open();
+            string query = "SELECT MAX(ma_KH) AS Largest_ma_kh FROM KHACH_HANG";
+            SqlCommand command = new SqlCommand(query, conn);
+            string largestHHMa = command.ExecuteScalar().ToString();
+            string a, b;
+            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
+            if (match.Success)
+            {
+                a = match.Groups[1].Value; // Lưu "LH" vào biến a
+                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
+                int intValue;
+                if (int.TryParse(b, out intValue))
+                {
+                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+                    int intB = intValue;
+                    intB++;
+                    string newID = a + intB.ToString();
+                    txtID.Text = newID;
+                }
+            }
 
+            conn.Close();
             dtgvCustomer.DataSource = buskhachhang.ListCustomer();
             LoadGridView();
         }
@@ -65,6 +95,31 @@ namespace GUI
                     dtgvCustomer.DataSource = buskhachhang.ListCustomer();
                     LoadGridView();
                     MessBox("Thêm khách hàng thành công");
+                    //code nửa mùa của anh tònh
+                    string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+                    SqlConnection conn = new SqlConnection(stringConnect);
+                    conn.Open();
+                    string query = "SELECT MAX(ma_KH) AS Largest_ma_kh FROM KHACH_HANG";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    string largestHHMa = command.ExecuteScalar().ToString();
+                    string a, b;
+                    Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
+                    if (match.Success)
+                    {
+                        a = match.Groups[1].Value; // Lưu "LH" vào biến a
+                        b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
+                        int intValue;
+                        if (int.TryParse(b, out intValue))
+                        {
+                            // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+                            int intB = intValue;
+                            intB++;
+                            string newID = a + intB.ToString();
+                            txtID.Text = newID;
+                        }
+                    }
+
+                    conn.Close();
                 }
                 else
                 {
@@ -162,6 +217,77 @@ namespace GUI
             {
                 DataTable table = buskhachhang.SearchCustomer(kh);
                 dtgvCustomer.DataSource = table;
+            }
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(dtgvCustomer);
+        }
+
+        public void ExportToExcel(DataGridView dataGridView)
+        {
+
+            // Định dạng lại theo chuẩn của SQL Server
+            string fileName = "DanhSachKhachhang.xlsx";
+            SpreadsheetDocument document = SpreadsheetDocument.Create(fileName, SpreadsheetDocumentType.Workbook);
+
+            // Tạo các sheet và cấu hình file excel
+            WorkbookPart workbookPart = document.AddWorkbookPart();
+            workbookPart.Workbook = new Workbook();
+
+            WorksheetPart worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
+            worksheetPart.Worksheet = new Worksheet(new SheetData());
+
+            Sheets sheets = workbookPart.Workbook.AppendChild(new Sheets());
+            Sheet sheet = new Sheet() { Id = workbookPart.GetIdOfPart(worksheetPart), SheetId = 1, Name = "Sheet 1" };
+            sheets.Append(sheet);
+
+            // Đổ data từ datagridview vào file excel
+            SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+
+            Row headerRow = new Row();
+
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                headerRow.AppendChild(CreateCell(column.HeaderText));
+            }
+
+            sheetData.AppendChild(headerRow);
+
+            foreach (DataGridViewRow dataGridViewRow in dataGridView.Rows)
+            {
+                Row row = new Row();
+
+                foreach (DataGridViewCell cell in dataGridViewRow.Cells)
+                {
+                    string cellValue = cell.Value != null ? cell.Value.ToString() : "";
+                    row.AppendChild(CreateCell(cellValue));
+                }
+                sheetData.AppendChild(row);
+            }
+            Row totalRow = new Row();
+
+            worksheetPart.Worksheet.Save();
+
+            workbookPart.Workbook.Save();
+
+            document.Close();
+
+            // Mở file excel sau khi export thành công
+            System.Diagnostics.Process.Start(fileName);
+        }
+
+        // Hàm tạo một cell với giá trị được cung cấp
+        private Cell CreateCell(string text)
+        {
+            if (int.TryParse(text, out int result))
+            {
+                return new Cell(new CellValue(result.ToString())) { DataType = CellValues.Number };
+            }
+            else
+            {
+                return new Cell(new CellValue(text ?? string.Empty)) { DataType = CellValues.String };
             }
         }
     }

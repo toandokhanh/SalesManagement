@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +18,7 @@ namespace GUI
     {
         DAL_ImportBill dalImportBill = new DAL_ImportBill();
         BUS_ImportBill busImportBill = new BUS_ImportBill();
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         private string role;
         private string email;
         public frmImportBill(string role, string email)
@@ -87,6 +89,21 @@ namespace GUI
             cbIDProduct.SelectedIndex = -1;
             dtgvImportBill.DataSource = busImportBill.ListImportBill(txtIDExprotBill.Text);
             LoadDataGV();
+        }
+
+        private void cbPQNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

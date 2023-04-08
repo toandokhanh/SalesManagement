@@ -23,7 +23,7 @@ namespace GUI
             this.role = role;
             this.email = email;
 
-            lbUserName.Text = "Xin chào đến với trang quản trị hệ thống quản lý vật tư xây dựng ";
+            lbUserName.Text = "Xin chào "+email+" ";
             if (role == "PQ03")
             {
                 guna2GradientButton7.Enabled = false;
@@ -74,10 +74,11 @@ namespace GUI
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
 
-            frmStaffs fStaffs = new frmStaffs();
-            this.Hide();
-            fStaffs.ShowDialog();
-            this.Show();
+            //frmStaffs fStaffs = new frmStaffs();
+            //this.Hide();
+            //fStaffs.ShowDialog();
+            //this.Show();
+            MessageBox.Show("Đang update ...");
             
         }
 
@@ -94,6 +95,11 @@ namespace GUI
             this.Hide(); 
             fImportBill.ShowDialog();
             this.Show();
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

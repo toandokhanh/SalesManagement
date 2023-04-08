@@ -8,10 +8,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace GUI
 {
     public partial class frmProducts : Form
@@ -54,7 +56,7 @@ namespace GUI
         private void LoadGridView()
         {
             dtgvProduct.Columns[0].HeaderText = "Mã hàng";
-            dtgvProduct.Columns[1].HeaderText = "Mã loại hàng";
+            dtgvProduct.Columns[1].HeaderText = "Loại hàng";
             dtgvProduct.Columns[2].HeaderText = "Nước sản xuất";
             dtgvProduct.Columns[3].HeaderText = "Nhà cung cấp";
             dtgvProduct.Columns[4].HeaderText = "Tên hàng";
@@ -85,10 +87,36 @@ namespace GUI
             cbLoaiVT.SelectedIndex = -1;
             cbNCC.SelectedIndex = -1;
             cbNuocSX.SelectedIndex = -1;
+            //code nửa mùa của anh tònh
+            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+            SqlConnection conn = new SqlConnection(stringConnect);
+            conn.Open();
+            string query = "SELECT MAX(HH_ma) AS Largest_HH_ma FROM HANGHOA";
+            SqlCommand command = new SqlCommand(query, conn);
+            string largestHHMa = command.ExecuteScalar().ToString();
+            string a, b;
+            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
+            if (match.Success)
+            {
+                a = match.Groups[1].Value; // Lưu "LH" vào biến a
+                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
+                int intValue;
+                if (int.TryParse(b, out intValue))
+                {
+                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+                    int intB = intValue;
+                    intB++;
+                    string newID = a + intB.ToString();
+                    txtIDProduct.Text = newID;
+                }
+            }
+            
+            conn.Close();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+
             if (txtIDProduct.Text == "")
                 MessBox("Vui lòng nhập mã đơn", true);
             else if (txtName.Text == "")
@@ -109,6 +137,8 @@ namespace GUI
                 MessBox("Vui lòng chọn hình!", true);
             else
             {
+               
+
                 dto_HangHoa = new DTO_HangHoa
                     (
                         txtIDProduct.Text,
@@ -127,6 +157,31 @@ namespace GUI
                     dtgvProduct.DataSource = busproduct.ListProduct();
                     LoadGridView();
                     MessBox("Thêm vật tư thành công");
+                    //code nửa mùa của anh tònh
+                    string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+                    SqlConnection conn = new SqlConnection(stringConnect);
+                    conn.Open();
+                    string query = "SELECT MAX(HH_ma) AS Largest_HH_ma FROM HANGHOA";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    string largestHHMa = command.ExecuteScalar().ToString();
+                    string a, b;
+                    Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
+                    if (match.Success)
+                    {
+                        a = match.Groups[1].Value; // Lưu "LH" vào biến a
+                        b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
+                        int intValue;
+                        if (int.TryParse(b, out intValue))
+                        {
+                            // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+                            int intB = intValue;
+                            intB++;
+                            string newID = a + intB.ToString();
+                            txtIDProduct.Text = newID;
+                        }
+                    }
+
+                    conn.Close();
                 }
                 else
                 {
@@ -144,9 +199,9 @@ namespace GUI
                 btnDelete.Enabled = true;
                 txtIDProduct.ReadOnly= true;
                 txtIDProduct.Text = dtgvProduct.CurrentRow.Cells[0].Value.ToString();
-                cbLoaiVT.SelectedValue = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
-                cbNuocSX.SelectedValue = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
-                cbNCC.SelectedValue= dtgvProduct.CurrentRow.Cells[3].Value.ToString();
+                cbLoaiVT.Text = dtgvProduct.CurrentRow.Cells[1].Value.ToString();
+                cbNuocSX.Text = dtgvProduct.CurrentRow.Cells[2].Value.ToString();
+                cbNCC.Text = dtgvProduct.CurrentRow.Cells[3].Value.ToString();
                 txtName.Text = dtgvProduct.CurrentRow.Cells[4].Value.ToString();
                 txtNumber.Text = dtgvProduct.CurrentRow.Cells[5].Value.ToString();
                 txtMoTa.Text = dtgvProduct.CurrentRow.Cells[6].Value.ToString();
@@ -204,20 +259,27 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string ma = txtIDProduct.Text;
-            if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtIDProduct.Text == "")
             {
-                if (ma != null)
+                MessageBox.Show("VUi lòng chọn vật tư cần xóa");
+            }
+            else
+            {
+                string ma = txtIDProduct.Text;
+                if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //MessageBox.Show(ma);
-                    busproduct.DeleteProduct(ma);
-                    dtgvProduct.DataSource = busproduct.ListProduct();
-                    LoadGridView();
-                    MessBox("Xóa vật tư thành công");
-                }
-                else
-                {
-                    MessBox("Xóa không thành công", true);
+                    if (ma != null)
+                    {
+                        //MessageBox.Show(ma);
+                        busproduct.DeleteProduct(ma);
+                        dtgvProduct.DataSource = busproduct.ListProduct();
+                        LoadGridView();
+                        MessBox("Xóa vật tư thành công");
+                    }
+                    else
+                    {
+                        MessBox("Xóa không thành công", true);
+                    }
                 }
             }
         }

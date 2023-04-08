@@ -13,7 +13,7 @@ namespace DAL
 {
     public class DAL_HangHoa 
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
 
         public DataTable ListProduct()
         {
@@ -21,7 +21,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SELECT * FROM dbo.HANGHOA", conn);
+                SqlCommand comd = new SqlCommand("SELECT \r\n    HH.HH_Ma,\r\n    LH.LH_Ten,\r\n    NSX.NSX_Ten,\r\n    NCC.NCC_Ten,\r\n    HH.HH_Ten,\r\n    HH.HH_SoLuong,\r\n    HH.HH_MoTa,\r\n    HH.HH_DonGia,\r\n    HH.HH_HinhAnh\r\nFROM [HANGHOA] AS HH\r\nINNER JOIN [LOAI_HANG] AS LH ON HH.LH_Ma = LH.LH_Ma\r\nINNER JOIN [NUOC_SAN_XUAT] AS NSX ON NSX.NSX_Ma =HH.NSX_Ma \r\nINNER JOIN [NHA_CUNG_CAP] AS NCC ON NCC.NCC_Ma = HH.NCC_Ma ", conn);
                 comd.CommandType = CommandType.Text;
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());
@@ -240,6 +240,25 @@ namespace DAL
             reader.Close();
             conn.Close();
             return ma;
+        }
+
+        //code a tonh 
+        public DataTable ListRevenue()
+        {
+            SqlConnection conn = new SqlConnection(stringConnect);
+            try
+            {
+                conn.Open();
+                SqlCommand comd = new SqlCommand("SELECT \r\n    HH.HH_Ma,\r\n    LH.LH_Ten,\r\n    NSX.NSX_Ten,\r\n    NCC.NCC_Ten,\r\n    HH.HH_Ten,\r\n    HH.HH_SoLuong,\r\n    HH.HH_MoTa,\r\n    HH.HH_DonGia,\r\n    HH.HH_HinhAnh\r\nFROM [HANGHOA] AS HH\r\nINNER JOIN [LOAI_HANG] AS LH ON HH.LH_Ma = LH.LH_Ma\r\nINNER JOIN [NUOC_SAN_XUAT] AS NSX ON NSX.NSX_Ma =HH.NSX_Ma \r\nINNER JOIN [NHA_CUNG_CAP] AS NCC ON NCC.NCC_Ma = HH.NCC_Ma ", conn);
+                comd.CommandType = CommandType.Text;
+                DataTable data = new DataTable();
+                data.Load(comd.ExecuteReader());
+                return data;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
