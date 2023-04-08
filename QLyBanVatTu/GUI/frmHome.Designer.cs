@@ -35,13 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnImportBill = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnImportBill = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,6 +146,28 @@
             this.guna2GradientButton7.TabIndex = 12;
             this.guna2GradientButton7.Text = "Quản lý nhân viên";
             this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
+            // 
+            // btnImportBill
+            // 
+            this.btnImportBill.BorderColor = System.Drawing.Color.Transparent;
+            this.btnImportBill.BorderRadius = 8;
+            this.btnImportBill.BorderThickness = 2;
+            this.btnImportBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImportBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImportBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImportBill.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImportBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImportBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(90)))), ((int)(((byte)(249)))));
+            this.btnImportBill.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
+            this.btnImportBill.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnImportBill.ForeColor = System.Drawing.Color.White;
+            this.btnImportBill.Location = new System.Drawing.Point(714, 366);
+            this.btnImportBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImportBill.Name = "btnImportBill";
+            this.btnImportBill.Size = new System.Drawing.Size(264, 80);
+            this.btnImportBill.TabIndex = 12;
+            this.btnImportBill.Text = "Quản lý hóa đơn nhập";
+            this.btnImportBill.Click += new System.EventHandler(this.btnImportBill_Click);
             // 
             // guna2GradientButton6
             // 
@@ -277,28 +299,6 @@
             this.guna2GradientButton1.TabIndex = 12;
             this.guna2GradientButton1.Text = "Đăng xuất";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
-            // 
-            // btnImportBill
-            // 
-            this.btnImportBill.BorderColor = System.Drawing.Color.Transparent;
-            this.btnImportBill.BorderRadius = 8;
-            this.btnImportBill.BorderThickness = 2;
-            this.btnImportBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImportBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImportBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImportBill.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImportBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImportBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(90)))), ((int)(((byte)(249)))));
-            this.btnImportBill.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
-            this.btnImportBill.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnImportBill.ForeColor = System.Drawing.Color.White;
-            this.btnImportBill.Location = new System.Drawing.Point(714, 366);
-            this.btnImportBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnImportBill.Name = "btnImportBill";
-            this.btnImportBill.Size = new System.Drawing.Size(264, 80);
-            this.btnImportBill.TabIndex = 12;
-            this.btnImportBill.Text = "Quản lý hóa đơn nhập";
-            this.btnImportBill.Click += new System.EventHandler(this.btnImportBill_Click);
             // 
             // frmHome
             // 

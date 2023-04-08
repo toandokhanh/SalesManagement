@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BUS_ExportBill.cs" />
     <Compile Include="BUS_HangHoa.cs" />
+    <Compile Include="BUS_ImportBill.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_TKHT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -88,7 +88,9 @@ namespace GUI
 
         private void btnImportBill_Click(object sender, EventArgs e)
         {
-            frmImportBill fImportBill = new frmImportBill();
+            this.role = role;
+            this.email = email;
+            frmImportBill fImportBill = new frmImportBill(role, email);
             this.Hide(); 
             fImportBill.ShowDialog();
             this.Show();
