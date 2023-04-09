@@ -1,4 +1,4 @@
-
+		
 CREATE TABLE [dbo].[PHAN_QUYEN](
 	[PQ_Ma] [varchar](6) NOT NULL,
 	[PQ_Ten] [nvarchar](50) NULL,

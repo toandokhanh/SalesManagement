@@ -56,8 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRole = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -120,12 +118,13 @@
             this.btnUpdate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(152, 540);
+            this.btnUpdate.Location = new System.Drawing.Point(153, 494);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(106, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(140, 33);
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnUpdatePass
             // 
@@ -163,12 +162,13 @@
             this.btnRefresh.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(367, 540);
+            this.btnRefresh.Location = new System.Drawing.Point(339, 494);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(118, 33);
+            this.btnRefresh.Size = new System.Drawing.Size(145, 33);
             this.btnRefresh.TabIndex = 20;
             this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // txtName
             // 
@@ -325,7 +325,7 @@
             this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(115, 465);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(116, 419);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(397, 70);
             this.guna2GroupBox2.TabIndex = 28;
@@ -340,7 +340,7 @@
             this.checkMale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.checkMale.CheckedState.InnerOffset = -4;
             this.checkMale.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkMale.Location = new System.Drawing.Point(115, 13);
+            this.checkMale.Location = new System.Drawing.Point(140, 11);
             this.checkMale.Name = "checkMale";
             this.checkMale.Size = new System.Drawing.Size(62, 24);
             this.checkMale.TabIndex = 26;
@@ -359,7 +359,7 @@
             this.checkFemale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.checkFemale.CheckedState.InnerOffset = -4;
             this.checkFemale.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkFemale.Location = new System.Drawing.Point(252, 13);
+            this.checkFemale.Location = new System.Drawing.Point(280, 11);
             this.checkFemale.Name = "checkFemale";
             this.checkFemale.Size = new System.Drawing.Size(50, 24);
             this.checkFemale.TabIndex = 25;
@@ -517,40 +517,6 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(245, 36);
             this.guna2TextBox1.TabIndex = 23;
             // 
-            // txtRole
-            // 
-            this.txtRole.BorderColor = System.Drawing.Color.White;
-            this.txtRole.BorderRadius = 10;
-            this.txtRole.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRole.DefaultText = "";
-            this.txtRole.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRole.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRole.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRole.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.txtRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRole.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRole.ForeColor = System.Drawing.Color.White;
-            this.txtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRole.Location = new System.Drawing.Point(256, 411);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.PasswordChar = '\0';
-            this.txtRole.PlaceholderText = "";
-            this.txtRole.SelectedText = "";
-            this.txtRole.Size = new System.Drawing.Size(245, 36);
-            this.txtRole.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(123, 420);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 16);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Vai trò";
-            // 
             // frmInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,7 +524,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(1166, 621);
             this.Controls.Add(this.guna2GroupBox2);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -569,7 +534,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtRole);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtAddress);
@@ -627,7 +591,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtRole;
-        private System.Windows.Forms.Label label12;
     }
 }

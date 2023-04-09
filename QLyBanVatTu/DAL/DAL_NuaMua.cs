@@ -13,7 +13,7 @@ namespace DAL
         public string CreateNewID(string query)
         {
             //code nửa mùa của anh tònh
-            string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
             SqlConnection conn = new SqlConnection(stringConnect);
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);

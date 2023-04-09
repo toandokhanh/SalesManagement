@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -370,7 +370,7 @@ namespace GUI
             exRange.Range["C1:E3"].VerticalAlignment = COMExcel.XlVAlign.xlVAlignCenter;
             exRange.Range["C1:E3"].Value = "HÓA ĐƠN BÁN";
             // Biểu diễn thông tin chung của hóa đơn bán
-            sql = "SELECT a.HDX_Ma, a.HDX_NgayLap, a.HDX_TongTien, b.Ten_KH, b.DIACHI, b.SDT, c.TKHT_Email FROM HOA_DON_XUAT AS a, KHACH_HANG AS b, TAI_KHOAN_HE_THONG AS c WHERE a.HDX_Ma = '" + txtIDExprotBill.Text + "' AND a.Ma_KH = b.Ma_KH AND a.TKHT_Email = c.TKHT_Email";
+            sql = "SELECT a.HDX_Ma, a.HDX_NgayLap, a.HDX_TongTien, b.Ten_KH, b.DIACHI, b.SDT, c.TKHT_HoTen FROM HOA_DON_XUAT AS a, KHACH_HANG AS b, TAI_KHOAN_HE_THONG AS c WHERE a.HDX_Ma = '" + txtIDExprotBill.Text + "' AND a.Ma_KH = b.Ma_KH AND a.TKHT_Email = c.TKHT_Email";
             tblThongtinHD = dalHDX.GetDataToTable(sql);
             exRange.Range["B6:C9"].Font.Size = 12;
             exRange.Range["B5:B5"].Value = "Mã hóa đơn:";

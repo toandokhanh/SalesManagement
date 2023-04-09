@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace GUI
 {
     public partial class frmInformation : Form
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL ;Database=QLVT;integrated security=true";
         BUS_TKHT tkht;
         private string email;
         public frmInformation(string email)
@@ -56,27 +57,20 @@ namespace GUI
                                 string TKHT_SoDienThoai = reader.GetString(5);
                                 bool TKHT_GioiTinh = reader.GetBoolean(6);
                                 DateTime TKHT_NgaySinh = reader.GetDateTime(7);
+                                string NgaySinh = TKHT_NgaySinh.ToString("yyyy-MM-dd");
                                 txtAddress.Text = TKHT_DiaChi;
+                                txtPhone.Text = TKHT_SoDienThoai;
                                 txtEmail.Text = TKHT_Email;
                                 txtName.Text = TKHT_HoTen;
-                                if(PQ_Ma == "PQ01")
+                                guna2TextBox1.Text = NgaySinh;
+                                if(TKHT_GioiTinh == true)
                                 {
-
+                                    checkMale.Checked= true;    
                                 }
-                                if (PQ_Ma == "PQ02")
+                                if(TKHT_GioiTinh == false)
                                 {
-
+                                    checkFemale.Checked= true;
                                 }
-                                if (PQ_Ma == "PQ03")
-                                {
-
-                                }
-                                txtRole.Text = TKHT_HoTen;
-                                MessageBox.Show(PQ_Ma);
-                                MessageBox.Show(TKHT_Password);
-                                MessageBox.Show();
-                                MessageBox.Show(TKHT_SoDienThoai);
-                                MessageBox.Show(TKHT_GioiTinh.ToString());
                             }
                         }
                         else
@@ -107,6 +101,52 @@ namespace GUI
                 else MessageBox.Show("Mật khẩu mới không trùng nhau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else MessageBox.Show("Vui lòng nhập mật khẩu cũ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtAddress.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtName.Text = "";
+            guna2TextBox1.Text = "";
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+            if (txtAddress.Text == "" || txtPhone.Text == "" || txtEmail.Text == "" || guna2TextBox1.Text == "" ){
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                
+            }else
+            {
+                int gender;
+                string role;
+
+                if (checkMale.Checked == true)
+                {
+                    gender = 1;
+                }
+                else {
+                    gender = 0;
+                }
+                string query = "UPDATE [QLVT].[dbo].[TAI_KHOAN_HE_THONG] SET [TKHT_Email] = '"+ txtEmail.Text + "'," +"[TKHT_HoTen] = N'"+ txtName.Text  + "',[TKHT_DiaChi] = N'"+ txtAddress.Text + "',[TKHT_SoDienThoai] = '"+ txtPhone.Text + "',[TKHT_GioiTinh] = "+ gender + ",[TKHT_NgaySinh] = '"+ guna2TextBox1.Text + "' WHERE [TKHT_Email]='"+email+"'";
+                try
+                {
+                    SqlConnection conn = new SqlConnection(stringConnect);
+                    conn.Open();
+                    SqlCommand comd = new SqlCommand(query, conn);
+                    comd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật thông tin thành công");
+                    frmInformation_Load(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
         }
     }
 }
