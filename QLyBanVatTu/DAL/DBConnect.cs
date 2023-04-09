@@ -11,7 +11,7 @@ namespace DAL
     {
         public static SqlConnection Connect()
         {
-            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+            string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
             SqlConnection conn = new SqlConnection(stringConnect);
             //conn.ConnectionString = stringConnect;
             //conn.Open();

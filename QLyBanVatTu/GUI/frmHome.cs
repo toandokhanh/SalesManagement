@@ -47,7 +47,8 @@ namespace GUI
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-            frmInformation fInformation = new frmInformation();
+            this.email = email;
+            frmInformation fInformation = new frmInformation(email);
             this.Hide();
             fInformation.ShowDialog();
             this.Show();
@@ -63,8 +64,8 @@ namespace GUI
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
-            this.role = role;
             this.email = email;
+            this.role = role;
             frmExportBills fBills = new frmExportBills(role, email);
             this.Hide();
             fBills.ShowDialog();

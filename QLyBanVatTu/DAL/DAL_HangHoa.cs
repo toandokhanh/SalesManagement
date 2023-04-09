@@ -13,7 +13,7 @@ namespace DAL
 {
     public class DAL_HangHoa 
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
 
         public DataTable ListProduct()
         {
@@ -216,7 +216,7 @@ namespace DAL
             try
             {
                 conn.Open();
-                SqlCommand comd = new SqlCommand("SELECT HH_Ma FROM dbo.HANGHOA", conn);
+                SqlCommand comd = new SqlCommand("SELECT HH_Ma, HH_Ten FROM dbo.HANGHOA", conn);
                 comd.CommandType = CommandType.Text;
                 DataTable data = new DataTable();
                 data.Load(comd.ExecuteReader());

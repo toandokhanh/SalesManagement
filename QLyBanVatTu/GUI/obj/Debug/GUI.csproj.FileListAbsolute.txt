@@ -156,3 +156,5 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\G
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmImportBill.resources
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.dll
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.xml

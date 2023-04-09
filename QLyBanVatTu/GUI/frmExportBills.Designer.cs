@@ -44,18 +44,17 @@
             this.txtStaff = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.datepicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtNameCustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIDCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.dtgvExportBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtIntro = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtTotalProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalBill = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNumberProduct = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNameProduct = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIDProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -78,10 +77,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbPQNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtgvExportBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvExportBill)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvExportBill)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -218,9 +218,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(766, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Tên khách hàng";
+            this.label3.Text = "Mã khách hàng";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -287,36 +287,36 @@
             this.datepicker.Value = new System.DateTime(2023, 3, 12, 18, 24, 20, 651);
             this.datepicker.ValueChanged += new System.EventHandler(this.datepicker_ValueChanged);
             // 
-            // txtNameCustomer
+            // txtIDCustomer
             // 
-            this.txtNameCustomer.BorderRadius = 10;
-            this.txtNameCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameCustomer.DefaultText = "";
-            this.txtNameCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.txtNameCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNameCustomer.ForeColor = System.Drawing.Color.White;
-            this.txtNameCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCustomer.Location = new System.Drawing.Point(885, 65);
-            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.PasswordChar = '\0';
-            this.txtNameCustomer.PlaceholderText = "";
-            this.txtNameCustomer.ReadOnly = true;
-            this.txtNameCustomer.SelectedText = "";
-            this.txtNameCustomer.Size = new System.Drawing.Size(215, 38);
-            this.txtNameCustomer.TabIndex = 36;
-            this.txtNameCustomer.TextChanged += new System.EventHandler(this.txtNameCustomer_TextChanged);
+            this.txtIDCustomer.BorderRadius = 10;
+            this.txtIDCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDCustomer.DefaultText = "";
+            this.txtIDCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtIDCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIDCustomer.ForeColor = System.Drawing.Color.White;
+            this.txtIDCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDCustomer.Location = new System.Drawing.Point(885, 65);
+            this.txtIDCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDCustomer.Name = "txtIDCustomer";
+            this.txtIDCustomer.PasswordChar = '\0';
+            this.txtIDCustomer.PlaceholderText = "";
+            this.txtIDCustomer.ReadOnly = true;
+            this.txtIDCustomer.SelectedText = "";
+            this.txtIDCustomer.Size = new System.Drawing.Size(215, 38);
+            this.txtIDCustomer.TabIndex = 36;
+            this.txtIDCustomer.TextChanged += new System.EventHandler(this.txtNameCustomer_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtgvExportBill);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.dtgvExportBill);
             this.groupBox1.Controls.Add(this.txtIntro);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.btnInsert);
@@ -325,7 +325,7 @@
             this.groupBox1.Controls.Add(this.txtTotalBill);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtNumberProduct);
-            this.groupBox1.Controls.Add(this.txtNameProduct);
+            this.groupBox1.Controls.Add(this.txtIDProduct);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.label12);
@@ -366,61 +366,6 @@
             this.label17.TabIndex = 39;
             this.label17.Text = "Nhấp đúp vào dòng trên bảng để xóa";
             this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // dtgvExportBill
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvExportBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvExportBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvExportBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvExportBill.ColumnHeadersHeight = 20;
-            this.dtgvExportBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvExportBill.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvExportBill.GridColor = System.Drawing.Color.Black;
-            this.dtgvExportBill.Location = new System.Drawing.Point(3, 146);
-            this.dtgvExportBill.Name = "dtgvExportBill";
-            this.dtgvExportBill.RowHeadersVisible = false;
-            this.dtgvExportBill.RowHeadersWidth = 51;
-            this.dtgvExportBill.RowTemplate.Height = 24;
-            this.dtgvExportBill.Size = new System.Drawing.Size(1138, 211);
-            this.dtgvExportBill.TabIndex = 38;
-            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgvExportBill.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dtgvExportBill.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvExportBill.ThemeStyle.HeaderStyle.Height = 20;
-            this.dtgvExportBill.ThemeStyle.ReadOnly = false;
-            this.dtgvExportBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvExportBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvExportBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgvExportBill.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgvExportBill.ThemeStyle.RowsStyle.Height = 24;
-            this.dtgvExportBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvExportBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgvExportBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvExportBill_CellContentClick);
-            this.dtgvExportBill.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvExportBill_CellContentDoubleClick);
             // 
             // txtIntro
             // 
@@ -554,29 +499,29 @@
             this.txtNumberProduct.TabIndex = 34;
             this.txtNumberProduct.TextChanged += new System.EventHandler(this.txtNumberProduct_TextChanged);
             // 
-            // txtNameProduct
+            // txtIDProduct
             // 
-            this.txtNameProduct.BorderRadius = 10;
-            this.txtNameProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameProduct.DefaultText = "";
-            this.txtNameProduct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameProduct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.txtNameProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNameProduct.ForeColor = System.Drawing.Color.White;
-            this.txtNameProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameProduct.Location = new System.Drawing.Point(140, 94);
-            this.txtNameProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNameProduct.Name = "txtNameProduct";
-            this.txtNameProduct.PasswordChar = '\0';
-            this.txtNameProduct.PlaceholderText = "";
-            this.txtNameProduct.SelectedText = "";
-            this.txtNameProduct.Size = new System.Drawing.Size(215, 38);
-            this.txtNameProduct.TabIndex = 34;
-            this.txtNameProduct.TextChanged += new System.EventHandler(this.txtNameProduct_TextChanged);
+            this.txtIDProduct.BorderRadius = 10;
+            this.txtIDProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDProduct.DefaultText = "";
+            this.txtIDProduct.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDProduct.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtIDProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIDProduct.ForeColor = System.Drawing.Color.White;
+            this.txtIDProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDProduct.Location = new System.Drawing.Point(140, 94);
+            this.txtIDProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDProduct.Name = "txtIDProduct";
+            this.txtIDProduct.PasswordChar = '\0';
+            this.txtIDProduct.PlaceholderText = "";
+            this.txtIDProduct.SelectedText = "";
+            this.txtIDProduct.Size = new System.Drawing.Size(215, 38);
+            this.txtIDProduct.TabIndex = 34;
+            this.txtIDProduct.TextChanged += new System.EventHandler(this.txtNameProduct_TextChanged);
             // 
             // label14
             // 
@@ -686,9 +631,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
             this.label10.Location = new System.Drawing.Point(34, 107);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 16);
+            this.label10.Size = new System.Drawing.Size(85, 16);
             this.label10.TabIndex = 32;
-            this.label10.Text = "Tên hàng hóa";
+            this.label10.Text = "Mã hàng hóa";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
@@ -697,9 +642,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(34, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 16);
+            this.label9.Size = new System.Drawing.Size(90, 16);
             this.label9.TabIndex = 32;
-            this.label9.Text = "Mã hàng hóa";
+            this.label9.Text = "Tên hàng hóa";
             // 
             // cbHDX_Ma
             // 
@@ -747,7 +692,7 @@
             this.groupBox2.Controls.Add(this.txtAddress);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtPhone);
-            this.groupBox2.Controls.Add(this.txtNameCustomer);
+            this.groupBox2.Controls.Add(this.txtIDCustomer);
             this.groupBox2.Controls.Add(this.datepicker);
             this.groupBox2.Controls.Add(this.txtIDExprotBill);
             this.groupBox2.Controls.Add(this.txtStaff);
@@ -858,7 +803,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(368, 108);
+            this.label7.Location = new System.Drawing.Point(373, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 16);
             this.label7.TabIndex = 32;
@@ -871,9 +816,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(766, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 16);
+            this.label6.Size = new System.Drawing.Size(103, 16);
             this.label6.TabIndex = 32;
-            this.label6.Text = "Mã khách hàng";
+            this.label6.Text = "Tên khách hàng";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label8
@@ -923,6 +868,60 @@
             this.cbCustomer.TabIndex = 33;
             this.cbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbCustomer_SelectedIndexChanged);
             // 
+            // dtgvExportBill
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvExportBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvExportBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dtgvExportBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvExportBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvExportBill.ColumnHeadersHeight = 30;
+            this.dtgvExportBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvExportBill.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvExportBill.GridColor = System.Drawing.Color.White;
+            this.dtgvExportBill.Location = new System.Drawing.Point(8, 149);
+            this.dtgvExportBill.Name = "dtgvExportBill";
+            this.dtgvExportBill.RowHeadersVisible = false;
+            this.dtgvExportBill.RowHeadersWidth = 51;
+            this.dtgvExportBill.RowTemplate.Height = 24;
+            this.dtgvExportBill.Size = new System.Drawing.Size(1128, 269);
+            this.dtgvExportBill.TabIndex = 40;
+            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgvExportBill.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgvExportBill.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dtgvExportBill.ThemeStyle.GridColor = System.Drawing.Color.White;
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvExportBill.ThemeStyle.HeaderStyle.Height = 30;
+            this.dtgvExportBill.ThemeStyle.ReadOnly = false;
+            this.dtgvExportBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvExportBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvExportBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgvExportBill.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgvExportBill.ThemeStyle.RowsStyle.Height = 24;
+            this.dtgvExportBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvExportBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // frmExportBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -942,9 +941,9 @@
             this.guna2Panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvExportBill)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvExportBill)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -964,7 +963,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtStaff;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DateTimePicker datepicker;
-        private Guna.UI2.WinForms.Guna2TextBox txtNameCustomer;
+        private Guna.UI2.WinForms.Guna2TextBox txtIDCustomer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -979,7 +978,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTotalProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtNumberProduct;
-        private Guna.UI2.WinForms.Guna2TextBox txtNameProduct;
+        private Guna.UI2.WinForms.Guna2TextBox txtIDProduct;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
@@ -991,12 +990,12 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbPQNV;
         private Guna.UI2.WinForms.Guna2TextBox txtIntro;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgvExportBill;
         private Guna.UI2.WinForms.Guna2GradientButton btnPrint;
         private Guna.UI2.WinForms.Guna2ComboBox cbHDX_Ma;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2GradientButton btnRefresh;
         private System.Windows.Forms.Label label19;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgvExportBill;
     }
 }

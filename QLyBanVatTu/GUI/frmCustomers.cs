@@ -50,31 +50,8 @@ namespace GUI
         }
         private void frmCustomers_Load(object sender, EventArgs e)
         {
-            //code nửa mùa của anh tònh
-            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
-            SqlConnection conn = new SqlConnection(stringConnect);
-            conn.Open();
-            string query = "SELECT MAX(ma_KH) AS Largest_ma_kh FROM KHACH_HANG";
-            SqlCommand command = new SqlCommand(query, conn);
-            string largestHHMa = command.ExecuteScalar().ToString();
-            string a, b;
-            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
-            if (match.Success)
-            {
-                a = match.Groups[1].Value; // Lưu "LH" vào biến a
-                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
-                int intValue;
-                if (int.TryParse(b, out intValue))
-                {
-                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
-                    int intB = intValue;
-                    intB++;
-                    string newID = a + intB.ToString();
-                    txtID.Text = newID;
-                }
-            }
-
-            conn.Close();
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
             dtgvCustomer.DataSource = buskhachhang.ListCustomer();
             LoadGridView();
         }
@@ -95,32 +72,13 @@ namespace GUI
                     dtgvCustomer.DataSource = buskhachhang.ListCustomer();
                     LoadGridView();
                     MessBox("Thêm khách hàng thành công");
-                    //code nửa mùa của anh tònh
-                    string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
-                    SqlConnection conn = new SqlConnection(stringConnect);
-                    conn.Open();
-                    string query = "SELECT MAX(ma_KH) AS Largest_ma_kh FROM KHACH_HANG";
-                    SqlCommand command = new SqlCommand(query, conn);
-                    string largestHHMa = command.ExecuteScalar().ToString();
-                    string a, b;
-                    Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
-                    if (match.Success)
-                    {
-                        a = match.Groups[1].Value; // Lưu "LH" vào biến a
-                        b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
-                        int intValue;
-                        if (int.TryParse(b, out intValue))
-                        {
-                            // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
-                            int intB = intValue;
-                            intB++;
-                            string newID = a + intB.ToString();
-                            txtID.Text = newID;
-                        }
-                    }
-
-                    conn.Close();
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
+                    txtAddress.Text = "";
+                    txtName.Text = "";
+                    txtPhone.Text = "";
                 }
+
                 else
                 {
                     MessBox("Thêm khách hàng không thành công", true);
@@ -136,11 +94,13 @@ namespace GUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            txtID.ReadOnly = false;
-            txtID.Text = null;
+            // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtID.Text = nuamua.CreateNewID("ma_kh");
             txtName.Text = null;
             txtAddress.Text = null;
             txtPhone.Text = null;
+
         }
 
         private void dtgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)

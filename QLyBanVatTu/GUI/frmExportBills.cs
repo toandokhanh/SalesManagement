@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -43,7 +43,7 @@ namespace GUI
         {
             DAL_KhachHang kh = new DAL_KhachHang();
             DataTable data = kh.GetCustomer();
-            cbCustomer.DisplayMember = "MA_KH";
+            cbCustomer.DisplayMember = "TEN_KH";
             cbCustomer.ValueMember = "MA_KH";
             cbCustomer.DataSource = data;
         }
@@ -51,9 +51,9 @@ namespace GUI
         {
             string str;
             DAL_TKHT tkht = new DAL_TKHT();
-            DataTable data = tkht.GetTKHT(role);
-            cbPQNV.DisplayMember = "PQ_Ma";
-            cbPQNV.ValueMember = "TKHT_Email";
+            DataTable data = tkht.GetTKHT(role, email);
+            cbPQNV.DisplayMember = "PQ_Ten";
+            cbPQNV.ValueMember = "PQ_Ma";
             cbPQNV.DataSource = data;
             str = "Select TKHT_Email from TAI_KHOAN_HE_THONG where PQ_Ma =N'" + role + "' and TKHT_Email = N'"+email+"'";
             txtStaff.Text = tkht.GetFieldValues(str);
@@ -63,7 +63,7 @@ namespace GUI
         {
             DAL_HangHoa hanghoa = new DAL_HangHoa();
             DataTable data = hanghoa.GetVatTu();
-            cbIDProduct.DisplayMember = "HH_Ma";
+            cbIDProduct.DisplayMember = "HH_Ten";
             cbIDProduct.ValueMember = "HH_Ma";
             cbIDProduct.DataSource = data;
         }
@@ -85,10 +85,10 @@ namespace GUI
             btnPrint.Enabled = false;
             cbPQNV.Enabled = false;
             txtStaff.ReadOnly = true;
-            txtNameCustomer.ReadOnly = true;
+            txtIDCustomer.ReadOnly = true;
             txtAddress.ReadOnly = true;
             txtPhone.ReadOnly = true;
-            txtNameProduct.ReadOnly = true;
+            txtIDProduct.ReadOnly = true;
             txtPrice.ReadOnly = true;
             txtTotalProduct.ReadOnly = true;
             txtTotalBill.ReadOnly = true;
@@ -100,31 +100,8 @@ namespace GUI
             cbIDProduct.SelectedIndex = -1;
             dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
             LoadDataGV();
-            //code nửa mùa của anh tònh
-            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
-            SqlConnection conn = new SqlConnection(stringConnect);
-            conn.Open();
-            string query = "SELECT MAX(HDX_ma) AS Largest_hdx_ma FROM HOA_DON_XUAT";
-            SqlCommand command = new SqlCommand(query, conn);
-            string largestHHMa = command.ExecuteScalar().ToString();
-            string a, b;
-            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
-            if (match.Success)
-            {
-                a = match.Groups[1].Value; // Lưu "LH" vào biến a
-                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
-                int intValue;
-                if (int.TryParse(b, out intValue))
-                {
-                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
-                    int intB = intValue;
-                    intB++;
-                    string newID = a + intB.ToString();
-                    txtIDExprotBill.Text = newID;
-                }
-            }
-
-            conn.Close();
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtIDExprotBill.Text = nuamua.CreateNewID("SELECT MAX(hdx_ma) AS Largest_ma_kh FROM HOA_DON_XUAT");
 
         }
 
@@ -134,23 +111,23 @@ namespace GUI
             if (cbCustomer.SelectedItem != null)
             {
                 string ma = cbCustomer.SelectedValue.ToString();
-                string query = "Select * from KHACH_HANG where MA_KH = @Ma";
+                string query = "Select * from KHACH_HANG where MA_KH = @Ten";
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@Ma", ma);
+                cmd.Parameters.AddWithValue("@Ten", ma);
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        txtNameCustomer.Text = reader["Ten_KH"].ToString();
+                        txtIDCustomer.Text = reader["MA_KH"].ToString();
                         txtAddress.Text = reader["DIACHI"].ToString();
                         txtPhone.Text = reader["SDT"].ToString();
                     }
                 }
                 else
                 {
-                    txtNameCustomer.Text = "";
+                    txtIDCustomer.Text = "";
                     txtAddress.Text = "";
                     txtPhone.Text = "";
                 }
@@ -160,7 +137,7 @@ namespace GUI
             }
             else
             {
-                txtNameCustomer.Text = "";
+                txtIDCustomer.Text = "";
                 txtAddress.Text = "";
                 txtPhone.Text = "";
             }
@@ -180,14 +157,14 @@ namespace GUI
                 {
                     while (reader.Read())
                     {
-                        txtNameProduct.Text = reader["HH_Ten"].ToString();
+                        txtIDProduct.Text = reader["HH_Ma"].ToString();
                         txtIntro.Text = reader["HH_MoTa"].ToString();
                         txtPrice.Text = reader["HH_DonGia"].ToString();
                     }
                 }
                 else
                 {
-                    txtNameProduct.Text = "";
+                    txtIDProduct.Text = "";
                     txtIntro.Text = "";
                     txtPrice.Text = "";
                 }
@@ -197,7 +174,7 @@ namespace GUI
             }
             else
             {
-                txtNameProduct.Text = "";
+                txtIDProduct.Text = "";
                 txtIntro.Text = "";
                 txtPrice.Text = "";
             }
@@ -409,7 +386,7 @@ namespace GUI
             exRange.Range["C8:E8"].MergeCells = true;
             exRange.Range["C8:E8"].Value = tblThongtinHD.Rows[0][5].ToString();
             //Lấy thông tin các mặt hàng
-            sql = "SELECT b.HH_Ma, a.SoLuongXuat, b.HH_DonGia, a.ThanhTien " +
+            sql = "SELECT b.HH_Ten, a.SoLuongXuat, b.HH_DonGia, a.ThanhTien " +
                   "FROM CHI_TIET_HD_XUAT AS a , HANGHOA AS b WHERE a.HDX_Ma = N'" +
                   txtIDExprotBill.Text + "' AND a.HH_Ma = b.HH_Ma";
             tblThongtinHang = dalHDX.GetDataToTable(sql);
@@ -585,6 +562,7 @@ namespace GUI
             string query = "Select HDX_NgayLap from HOA_DON_XUAT where HDX_Ma = '" + txtIDExprotBill.Text + "'";
             datepicker.Text = dalHDX.GetFieldValues(query);
             dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
+            btnPrint.Enabled = true;
             LoadDataGV();
         }
 

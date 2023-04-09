@@ -34,6 +34,9 @@ namespace BUS
             string role = thkt.checkRole(TKHT);
             return role;
         }
-        
+        public bool ChangePassword(string email, string oldPassword, string newPassword)
+        {
+            return thkt.ChangePassword(email, oldPassword, newPassword);
+        }
     }
 }

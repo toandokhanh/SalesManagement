@@ -14,6 +14,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using DocumentFormat.OpenXml.Wordprocessing;
+
 namespace GUI
 {
     public partial class frmProducts : Form
@@ -87,31 +89,9 @@ namespace GUI
             cbLoaiVT.SelectedIndex = -1;
             cbNCC.SelectedIndex = -1;
             cbNuocSX.SelectedIndex = -1;
-            //code nửa mùa của anh tònh
-            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
-            SqlConnection conn = new SqlConnection(stringConnect);
-            conn.Open();
-            string query = "SELECT MAX(HH_ma) AS Largest_HH_ma FROM HANGHOA";
-            SqlCommand command = new SqlCommand(query, conn);
-            string largestHHMa = command.ExecuteScalar().ToString();
-            string a, b;
-            Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
-            if (match.Success)
-            {
-                a = match.Groups[1].Value; // Lưu "LH" vào biến a
-                b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
-                int intValue;
-                if (int.TryParse(b, out intValue))
-                {
-                    // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
-                    int intB = intValue;
-                    intB++;
-                    string newID = a + intB.ToString();
-                    txtIDProduct.Text = newID;
-                }
-            }
-            
-            conn.Close();
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
+
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -157,31 +137,8 @@ namespace GUI
                     dtgvProduct.DataSource = busproduct.ListProduct();
                     LoadGridView();
                     MessBox("Thêm vật tư thành công");
-                    //code nửa mùa của anh tònh
-                    string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
-                    SqlConnection conn = new SqlConnection(stringConnect);
-                    conn.Open();
-                    string query = "SELECT MAX(HH_ma) AS Largest_HH_ma FROM HANGHOA";
-                    SqlCommand command = new SqlCommand(query, conn);
-                    string largestHHMa = command.ExecuteScalar().ToString();
-                    string a, b;
-                    Match match = Regex.Match(largestHHMa, @"([a-zA-Z]+)(\d+)");
-                    if (match.Success)
-                    {
-                        a = match.Groups[1].Value; // Lưu "LH" vào biến a
-                        b = match.Groups[2].Value; // Lưu số 100 vào biến b (dạng string)
-                        int intValue;
-                        if (int.TryParse(b, out intValue))
-                        {
-                            // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
-                            int intB = intValue;
-                            intB++;
-                            string newID = a + intB.ToString();
-                            txtIDProduct.Text = newID;
-                        }
-                    }
-
-                    conn.Close();
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
                 }
                 else
                 {
