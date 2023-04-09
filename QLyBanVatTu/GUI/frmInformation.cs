@@ -23,13 +23,72 @@ namespace GUI
             InitializeComponent();
         }
 
-        
+
 
         private void frmInformation_Load(object sender, EventArgs e)
         {
-            txtEmail.Text = email;
-        }
+            // truy vấn SQL
+            string query = "SELECT TOP 1 [TKHT_Email],[TKHT_HoTen],[PQ_Ma],[TKHT_Password],[TKHT_DiaChi],[TKHT_SoDienThoai],[TKHT_GioiTinh],[TKHT_NgaySinh] FROM [QLVT].[dbo].[TAI_KHOAN_HE_THONG] Where [TKHT_Email] = " + email + "";
 
+            // khởi tạo đối tượng SqlConnection
+            using (SqlConnection connection = new SqlConnection(stringConnect))
+            {
+                // mở kết nối
+                connection.Open();
+
+                // khởi tạo đối tượng SqlCommand với truy vấn và kết nối
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // khởi tạo đối tượng SqlDataReader để đọc dữ liệu từ truy vấn
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // kiểm tra nếu có dữ liệu
+                        if (reader.HasRows)
+                        {
+                            // đọc dữ liệu và gán vào biến tương ứng
+                            while (reader.Read())
+                            {
+                                string TKHT_Email = reader.GetString(0);
+                                string TKHT_HoTen = reader.GetString(1);
+                                string PQ_Ma = reader.GetString(2);
+                                string TKHT_Password = reader.GetString(3);
+                                string TKHT_DiaChi = reader.GetString(4);
+                                string TKHT_SoDienThoai = reader.GetString(5);
+                                bool TKHT_GioiTinh = reader.GetBoolean(6);
+                                DateTime TKHT_NgaySinh = reader.GetDateTime(7);
+                                txtAddress.Text = TKHT_DiaChi;
+                                txtEmail.Text = TKHT_Email;
+                                txtName.Text = TKHT_HoTen;
+                                if(PQ_Ma == "PQ01")
+                                {
+
+                                }
+                                if (PQ_Ma == "PQ02")
+                                {
+
+                                }
+                                if (PQ_Ma == "PQ03")
+                                {
+
+                                }
+                                txtRole.Text = TKHT_HoTen;
+                                MessageBox.Show(PQ_Ma);
+                                MessageBox.Show(TKHT_Password);
+                                MessageBox.Show();
+                                MessageBox.Show(TKHT_SoDienThoai);
+                                MessageBox.Show(TKHT_GioiTinh.ToString());
+                            }
+                        }
+                        else
+                        {
+                            // không có dữ liệu
+                            // xử lý tương ứng ở đây
+                            // ...
+                        }
+                    }
+                }
+            }
+        }
         private void btnUpdatePass_Click(object sender, EventArgs e)
         {
             if (txtOldPassword.Text != "")
