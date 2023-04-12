@@ -108,7 +108,7 @@ namespace GUI
             if(dtgvCustomer.Rows.Count > 0)
             {
                 btnDelete.Enabled = true;
-                btnDelete.Enabled = true;
+                btnUpdate.Enabled = true;
                 txtID.ReadOnly = true;
                 txtID.Text = dtgvCustomer.CurrentRow.Cells[0].Value.ToString();
                 txtName.Text = dtgvCustomer.CurrentRow.Cells[1].Value.ToString();

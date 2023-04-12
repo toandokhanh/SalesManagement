@@ -254,6 +254,8 @@ namespace GUI
             txtPrice.Text = null;
             txtImg.Text = null;
             guna2PictureBox1.Image = null;
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
         }
 
 

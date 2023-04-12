@@ -59,6 +59,7 @@
     <Compile Include="DAL_NuocSanXuat.cs" />
     <Compile Include="DAL_HangHoa.cs" />
     <Compile Include="DAL_TKHT.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DAL_NhaCungCap
+    public class DAL_NhaCungCap 
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+        
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
         public DataTable GetNhaCungCap()
         {
             SqlConnection conn = new SqlConnection(stringConnect);

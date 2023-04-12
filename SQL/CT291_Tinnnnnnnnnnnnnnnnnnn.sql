@@ -184,7 +184,7 @@ SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[TAI_KHOAN_HE_THONG](
 	[TKHT_Email] [varchar](30) NOT NULL,
-	[TKHT_HoTen] [varchar](50) Null,
+	[TKHT_HoTen] [nvarchar](50) Null,
 	[PQ_Ma] [varchar](6) NULL,
 	[TKHT_Password] [varchar](20) NULL,
 	[TKHT_DiaChi] [nvarchar](100) NULL,
@@ -336,32 +336,10 @@ CREATE PROC [dbo].[DeleteofProduct]
 AS BEGIN
 DECLARE @kq BIT = 1
 IF EXISTS(SELECT * FROM HANGHOA WHERE HH_Ma = @mahang)
-	DELETE dbo.HANGHOA WHERE HH_Ma = @mahang
+	DELETE dbo.HANGHOA WHERE HH_Ma =  @mahang
 ELSE
 	SET @kq = 0
 SELECT @kq
-END
-GO
-/****** Object:  StoredProcedure [dbo].[InsertProduct]    Script Date: 04/07/2023 21:10:51 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[InsertProduct]
-    @mahang VARCHAR(6),
-    @maloai VARCHAR(6),
-    @manuocsx VARCHAR(6),
-    @manhacungcap varchar(6),
-    @tenhang nvarchar(50),
-    @soluonghang int,
-    @motahang nvarchar(100),
-    @dongiahang float,
-    @hinhanh varchar(max)
-
-AS
-BEGIN
-    INSERT INTO HANGHOA
-    VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @motahang, @dongiahang, @hinhanh, @soluonghang)
 END
 GO
 /****** Object:  StoredProcedure [dbo].[InsertofProducts]    Script Date: 04/07/2023 21:10:51 ******/
@@ -386,28 +364,7 @@ BEGIN
     VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @soluonghang, @motahang, @dongiahang, @hinhanh)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InsertofProduct]    Script Date: 04/07/2023 21:10:51 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[InsertofProduct]
-    @mahang VARCHAR(6),
-    @maloai VARCHAR(6),
-    @manuocsx VARCHAR(6),
-    @manhacungcap varchar(6),
-    @tenhang nvarchar(50),
-    @soluonghang int,
-    @motahang nvarchar(100),
-    @dongiahang float,
-    @hinhanh varchar(max)
 
-AS
-BEGIN
-    INSERT INTO HANGHOA 
-    VALUES (@mahang, @maloai, @manuocsx, @manhacungcap, @tenhang, @soluonghang, @motahang, @dongiahang, @hinhanh)
-END
-GO
 /****** Object:  Table [dbo].[CHITIET_HD_NHAP]    Script Date: 04/07/2023 21:10:49 ******/
 SET ANSI_NULLS ON
 GO

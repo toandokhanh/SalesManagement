@@ -13,7 +13,7 @@ namespace BUS
 {
     public class BUS_TKHT
     {
-        DAL_TKHT thkt = new DAL_TKHT();
+        DAL_TKHT dalthkt = new DAL_TKHT();
         public string CheckLogin(DTO_TKHT TKHT)
         {
             // Kiểm tra nghiệp vụ
@@ -26,17 +26,30 @@ namespace BUS
             {
                 return "requeid_password";
             }
-            string info = thkt.CheckLogin(TKHT);
+            string info = dalthkt.CheckLogin(TKHT);
             return info;
         }
         public string checkRole(DTO_TKHT TKHT)
         {
-            string role = thkt.checkRole(TKHT);
+            string role = dalthkt.checkRole(TKHT);
             return role;
         }
         public bool ChangePassword(string email, string oldPassword, string newPassword)
         {
-            return thkt.ChangePassword(email, oldPassword, newPassword);
+            return dalthkt.ChangePassword(email, oldPassword, newPassword);
         }
+        public DataTable ListStaff()
+        {
+            return dalthkt.ListStaff();
+        }
+        public DataTable GetStaff()
+        {
+            return dalthkt.PhanQuyen();
+        }
+        //public bool InsertStaff(DTO_TKHT dtotkht)
+        //{
+        //    return dalthkt.InsertStaff(dtotkht);
+        //}
+
     }
 }

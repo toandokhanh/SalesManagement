@@ -75,11 +75,10 @@ namespace GUI
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
 
-            //frmStaffs fStaffs = new frmStaffs();
-            //this.Hide();
-            //fStaffs.ShowDialog();
-            //this.Show();
-            MessageBox.Show("Đang update ...");
+            frmStaffs fStaffs = new frmStaffs();
+            this.Hide();
+            fStaffs.ShowDialog();
+            this.Show();
             
         }
 

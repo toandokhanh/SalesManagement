@@ -18,6 +18,9 @@ namespace GUI
 {
     public partial class frmRevenue : Form
     {
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+
+
         public frmRevenue()
         {
             InitializeComponent();
@@ -119,7 +122,6 @@ namespace GUI
             string ngayKTSQL = ngayKT.ToString("yyyy-MM-dd");
             string query = "SELECT HDX.HDX_Ma,KH.TEN_KH, KH.DIACHI,KH.SDT, HDX.HDX_NgayLap, HDX.HDX_TongTien\r\nFROM [QLVT].[dbo].[HOA_DON_XUAT] HDX\r\nJOIN [QLVT].[dbo].[KHACH_HANG] KH ON HDX.MA_KH = KH.MA_KH\r\nWHERE HDX.HDX_NgayLap BETWEEN '" + ngayBDSQL + "' AND '" + ngayKTSQL + "'";
             MessageBox.Show(query);
-            string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
             SqlConnection conn = new SqlConnection(stringConnect);
             SqlDataAdapter dt = new SqlDataAdapter(query, conn);
             DataSet dase = new DataSet();

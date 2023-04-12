@@ -155,7 +155,7 @@
             this.guna2GradientButton7.Name = "guna2GradientButton7";
             this.guna2GradientButton7.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton7.TabIndex = 12;
-            this.guna2GradientButton7.Text = "Quản lý nhân viên (waiting)";
+            this.guna2GradientButton7.Text = "Quản lý nhân viên ";
             this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
             // 
             // guna2GradientButton6
@@ -243,7 +243,7 @@
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton3.TabIndex = 12;
-            this.guna2GradientButton3.Text = "Quản lý thông tin cá nhân (waiting)";
+            this.guna2GradientButton3.Text = "Quản lý thông tin cá nhân";
             this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
             // 
             // guna2GradientButton2
