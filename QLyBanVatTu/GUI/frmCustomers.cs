@@ -96,7 +96,7 @@ namespace GUI
         {
             // Chuyển đổi biến b sang dạng int và lưu vào một biến khác (ví dụ: intB)
             DAL_NuaMua nuamua = new DAL_NuaMua();
-            txtID.Text = nuamua.CreateNewID("ma_kh");
+            txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
             txtName.Text = null;
             txtAddress.Text = null;
             txtPhone.Text = null;
@@ -134,6 +134,8 @@ namespace GUI
                     {
                         dtgvCustomer.DataSource = buskhachhang.ListCustomer();
                         LoadGridView();
+                        DAL_NuaMua nuamua = new DAL_NuaMua();
+                        txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
                         MessBox("Sửa thông tin khách hàng thành công");
                     }
                     else
@@ -157,7 +159,12 @@ namespace GUI
                     buskhachhang.DeleteCustomer(ma);
                     dtgvCustomer.DataSource = buskhachhang.ListCustomer();
                     LoadGridView();
-                    MessBox("Xóa vật tư thành công");
+                    DAL_NuaMua nuamua = new DAL_NuaMua();
+                    txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
+                    txtName.Text = null;
+                    txtAddress.Text = null;
+                    txtPhone.Text = null;
+                    MessBox("Xóa khách hàng thành công");
                 }
                 else
                 {

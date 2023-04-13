@@ -55,13 +55,12 @@ namespace  GUI
                 this.Hide();
                 fHome.ShowDialog();
                 this.Show();
+
             }
             else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin để đăng nhập");
             }
-
-
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)

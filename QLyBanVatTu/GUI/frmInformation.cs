@@ -94,7 +94,9 @@ namespace GUI
                     {
                         MessageBox.Show("Đổi mật khẩu thành công, vui lòng đăng nhập lại.", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                         Application.Restart();
+                        
                     }
                     else MessageBox.Show("Mật khẩu cũ không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

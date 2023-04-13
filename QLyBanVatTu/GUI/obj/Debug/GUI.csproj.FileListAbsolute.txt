@@ -158,3 +158,4 @@ D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\D
 D:\Work\CTU\CT291 - Lap trinh window\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\DELL\OneDrive\Máy tính\SalesManagement\QLyBanVatTu\GUI\obj\Debug\GUI.frmLoaiVatTu.resources

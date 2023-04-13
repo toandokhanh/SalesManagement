@@ -136,9 +136,20 @@ namespace GUI
                 {
                     dtgvProduct.DataSource = busproduct.ListProduct();
                     LoadGridView();
-                    MessBox("Thêm vật tư thành công");
+                    txtIDProduct.ReadOnly = false;
+                    txtIDProduct.Text = null;
+                    cbLoaiVT.SelectedIndex = -1;
+                    cbNuocSX.SelectedIndex = -1;
+                    cbNCC.SelectedIndex = -1;
+                    txtName.Text = null;
+                    txtNumber.Text = null;
+                    txtMoTa.Text = null;
+                    txtPrice.Text = null;
+                    txtImg.Text = null;
+                    guna2PictureBox1.Image = null;
                     DAL_NuaMua nuamua = new DAL_NuaMua();
                     txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
+                    MessBox("Thêm vật tư thành công");                    
                 }
                 else
                 {
@@ -203,7 +214,9 @@ namespace GUI
                     if (busproduct.UpdateProduct(dto_HangHoa))
                     {
                         dtgvProduct.DataSource = busproduct.ListProduct();
-                        LoadGridView();
+                        LoadGridView();                        
+                        DAL_NuaMua nuamua = new DAL_NuaMua();
+                        txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
                         MessBox("Sửa vật tư thành công");
                     }
                     else
@@ -225,12 +238,25 @@ namespace GUI
                 string ma = txtIDProduct.Text;
                 if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (ma != null)
+                    if (busproduct.DeleteProduct(txtIDProduct.Text))
                     {
                         //MessageBox.Show(ma);
                         busproduct.DeleteProduct(ma);
                         dtgvProduct.DataSource = busproduct.ListProduct();
                         LoadGridView();
+                        txtIDProduct.ReadOnly = false;
+                        txtIDProduct.Text = null;
+                        cbLoaiVT.SelectedIndex = -1;
+                        cbNuocSX.SelectedIndex = -1;
+                        cbNCC.SelectedIndex = -1;
+                        txtName.Text = null;
+                        txtNumber.Text = null;
+                        txtMoTa.Text = null;
+                        txtPrice.Text = null;
+                        txtImg.Text = null;
+                        guna2PictureBox1.Image = null;
+                        DAL_NuaMua nuamua = new DAL_NuaMua();
+                        txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
                         MessBox("Xóa vật tư thành công");
                     }
                     else

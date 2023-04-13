@@ -260,7 +260,7 @@ namespace GUI
                 txtNumberProduct.Text = "";
                 txtNumberProduct.Focus();
                 return;
-            }
+            }   
             conn.Open();
             sql = "INSERT INTO CHI_TIET_HD_XUAT(HDX_Ma, HH_Ma, SoLuongXuat, DonGiaXuat, ThanhTien) VALUES('" + txtIDExprotBill.Text + "', '" + cbIDProduct.SelectedValue.ToString() + "', '" + txtNumberProduct.Text + "', '" + txtPrice.Text + "', '" + txtTotalProduct.Text + "')";
             try
