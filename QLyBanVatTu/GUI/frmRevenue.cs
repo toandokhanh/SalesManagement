@@ -121,7 +121,7 @@ namespace GUI
             string ngayBDSQL = ngayBD.ToString("yyyy-MM-dd");
             string ngayKTSQL = ngayKT.ToString("yyyy-MM-dd");
             string query = "SELECT HDX.HDX_Ma,KH.TEN_KH, KH.DIACHI,KH.SDT, HDX.HDX_NgayLap, HDX.HDX_TongTien\r\nFROM [QLVT].[dbo].[HOA_DON_XUAT] HDX\r\nJOIN [QLVT].[dbo].[KHACH_HANG] KH ON HDX.MA_KH = KH.MA_KH\r\nWHERE HDX.HDX_NgayLap BETWEEN '" + ngayBDSQL + "' AND '" + ngayKTSQL + "'";
-            MessageBox.Show(query);
+            //MessageBox.Show(query);
             SqlConnection conn = new SqlConnection(stringConnect);
             SqlDataAdapter dt = new SqlDataAdapter(query, conn);
             DataSet dase = new DataSet();

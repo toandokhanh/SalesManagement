@@ -138,9 +138,10 @@ namespace GUI
                     LoadGridView();
                     txtIDProduct.ReadOnly = false;
                     txtIDProduct.Text = null;
+                    cbNCC.SelectedIndex = -1;
                     cbLoaiVT.SelectedIndex = -1;
                     cbNuocSX.SelectedIndex = -1;
-                    cbNCC.SelectedIndex = -1;
+                    
                     txtName.Text = null;
                     txtNumber.Text = null;
                     txtMoTa.Text = null;
@@ -246,9 +247,9 @@ namespace GUI
                         LoadGridView();
                         txtIDProduct.ReadOnly = false;
                         txtIDProduct.Text = null;
+                        cbNCC.SelectedIndex = -1;
                         cbLoaiVT.SelectedIndex = -1;
                         cbNuocSX.SelectedIndex = -1;
-                        cbNCC.SelectedIndex = -1;
                         txtName.Text = null;
                         txtNumber.Text = null;
                         txtMoTa.Text = null;
@@ -271,9 +272,9 @@ namespace GUI
         {
             txtIDProduct.ReadOnly = false;
             txtIDProduct.Text = null;
+            cbNCC.SelectedIndex = -1;
             cbLoaiVT.SelectedIndex = -1;
             cbNuocSX.SelectedIndex = -1;
-            cbNCC.SelectedIndex = -1;
             txtName.Text = null;
             txtNumber.Text = null;
             txtMoTa.Text = null;
