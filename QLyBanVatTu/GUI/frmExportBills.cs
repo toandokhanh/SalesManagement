@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL\SQLEXPRESS;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -553,10 +553,6 @@ namespace GUI
             dtgvExportBill.ClearSelection();
         }
 
-        private void cbHDX_Ma_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void cbHDX_Ma_SelectedValueChanged(object sender, EventArgs e)
         {
             txtIDExprotBill.Text = cbHDX_Ma.Text;
@@ -568,195 +564,12 @@ namespace GUI
             dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
             btnPrint.Enabled = true;
             LoadDataGV();
-        }
-
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        }      
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStaff_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void datepicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNameCustomer_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgvExportBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtIntro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTotalProduct_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTotalBill_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNameProduct_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        }          
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIDExprotBill_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbPQNV_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
         {
 
         }

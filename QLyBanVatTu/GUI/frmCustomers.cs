@@ -133,9 +133,7 @@ namespace GUI
                     if (buskhachhang.UpdateCustomer(dtokhachhang))
                     {
                         dtgvCustomer.DataSource = buskhachhang.ListCustomer();
-                        LoadGridView();
-                        DAL_NuaMua nuamua = new DAL_NuaMua();
-                        txtID.Text = nuamua.CreateNewID("SELECT MAX(ma_kh) AS Largest_ma_kh FROM KHACH_HANG");
+                        LoadGridView();                       
                         MessBox("Sửa thông tin khách hàng thành công");
                     }
                     else

@@ -221,7 +221,8 @@ namespace GUI
                 txtAddress.Text = dtgvStaff.CurrentRow.Cells[3].Value.ToString();
                 txtPhone.Text = dtgvStaff.CurrentRow.Cells[4].Value.ToString();
                 cbPhanQuyen.Text = dtgvStaff.CurrentRow.Cells[2].Value.ToString();
-                txtNgaySinh.Text = dtgvStaff.CurrentRow.Cells[6].Value.ToString();
+                DateTime ngaysinh = (DateTime)dtgvStaff.CurrentRow.Cells[6].Value;
+                txtNgaySinh.Text = ngaysinh.ToString("dd/MM/yyyy");
                 string gioitinh = dtgvStaff.CurrentRow.Cells[5].Value.ToString();
                 txtPassword.Text = daltkht.GetFieldValues("Select TKHT_Password from TAI_KHOAN_HE_THONG where TKHT_Email = '"+txtEmail.Text+"'");
                 if (gioitinh == "Nam")

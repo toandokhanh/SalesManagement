@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -94,7 +94,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1200, 30);
             this.guna2Panel1.TabIndex = 17;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2ControlBox1
             // 
@@ -107,7 +106,6 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(56, 29);
             this.guna2ControlBox1.TabIndex = 19;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -119,7 +117,6 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(56, 29);
             this.guna2ControlBox2.TabIndex = 18;
-            this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
             // label1
             // 
@@ -130,7 +127,6 @@
             this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Quản lý hóa đơn bán";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnDelete
             // 
@@ -210,7 +206,6 @@
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 32;
             this.label2.Text = "Mã hóa đơn";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -221,7 +216,6 @@
             this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 32;
             this.label3.Text = "Mã khách hàng";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -232,7 +226,6 @@
             this.label4.Size = new System.Drawing.Size(100, 16);
             this.label4.TabIndex = 32;
             this.label4.Text = "Phân quyền NV";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtStaff
             // 
@@ -257,7 +250,6 @@
             this.txtStaff.SelectedText = "";
             this.txtStaff.Size = new System.Drawing.Size(215, 38);
             this.txtStaff.TabIndex = 34;
-            this.txtStaff.TextChanged += new System.EventHandler(this.txtStaff_TextChanged);
             // 
             // label5
             // 
@@ -268,7 +260,6 @@
             this.label5.Size = new System.Drawing.Size(62, 16);
             this.label5.TabIndex = 32;
             this.label5.Text = "Ngày lập";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // datepicker
             // 
@@ -285,7 +276,6 @@
             this.datepicker.Size = new System.Drawing.Size(215, 36);
             this.datepicker.TabIndex = 35;
             this.datepicker.Value = new System.DateTime(2023, 3, 12, 18, 24, 20, 651);
-            this.datepicker.ValueChanged += new System.EventHandler(this.datepicker_ValueChanged);
             // 
             // txtIDCustomer
             // 
@@ -310,7 +300,6 @@
             this.txtIDCustomer.SelectedText = "";
             this.txtIDCustomer.Size = new System.Drawing.Size(215, 38);
             this.txtIDCustomer.TabIndex = 36;
-            this.txtIDCustomer.TextChanged += new System.EventHandler(this.txtNameCustomer_TextChanged);
             // 
             // groupBox1
             // 
@@ -345,32 +334,31 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dtgvExportBill
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvExportBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dtgvExportBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dtgvExportBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.dtgvExportBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvExportBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvExportBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dtgvExportBill.ColumnHeadersHeight = 30;
             this.dtgvExportBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvExportBill.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvExportBill.DefaultCellStyle = dataGridViewCellStyle21;
             this.dtgvExportBill.GridColor = System.Drawing.Color.White;
             this.dtgvExportBill.Location = new System.Drawing.Point(8, 149);
             this.dtgvExportBill.Name = "dtgvExportBill";
@@ -410,7 +398,6 @@
             this.label18.Size = new System.Drawing.Size(229, 16);
             this.label18.TabIndex = 39;
             this.label18.Text = "Nhấp đúp vào dòng trên bảng để xóa";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
@@ -420,7 +407,6 @@
             this.label17.Size = new System.Drawing.Size(229, 16);
             this.label17.TabIndex = 39;
             this.label17.Text = "Nhấp đúp vào dòng trên bảng để xóa";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // txtIntro
             // 
@@ -445,7 +431,6 @@
             this.txtIntro.SelectedText = "";
             this.txtIntro.Size = new System.Drawing.Size(215, 38);
             this.txtIntro.TabIndex = 37;
-            this.txtIntro.TextChanged += new System.EventHandler(this.txtIntro_TextChanged);
             // 
             // label16
             // 
@@ -456,7 +441,6 @@
             this.label16.Size = new System.Drawing.Size(40, 16);
             this.label16.TabIndex = 36;
             this.label16.Text = "Mô tả";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // txtTotalProduct
             // 
@@ -480,7 +464,6 @@
             this.txtTotalProduct.SelectedText = "";
             this.txtTotalProduct.Size = new System.Drawing.Size(215, 38);
             this.txtTotalProduct.TabIndex = 34;
-            this.txtTotalProduct.TextChanged += new System.EventHandler(this.txtTotalProduct_TextChanged);
             // 
             // txtTotalBill
             // 
@@ -503,7 +486,6 @@
             this.txtTotalBill.SelectedText = "";
             this.txtTotalBill.Size = new System.Drawing.Size(215, 38);
             this.txtTotalBill.TabIndex = 34;
-            this.txtTotalBill.TextChanged += new System.EventHandler(this.txtTotalBill_TextChanged);
             // 
             // txtPrice
             // 
@@ -528,7 +510,6 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(215, 38);
             this.txtPrice.TabIndex = 34;
-            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // txtNumberProduct
             // 
@@ -576,7 +557,6 @@
             this.txtIDProduct.SelectedText = "";
             this.txtIDProduct.Size = new System.Drawing.Size(215, 38);
             this.txtIDProduct.TabIndex = 34;
-            this.txtIDProduct.TextChanged += new System.EventHandler(this.txtNameProduct_TextChanged);
             // 
             // label14
             // 
@@ -587,7 +567,6 @@
             this.label14.Size = new System.Drawing.Size(69, 16);
             this.label14.TabIndex = 32;
             this.label14.Text = "Thành tiền";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // btnRefresh
             // 
@@ -621,7 +600,6 @@
             this.label12.Size = new System.Drawing.Size(63, 16);
             this.label12.TabIndex = 32;
             this.label12.Text = "Tổng tiền";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -632,7 +610,6 @@
             this.label13.Size = new System.Drawing.Size(53, 16);
             this.label13.TabIndex = 32;
             this.label13.Text = "Đơn giá";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // btnPrint
             // 
@@ -666,7 +643,6 @@
             this.label11.Size = new System.Drawing.Size(60, 16);
             this.label11.TabIndex = 32;
             this.label11.Text = "Số lượng";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label19
             // 
@@ -678,7 +654,6 @@
             this.label19.Size = new System.Drawing.Size(77, 20);
             this.label19.TabIndex = 32;
             this.label19.Text = "Tìm kiếm";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label10
             // 
@@ -689,7 +664,6 @@
             this.label10.Size = new System.Drawing.Size(85, 16);
             this.label10.TabIndex = 32;
             this.label10.Text = "Mã hàng hóa";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -767,7 +741,6 @@
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chung";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtAddress
             // 
@@ -792,7 +765,6 @@
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(215, 38);
             this.txtAddress.TabIndex = 38;
-            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label15
             // 
@@ -803,7 +775,6 @@
             this.label15.Size = new System.Drawing.Size(47, 16);
             this.label15.TabIndex = 37;
             this.label15.Text = "Địa chỉ";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // txtPhone
             // 
@@ -828,7 +799,6 @@
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(215, 38);
             this.txtPhone.TabIndex = 36;
-            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // txtIDExprotBill
             // 
@@ -852,7 +822,6 @@
             this.txtIDExprotBill.SelectedText = "";
             this.txtIDExprotBill.Size = new System.Drawing.Size(215, 38);
             this.txtIDExprotBill.TabIndex = 34;
-            this.txtIDExprotBill.TextChanged += new System.EventHandler(this.txtIDExprotBill_TextChanged);
             // 
             // label7
             // 
@@ -863,7 +832,6 @@
             this.label7.Size = new System.Drawing.Size(41, 16);
             this.label7.TabIndex = 32;
             this.label7.Text = "Email";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -874,7 +842,6 @@
             this.label6.Size = new System.Drawing.Size(103, 16);
             this.label6.TabIndex = 32;
             this.label6.Text = "Tên khách hàng";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label8
             // 
@@ -885,7 +852,6 @@
             this.label8.Size = new System.Drawing.Size(88, 16);
             this.label8.TabIndex = 32;
             this.label8.Text = "Số điện thoại ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cbPQNV
             // 
@@ -903,7 +869,6 @@
             this.cbPQNV.Name = "cbPQNV";
             this.cbPQNV.Size = new System.Drawing.Size(215, 36);
             this.cbPQNV.TabIndex = 33;
-            this.cbPQNV.SelectedIndexChanged += new System.EventHandler(this.cbPQNV_SelectedIndexChanged);
             // 
             // cbCustomer
             // 
