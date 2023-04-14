@@ -1,6 +1,6 @@
-		
+	
 CREATE TABLE [dbo].[PHAN_QUYEN](
-	[PQ_Ma] [varchar](6) NOT NULL,
+	[PQ_Ma] [varchar](10) NOT NULL,
 	[PQ_Ten] [nvarchar](50) NULL,
 	[PQ_MoTa] [nvarchar](100) NULL,
 	[PQ_TinhTrang] [bit] NULL,
@@ -20,7 +20,7 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[NUOC_SAN_XUAT](
-	[NSX_Ma] [varchar](6) NOT NULL,
+	[NSX_Ma] [varchar](10) NOT NULL,
 	[NSX_Ten] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -38,7 +38,7 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[NHA_CUNG_CAP](
-	[NCC_Ma] [varchar](6) NOT NULL,
+	[NCC_Ma] [varchar](10) NOT NULL,
 	[NCC_Ten] [nvarchar](50) NULL,
 	[NCC_DiaChi] [nvarchar](100) NULL,
 	[NCC_SDT] [varchar](10) NULL,
@@ -58,8 +58,8 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[LOAI_HANG](
-	[LH_Ma] [varchar](6) NOT NULL,
-	[LH_Ten] [nvarchar](20) NULL,
+	[LH_Ma] [varchar](10) NOT NULL,
+	[LH_Ten] [nvarchar](50) NULL,
 	[LH_MoTa] [nvarchar](100) NULL,
 	[LH_TrangThai] [bit] NULL,
 PRIMARY KEY CLUSTERED 
@@ -78,7 +78,7 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[KHACH_HANG](
-	[MA_KH] [varchar](6) NOT NULL,
+	[MA_KH] [varchar](10) NOT NULL,
 	[TEN_KH] [nvarchar](20) NULL,
 	[DIACHI] [nvarchar](100) NULL,
 	[SDT] [varchar](10) NULL,
@@ -98,10 +98,10 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[HANGHOA](
-	[HH_Ma] [varchar](6) NOT NULL,
-	[LH_Ma] [varchar](6) NULL,
-	[NSX_ma] [varchar](6) NULL,
-	[NCC_ma] [varchar](6) NULL,
+	[HH_Ma] [varchar](10) NOT NULL,
+	[LH_Ma] [varchar](10) NULL,
+	[NSX_ma] [varchar](10) NULL,
+	[NCC_ma] [varchar](10) NULL,
 	[HH_Ten] [nvarchar](50) NULL,
 	[HH_SoLuong] [int] NULL,
 	[HH_MoTa] [nvarchar](100) NULL,
@@ -122,7 +122,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[InsertCustomers]
-    @makh VARCHAR(6),
+    @makh VARCHAR(10),
     @tenkh nvarchar(20),
     @diachi nvarchar(100),
     @sdt varchar(10)
@@ -163,7 +163,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[UpdateCustomers]
-    @makh VARCHAR(6),
+    @makh VARCHAR(10),
     @tenkh nvarchar(20),
     @diachi nvarchar(100),
     @sdt varchar(10)
@@ -185,7 +185,7 @@ GO
 CREATE TABLE [dbo].[TAI_KHOAN_HE_THONG](
 	[TKHT_Email] [varchar](30) NOT NULL,
 	[TKHT_HoTen] [nvarchar](50) Null,
-	[PQ_Ma] [varchar](6) NULL,
+	[PQ_Ma] [varchar](10) NULL,
 	[TKHT_Password] [varchar](20) NULL,
 	[TKHT_DiaChi] [nvarchar](100) NULL,
 	[TKHT_SoDienThoai] [varchar](10) NULL,
@@ -205,10 +205,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[UpdateProduct]
-    @mahang VARCHAR(6),
-    @maloai VARCHAR(6),
-    @manuocsx VARCHAR(6),
-	@manhacungcap varchar(6),
+    @mahang VARCHAR(10),
+    @maloai VARCHAR(10),
+    @manuocsx VARCHAR(10),
+	@manhacungcap varchar(10),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -269,8 +269,8 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[HOA_DON_XUAT](
-	[HDX_Ma] [varchar](6) NOT NULL,
-	[MA_KH] [varchar](6) NULL,
+	[HDX_Ma] [varchar](10) NOT NULL,
+	[MA_KH] [varchar](10) NULL,
 	[TKHT_Email] [varchar](30) NOT NULL,
 	[HDX_NgayLap] [date] NULL,
 	[HDX_TongTien] [float] NULL,
@@ -290,8 +290,8 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[HOA_DON_NHAP](
-	[HDN_Ma] [varchar](6) NOT NULL,
-	[NCC_Ma] [varchar](6) NULL,
+	[HDN_Ma] [varchar](10) NOT NULL,
+	[NCC_Ma] [varchar](10) NULL,
 	[TKHT_Email] [varchar](30) NOT NULL,
 	[HDN_NgayNhap] [date] NULL,
 	[HDN_TongTien] [float] NULL,
@@ -332,7 +332,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROC [dbo].[DeleteofProduct]
-@mahang varchar(6)
+@mahang varchar(10)
 AS BEGIN
 DECLARE @kq BIT = 1
 IF EXISTS(SELECT * FROM HANGHOA WHERE HH_Ma = @mahang)
@@ -348,10 +348,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[InsertofProducts]
-    @mahang VARCHAR(6),
-    @maloai VARCHAR(6),
-    @manuocsx VARCHAR(6),
-    @manhacungcap varchar(6),
+    @mahang VARCHAR(10),
+    @maloai VARCHAR(10),
+    @manuocsx VARCHAR(10),
+    @manhacungcap varchar(10),
     @tenhang nvarchar(50),
     @soluonghang int,
     @motahang nvarchar(100),
@@ -373,8 +373,8 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[CHITIET_HD_NHAP](
-	[HDN_Ma] [varchar](6) NOT NULL,
-	[HH_Ma] [varchar](6) NOT NULL,
+	[HDN_Ma] [varchar](10) NOT NULL,
+	[HH_Ma] [varchar](10) NOT NULL,
 	[SoLuongNhap] [int] NULL,
 	[DonGiaNhap] [float] NULL,
 PRIMARY KEY CLUSTERED 
@@ -394,8 +394,8 @@ GO
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[CHI_TIET_HD_XUAT](
-	[HDX_Ma] [varchar](6) NOT NULL,
-	[HH_Ma] [varchar](6) NOT NULL,
+	[HDX_Ma] [varchar](10) NOT NULL,
+	[HH_Ma] [varchar](10) NOT NULL,
 	[SoLuongXuat] [int] NULL,
 	[DonGiaXuat] [float] NULL,
 	[ThanhTien] [float] NULL,
@@ -433,14 +433,17 @@ Go
 
 Go
 INSERT INTO TAI_KHOAN_HE_THONG (TKHT_Email,TKHT_HoTen , PQ_Ma, TKHT_Password, TKHT_DiaChi, TKHT_SoDienThoai, TKHT_GioiTinh, TKHT_NgaySinh)
-VALUES ('admin@localhost.com','Cat', 'PQ01', '123456', 'Ha Noi', '0987654321', 1, '2000-01-01')
+VALUES ('toan@gmail.com',N'Đỗ Khánh Toàn', 'PQ01', '123456', 'Ha Noi', '0987654321', 1, '2000-01-01')
 GO
 INSERT INTO TAI_KHOAN_HE_THONG (TKHT_Email,TKHT_HoTen , PQ_Ma, TKHT_Password, TKHT_DiaChi, TKHT_SoDienThoai, TKHT_GioiTinh, TKHT_NgaySinh)
-VALUES ('CEO@localhost.com','thòn', 'PQ02', '123456', 'Ha Noi', '0987654321', 1, '1990-01-01')
+VALUES ('tin@gmail.com',N'Huỳnh Trung Tín', 'PQ01', '123456', 'Ha Noi', '0987654321', 1, '1990-01-01')
 GO
 INSERT INTO TAI_KHOAN_HE_THONG (TKHT_Email,TKHT_HoTen , PQ_Ma, TKHT_Password, TKHT_DiaChi, TKHT_SoDienThoai, TKHT_GioiTinh, TKHT_NgaySinh)
-VALUES ('emp1@localhost.com','Kiệp', 'PQ03', '123456', 'Ha Noi', '0987654321', 0, '1995-01-01')
+VALUES ('kiep@gmail.com','Trần Thanh Kiệp', 'PQ02', '123456', 'Ha Noi', '0987654321', 1, '1995-01-01')
 GO
+GO
+INSERT INTO TAI_KHOAN_HE_THONG (TKHT_Email,TKHT_HoTen , PQ_Ma, TKHT_Password, TKHT_DiaChi, TKHT_SoDienThoai, TKHT_GioiTinh, TKHT_NgaySinh)
+VALUES ('an@gmail.com',N'Nguyễn Thành An', 'PQ03', '123456', 'Ha Noi', '0987654321', 1, '1995-01-01')
 GO
 INSERT INTO TAI_KHOAN_HE_THONG (TKHT_Email,TKHT_HoTen , PQ_Ma, TKHT_Password, TKHT_DiaChi, TKHT_SoDienThoai, TKHT_GioiTinh, TKHT_NgaySinh)
 VALUES ('1', 'An', 'PQ01', '1', 'Ha Tinh', '087654321', 0, '2002-01-01')
@@ -457,19 +460,30 @@ VALUES ('NCC01', N'Công ty TNHH A', N'123 Đường ABC, Quận 1, TP. HCM', '0
 ('NCC03', N'Công ty TNHH C', N'789 Đường LMN, Quận 3, TP. HCM', '0123456789');
 GO
 INSERT INTO LOAI_HANG (LH_Ma, LH_Ten, LH_MoTa, LH_TrangThai)
-VALUES ('LH_1', N'Cát xây dựng', N'Loại cát dùng để xây dựng', 1),
-('LH_2', N'Đá 1x2', N'Loại đá có kích thước 1x2', 1),
-('LH_3', N'Than củi', N'Loại than dùng để đốt lò hơi', 1);
+VALUES ('LH_1', N'VẬT TƯ TIÊU CHUẨN PHẦN THÔ', N'Bao gồm các loại vật tư để xây dựng nên móng,...', 1),
+('LH_2', N'SƠN NƯỚC', N'Bao gồm sơn nước, sơn khô, sơn xịt,...', 1),
+('LH_3', N'LÁT NỀN', N'Bao gồm các loại gạch lát từ trong nhà ngoài sân,...', 1),
+('LH_4', N'GẠCH ỐP TƯỜNG', N'Bao gồm các loại gạch đá,...', 1),
+('LH_5', N'TRẦN THẠCH CAO', N'Bao gồm các loại thạch cao ốp trần nhà,...', 1),
+('LH_6', N'CỔNG ', N'Gồm các loại cổng,...', 1),
+('LH_7', N'CỬA ĐI', N'Gồm các loại cửa,...', 1),
+('LH_8', N'THIẾT BỊ ĐIỆN VÀ CHIẾU SÁNG', N'Gồm có đèn, dây điện,...', 1);
 GO
 INSERT INTO NUOC_SAN_XUAT (NSX_Ma, NSX_Ten)
 VALUES ('NSX01', N'Việt Nam'),
 ('NSX02', N'Đức'),
-('NSX03', N'Mỹ');
+('NSX03', N'Mỹ'),
+('NSX04', N'Thái Lan'),
+('NSX05', N'Trung Quốc');
 GO
 INSERT INTO KHACH_HANG (MA_KH, TEN_KH, DIACHI, SDT)
 VALUES ('KH_1', N'Nguyễn Văn A', N'123 Đường ABC, Quận 1, TP. HCM', '0123456789'),
 ('KH_2', N'Trần Thị B', N'456 Đường XYZ, Quận 2, TP. HCM', '0123456789'),
-('KH_3', N'Lê Văn C', N'789 Đường LMN, Quận 3, TP. HCM', '0123456789');
+('KH_3', N'Lê Văn C', N'789 Đường NVC, Quận 3, TP. HCM', '0123456789'),
+('KH_4', N'Trần Thanh Kiệp', N'789 Đường NVL, Quận 5, TP. HCM', '0123456789'),
+('KH_5', N'Đỗ Khánh Thòn', N'789 Đường NVC, Quận 9, TP. HCM', '0123456789'),
+('KH_6', N'Huỳnh Trung Tín', N'789 Đường 3/2, Quận 10, TP. HCM', '0123456789'),
+('KH_7', N'Nguyễn Thành Ân', N'789 Đường 30/4, Quận 1, TP. HCM', '0123456789');
 GO
 
 INSERT INTO [dbo].[HOA_DON_XUAT] ([HDX_Ma], [MA_KH], [TKHT_Email], [HDX_NgayLap], [HDX_TongTien])
@@ -480,54 +494,5 @@ VALUES ('HDX_1', 'KH_1', 'admin@localhost.com', '2023-04-01', 1000000),
 ('HDX_5', 'KH_2', 'admin@localhost.com', '2023-04-05', 5000000),
 ('HDX_6', 'KH_3', 'admin@localhost.com', '2023-04-06', 6000000)
 GO
-SET ANSI_PADDING OFF
-GO
-/****** Object:  ForeignKey [FK__CHI_TIET___HDX_M__33D4B598]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[CHI_TIET_HD_XUAT]  WITH CHECK ADD FOREIGN KEY([HDX_Ma])
-REFERENCES [dbo].[HOA_DON_XUAT] ([HDX_Ma])
-GO
-/****** Object:  ForeignKey [FK__CHI_TIET___HH_Ma__34C8D9D1]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[CHI_TIET_HD_XUAT]  WITH CHECK ADD FOREIGN KEY([HH_Ma])
-REFERENCES [dbo].[HANGHOA] ([HH_Ma])
-GO
-/****** Object:  ForeignKey [FK__CHITIET_H__HDN_M__35BCFE0A]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[CHITIET_HD_NHAP]  WITH CHECK ADD FOREIGN KEY([HDN_Ma])
-REFERENCES [dbo].[HOA_DON_NHAP] ([HDN_Ma])
-GO
-/****** Object:  ForeignKey [FK__CHITIET_H__HH_Ma__36B12243]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[CHITIET_HD_NHAP]  WITH CHECK ADD FOREIGN KEY([HH_Ma])
-REFERENCES [dbo].[HANGHOA] ([HH_Ma])
-GO
-/****** Object:  ForeignKey [FK__HANGHOA__LH_Ma__30F848ED]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HANGHOA]  WITH CHECK ADD FOREIGN KEY([LH_Ma])
-REFERENCES [dbo].[LOAI_HANG] ([LH_Ma])
-GO
-/****** Object:  ForeignKey [FK__HANGHOA__NCC_ma__32E0915F]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HANGHOA]  WITH CHECK ADD FOREIGN KEY([NCC_ma])
-REFERENCES [dbo].[NHA_CUNG_CAP] ([NCC_Ma])
-GO
-/****** Object:  ForeignKey [FK__HANGHOA__NSX_ma__31EC6D26]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HANGHOA]  WITH CHECK ADD FOREIGN KEY([NSX_ma])
-REFERENCES [dbo].[NUOC_SAN_XUAT] ([NSX_Ma])
-GO
-/****** Object:  ForeignKey [FK__HOA_DON_N__NCC_M__2F10007B]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HOA_DON_NHAP]  WITH CHECK ADD FOREIGN KEY([NCC_Ma])
-REFERENCES [dbo].[NHA_CUNG_CAP] ([NCC_Ma])
-GO
-/****** Object:  ForeignKey [FK__HOA_DON_N__TKHT___300424B4]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HOA_DON_NHAP]  WITH CHECK ADD FOREIGN KEY([TKHT_Email])
-REFERENCES [dbo].[TAI_KHOAN_HE_THONG] ([TKHT_Email])
-GO
-/****** Object:  ForeignKey [FK__HOA_DON_X__MA_KH__2D27B809]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HOA_DON_XUAT]  WITH CHECK ADD FOREIGN KEY([MA_KH])
-REFERENCES [dbo].[KHACH_HANG] ([MA_KH])
-GO
-/****** Object:  ForeignKey [FK__HOA_DON_X__TKHT___2E1BDC42]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[HOA_DON_XUAT]  WITH CHECK ADD FOREIGN KEY([TKHT_Email])
-REFERENCES [dbo].[TAI_KHOAN_HE_THONG] ([TKHT_Email])
-GO
-/****** Object:  ForeignKey [FK__TAI_KHOAN__PQ_Ma__2C3393D0]    Script Date: 04/07/2023 21:10:49 ******/
-ALTER TABLE [dbo].[TAI_KHOAN_HE_THONG]  WITH CHECK ADD FOREIGN KEY([PQ_Ma])
-REFERENCES [dbo].[PHAN_QUYEN] ([PQ_Ma])
-GO
+
 
