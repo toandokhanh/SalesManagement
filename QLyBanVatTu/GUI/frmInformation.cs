@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class frmInformation : Form
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         BUS_TKHT tkht;
         private string email;
         public frmInformation(string email)

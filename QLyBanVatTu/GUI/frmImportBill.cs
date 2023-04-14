@@ -18,7 +18,7 @@ namespace GUI
     {
         DAL_ImportBill dalImportBill = new DAL_ImportBill();
         BUS_ImportBill busImportBill = new BUS_ImportBill();
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         private string role;
         private string email;
         public frmImportBill(string role, string email)

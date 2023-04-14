@@ -60,8 +60,7 @@ GO
 CREATE TABLE [dbo].[LOAI_HANG](
 	[LH_Ma] [varchar](10) NOT NULL,
 	[LH_Ten] [nvarchar](50) NULL,
-	[LH_MoTa] [nvarchar](100) NULL,
-	[LH_TrangThai] [bit] NULL,
+	[LH_MoTa] [nvarchar](100) NULL
 PRIMARY KEY CLUSTERED 
 (
 	[LH_Ma] ASC
@@ -459,15 +458,15 @@ VALUES ('NCC01', N'Công ty TNHH A', N'123 Đường ABC, Quận 1, TP. HCM', '0
 ('NCC02', N'Công ty TNHH B', N'456 Đường XYZ, Quận 2, TP. HCM', '0123456789'),
 ('NCC03', N'Công ty TNHH C', N'789 Đường LMN, Quận 3, TP. HCM', '0123456789');
 GO
-INSERT INTO LOAI_HANG (LH_Ma, LH_Ten, LH_MoTa, LH_TrangThai)
-VALUES ('LH_1', N'VẬT TƯ TIÊU CHUẨN PHẦN THÔ', N'Bao gồm các loại vật tư để xây dựng nên móng,...', 1),
-('LH_2', N'SƠN NƯỚC', N'Bao gồm sơn nước, sơn khô, sơn xịt,...', 1),
-('LH_3', N'LÁT NỀN', N'Bao gồm các loại gạch lát từ trong nhà ngoài sân,...', 1),
-('LH_4', N'GẠCH ỐP TƯỜNG', N'Bao gồm các loại gạch đá,...', 1),
-('LH_5', N'TRẦN THẠCH CAO', N'Bao gồm các loại thạch cao ốp trần nhà,...', 1),
-('LH_6', N'CỔNG ', N'Gồm các loại cổng,...', 1),
-('LH_7', N'CỬA ĐI', N'Gồm các loại cửa,...', 1),
-('LH_8', N'THIẾT BỊ ĐIỆN VÀ CHIẾU SÁNG', N'Gồm có đèn, dây điện,...', 1);
+INSERT INTO LOAI_HANG (LH_Ma, LH_Ten, LH_MoTa)
+VALUES ('LH_1', N'VẬT TƯ TIÊU CHUẨN PHẦN THÔ', N'Bao gồm các loại vật tư để xây dựng nên móng,...'),
+('LH_2', N'SƠN NƯỚC', N'Bao gồm sơn nước, sơn khô, sơn xịt,...'),
+('LH_3', N'LÁT NỀN', N'Bao gồm các loại gạch lát từ trong nhà ngoài sân,...'),
+('LH_4', N'GẠCH ỐP TƯỜNG', N'Bao gồm các loại gạch đá,...'),
+('LH_5', N'TRẦN THẠCH CAO', N'Bao gồm các loại thạch cao ốp trần nhà,...'),
+('LH_6', N'CỔNG ', N'Gồm các loại cổng,...'),
+('LH_7', N'CỬA ĐI', N'Gồm các loại cửa,...'),
+('LH_8', N'THIẾT BỊ ĐIỆN VÀ CHIẾU SÁNG', N'Gồm có đèn, dây điện,...');
 GO
 INSERT INTO NUOC_SAN_XUAT (NSX_Ma, NSX_Ten)
 VALUES ('NSX01', N'Việt Nam'),
@@ -487,12 +486,7 @@ VALUES ('KH_1', N'Nguyễn Văn A', N'123 Đường ABC, Quận 1, TP. HCM', '01
 GO
 
 INSERT INTO [dbo].[HOA_DON_XUAT] ([HDX_Ma], [MA_KH], [TKHT_Email], [HDX_NgayLap], [HDX_TongTien])
-VALUES ('HDX_1', 'KH_1', 'admin@localhost.com', '2023-04-01', 1000000),
-('HDX_2', 'KH_2', 'admin@localhost.com', '2023-04-02', 2000000),
-('HDX_3', 'KH_3', 'admin@localhost.com', '2023-04-03', 3000000),
-('HDX_4', 'KH_1', 'admin@localhost.com', '2023-04-04', 4000000),
-('HDX_5', 'KH_2', 'admin@localhost.com', '2023-04-05', 5000000),
-('HDX_6', 'KH_3', 'admin@localhost.com', '2023-04-06', 6000000)
+VALUES ('HDX_1', 'KH_1', 'admin@localhost.com', '2023-04-01', 0)
 GO
 
 

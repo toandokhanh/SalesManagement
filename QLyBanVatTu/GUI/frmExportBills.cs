@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -79,6 +79,7 @@ namespace GUI
         }
         private void frmExportBills_Load(object sender, System.EventArgs e)
         {
+            txtIDExprotBill.ReadOnly= true;
             btnInsert.Enabled = true;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
@@ -539,13 +540,16 @@ namespace GUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            dtgvExportBill.ClearSelection();
             cbCustomer.SelectedIndex = -1;
             cbHDX_Ma.SelectedIndex = -1;
             cbIDProduct.SelectedIndex = -1;
-            txtIDExprotBill.Text = "";
             txtNumberProduct.Text = "";
             txtTotalBill.Text = "";
             txtTotalProduct.Text = "";
+            DAL_NuaMua nuamua = new DAL_NuaMua();
+            txtIDExprotBill.Text = nuamua.CreateNewID("SELECT MAX(hdx_ma) AS Largest_ma_kh FROM HOA_DON_XUAT");
+            dtgvExportBill.DataSource = busExportBill.ListExportBill(txtIDExprotBill.Text);
             dtgvExportBill.ClearSelection();
         }
 

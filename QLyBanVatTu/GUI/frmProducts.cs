@@ -216,8 +216,8 @@ namespace GUI
                     {
                         dtgvProduct.DataSource = busproduct.ListProduct();
                         LoadGridView();                        
-                        DAL_NuaMua nuamua = new DAL_NuaMua();
-                        txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
+                        //DAL_NuaMua nuamua = new DAL_NuaMua();
+                        //txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
                         MessBox("Sửa vật tư thành công");
                     }
                     else
@@ -270,8 +270,10 @@ namespace GUI
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            txtIDProduct.ReadOnly = false;
-            txtIDProduct.Text = null;
+            txtIDProduct.ReadOnly = true;
+            cbNCC.SelectedIndex = -1;
+            cbLoaiVT.SelectedIndex = -1;
+            cbNuocSX.SelectedIndex = -1;
             cbNCC.SelectedIndex = -1;
             cbLoaiVT.SelectedIndex = -1;
             cbNuocSX.SelectedIndex = -1;

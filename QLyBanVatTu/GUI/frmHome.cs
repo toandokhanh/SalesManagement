@@ -75,9 +75,9 @@ namespace GUI
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
 
-            frmStaffs fStaffs = new frmStaffs();
+            frmLoaiVatTu frmLoaiVatTu = new frmLoaiVatTu();
             this.Hide();
-            fStaffs.ShowDialog();
+            frmLoaiVatTu.ShowDialog();
             this.Show();
             
         }
@@ -100,6 +100,14 @@ namespace GUI
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2GradientButton8_Click(object sender, EventArgs e)
+        {
+            frmStaffs frmStaffs = new frmStaffs();
+            this.Hide();
+            frmStaffs.ShowDialog();
+            this.Show();
         }
     }
 }

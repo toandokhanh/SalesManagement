@@ -127,9 +127,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(14, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
+            this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Quản lý hóa đơn xuất";
+            this.label1.Text = "Quản lý hóa đơn bán";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnDelete

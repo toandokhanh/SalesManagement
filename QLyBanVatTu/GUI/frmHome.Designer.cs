@@ -128,13 +128,13 @@
             this.guna2GradientButton8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton8.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton8.Location = new System.Drawing.Point(83, 443);
+            this.guna2GradientButton8.Location = new System.Drawing.Point(474, 304);
             this.guna2GradientButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton8.Name = "guna2GradientButton8";
             this.guna2GradientButton8.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton8.TabIndex = 12;
-            this.guna2GradientButton8.Text = "Quản lý loại vật tư (waiting)";
-            this.guna2GradientButton8.Click += new System.EventHandler(this.guna2GradientButton7_Click);
+            this.guna2GradientButton8.Text = "Quản lý nhân viên";
+            this.guna2GradientButton8.Click += new System.EventHandler(this.guna2GradientButton8_Click);
             // 
             // guna2GradientButton7
             // 
@@ -150,12 +150,12 @@
             this.guna2GradientButton7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton7.Location = new System.Drawing.Point(851, 304);
+            this.guna2GradientButton7.Location = new System.Drawing.Point(851, 168);
             this.guna2GradientButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton7.Name = "guna2GradientButton7";
             this.guna2GradientButton7.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton7.TabIndex = 12;
-            this.guna2GradientButton7.Text = "Quản lý nhân viên ";
+            this.guna2GradientButton7.Text = "Quản lý danh mục";
             this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
             // 
             // guna2GradientButton6
@@ -172,7 +172,7 @@
             this.guna2GradientButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.Location = new System.Drawing.Point(474, 304);
+            this.guna2GradientButton6.Location = new System.Drawing.Point(83, 304);
             this.guna2GradientButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton6.Name = "guna2GradientButton6";
             this.guna2GradientButton6.Size = new System.Drawing.Size(264, 80);
@@ -194,12 +194,12 @@
             this.guna2GradientButton4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(83, 304);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(851, 304);
             this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.Size = new System.Drawing.Size(264, 80);
             this.guna2GradientButton4.TabIndex = 12;
-            this.guna2GradientButton4.Text = "Quản lý hóa đơn xuất";
+            this.guna2GradientButton4.Text = "Quản lý hóa đơn bán";
             this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 
             // guna2GradientButton5
@@ -238,7 +238,7 @@
             this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(851, 168);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(83, 444);
             this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.Size = new System.Drawing.Size(264, 80);
@@ -281,7 +281,7 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(474, 443);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(474, 444);
             this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(264, 81);

@@ -21,7 +21,7 @@ namespace GUI
         DAL_TKHT daltkht = new DAL_TKHT();
         BUS_TKHT bustkht = new BUS_TKHT();
         DTO_TKHT dtotkht;
-        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
         public frmStaffs()
         {
             InitializeComponent();
