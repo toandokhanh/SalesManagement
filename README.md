@@ -24,8 +24,10 @@
 	<ol>
 		<li>Clone this repository</li>
 		<li>Open the solution in Visual Studio</li>
-		<li>Build the solution</li>
+		<li>Build the solution</li>		
 		<li>Run the application</li>
+		<li>In the main page, click Project -> Manage NuGet Packages -> Search Guna.UI2.WinForms and Install this packages </li>
+		<li>Go to DAL layer, frmExportBills, frmInformation, frmLoaiVatTu, frmRevenue, frmStaffs and change all string connect to your with server name and database name </li>
 	</ol>
 	<h2>Usage:</h2>
 	<p>Upon launching the application, you will be presented with the main dashboard. From here, you can navigate to the various features of the application:</p>
