@@ -26,7 +26,7 @@ namespace GUI
             lbUserName.Text = "Xin chào "+email+" ";
             if (role == "PQ03")
             {
-                guna2GradientButton7.Enabled = false;
+                guna2GradientButton8.Enabled = false;
             }
         }
         private void guna2GradientButton2_Click(object sender, EventArgs e)

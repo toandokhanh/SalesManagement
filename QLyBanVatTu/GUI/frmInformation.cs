@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class frmInformation : Form
     {
-        string stringConnect = @"Server=MSI\SQL;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
         BUS_TKHT tkht;
         private string email;
         public frmInformation(string email)
@@ -29,8 +29,8 @@ namespace GUI
         private void frmInformation_Load(object sender, EventArgs e)
         {
             // truy vấn SQL
-            string query = "SELECT TOP 1 [TKHT_Email],[TKHT_HoTen],[PQ_Ma],[TKHT_Password],[TKHT_DiaChi],[TKHT_SoDienThoai],[TKHT_GioiTinh],[TKHT_NgaySinh] FROM [QLVT].[dbo].[TAI_KHOAN_HE_THONG] Where [TKHT_Email] = " + email + "";
-
+            string query = "SELECT [TKHT_HoTen],[PQ_Ma],[TKHT_Password],[TKHT_DiaChi],[TKHT_SoDienThoai],[TKHT_GioiTinh],[TKHT_NgaySinh] FROM [QLVT].[dbo].[TAI_KHOAN_HE_THONG] Where [TKHT_Email] = " + email + "";
+            MessageBox.Show(query);
             // khởi tạo đối tượng SqlConnection
             using (SqlConnection connection = new SqlConnection(stringConnect))
             {
@@ -50,17 +50,17 @@ namespace GUI
                             while (reader.Read())
                             {
                                 string TKHT_Email = reader.GetString(0);
-                                string TKHT_HoTen = reader.GetString(1);
-                                string PQ_Ma = reader.GetString(2);
-                                string TKHT_Password = reader.GetString(3);
-                                string TKHT_DiaChi = reader.GetString(4);
-                                string TKHT_SoDienThoai = reader.GetString(5);
-                                bool TKHT_GioiTinh = reader.GetBoolean(6);
-                                DateTime TKHT_NgaySinh = reader.GetDateTime(7);
+                                string TKHT_HoTen = reader.GetString(0);
+                                string PQ_Ma = reader.GetString(1);
+                                string TKHT_Password = reader.GetString(2);
+                                string TKHT_DiaChi = reader.GetString(3);
+                                string TKHT_SoDienThoai = reader.GetString(4);
+                                bool TKHT_GioiTinh = reader.GetBoolean(5);
+                                DateTime TKHT_NgaySinh = reader.GetDateTime(6);
                                 string NgaySinh = TKHT_NgaySinh.ToString("yyyy-MM-dd");
                                 txtAddress.Text = TKHT_DiaChi;
                                 txtPhone.Text = TKHT_SoDienThoai;
-                                txtEmail.Text = TKHT_Email;
+                                txtEmail.Text = email;
                                 txtName.Text = TKHT_HoTen;
                                 guna2TextBox1.Text = NgaySinh;
                                 if(TKHT_GioiTinh == true)

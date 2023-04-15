@@ -21,7 +21,7 @@ namespace GUI
         public void Connnect()
         {
             conn = new SqlConnection();
-            string stringConnect = "Server=MSI\\SQL;Database=QLVT;integrated security=true";
+            string stringConnect = "Server=CAT-JUNIOR\\SQLEXPRESS;Database=QLVT;integrated security=true";
             conn.ConnectionString = stringConnect;
             conn.Open();
         }

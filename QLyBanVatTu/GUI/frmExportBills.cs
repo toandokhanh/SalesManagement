@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmExportBills : Form
     {
-        string stringConnect = @"Server=MSI\SQL\SQLEXPRESS;Database=QLVT;integrated security=true";
+        string stringConnect = @"Server=CAT-JUNIOR\SQLEXPRESS;Database=QLVT;integrated security=true";
         BUS_ExportBill busExportBill = new BUS_ExportBill();
         DAL_ExportBills dalHDX = new DAL_ExportBills();
         //DTO_HoaDonXuat dtoHDX;
@@ -541,6 +541,9 @@ namespace GUI
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             dtgvExportBill.ClearSelection();
+            cbCustomer.SelectedIndex = -1;
+            cbHDX_Ma.SelectedIndex = -1;
+            cbIDProduct.SelectedIndex = -1;
             cbCustomer.SelectedIndex = -1;
             cbHDX_Ma.SelectedIndex = -1;
             cbIDProduct.SelectedIndex = -1;
