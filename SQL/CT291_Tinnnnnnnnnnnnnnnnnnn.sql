@@ -424,10 +424,9 @@ VALUES
 ('HH_1', 'LH_1', 'NSX01', 'NCC01', N'Cát xây dựng Việt Nam', 12, N'Cát xây dựng Việt Nam tiêu chuẩn', 13000, NULL),
 ('HH_2', 'LH_2', 'NSX01', 'NCC02', N'Đá 1x2 Việt Nam', 12, N'Đá 1x2 Việt Nam chất lượng cao', 25000, NULL),
 ('HH_3', 'LH_2', 'NSX01', 'NCC03', N'Đá 1x2 Việt Nam', 12, N'Đá 1x2 Việt Nam tiêu chuẩn', 22000, NULL),
-('HH_4', 'LH_3', 'NSX02', 'NCC03', N'Than củi Đức', 12, N'Than củi Đức chất lượng cao', 80000, NULL),
-('HH_5', 'LH_3', 'NSX02', 'NCC01', N'Than củi Đức', 12, N'Than củi Đức tiêu chuẩn', 75000, NULL),
+('HH_4', 'LH_3', 'NSX02', 'NCC03', N'Xi măng Hà Tiên', 12, N'Xi măng chất lượng cao', 80000, NULL),
+('HH_5', 'LH_3', 'NSX02', 'NCC01', N'Gạch ống', 12, N'Tạo nên sự chắc chắn cho ngôi nhà bạn', 75000, NULL),
 ('HH_6', 'LH_1', 'NSX03', 'NCC03', N'Cát xây dựng Mỹ', 12, N'Cát xây dựng Mỹ chất lượng cao', 18000, NULL)
-
 Go
 
 Go

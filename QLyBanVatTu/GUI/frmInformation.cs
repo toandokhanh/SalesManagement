@@ -29,7 +29,7 @@ namespace GUI
         private void frmInformation_Load(object sender, EventArgs e)
         {
             // truy vấn SQL
-            string query = "SELECT [TKHT_HoTen],[PQ_Ma],[TKHT_Password],[TKHT_DiaChi],[TKHT_SoDienThoai],[TKHT_GioiTinh],[TKHT_NgaySinh] FROM [QLVT].[dbo].[TAI_KHOAN_HE_THONG] Where [TKHT_Email] = " + email + "";
+            string query = "SELECT [TKHT_HoTen],[PQ_Ma],[TKHT_Password],[TKHT_DiaChi],[TKHT_SoDienThoai],[TKHT_GioiTinh],[TKHT_NgaySinh] FROM [QLVT].[dbo].[TAI_KHOAN_HE_THONG] Where [TKHT_Email] = '" + email + "'";
             MessageBox.Show(query);
             // khởi tạo đối tượng SqlConnection
             using (SqlConnection connection = new SqlConnection(stringConnect))

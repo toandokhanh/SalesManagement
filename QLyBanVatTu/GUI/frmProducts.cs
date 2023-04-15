@@ -68,7 +68,6 @@ namespace GUI
             dtgvProduct.Columns[8].HeaderText = "Hình ảnh";
             foreach (DataGridViewColumn item in dtgvProduct.Columns)
                 item.DividerWidth = 1;
-
         }
         private void MessBox(string message, bool isError = false)
         {
@@ -77,8 +76,6 @@ namespace GUI
             else
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
         private void frmProducts_Load(object sender, EventArgs e)
         {
             dtgvProduct.DataSource= busproduct.ListProduct();
@@ -91,9 +88,7 @@ namespace GUI
             cbNuocSX.SelectedIndex = -1;
             DAL_NuaMua nuamua = new DAL_NuaMua();
             txtIDProduct.Text = nuamua.CreateNewID("SELECT MAX(hh_ma) AS Largest_ma_kh FROM HANGHOA");
-
         }
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
 
@@ -159,7 +154,6 @@ namespace GUI
             }
 
         }
-
         private void dtgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dtgvProduct.Rows.Count > 0)
